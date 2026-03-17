@@ -61,7 +61,6 @@ class AudioService {
     const initAudio = () => {
       if (this.isInitialized) return
       
-      console.log('初始化音频系统...')
       this.sounds.forEach((audio, soundType) => {
         // 保存当前音量
         const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
@@ -73,16 +72,13 @@ class AudioService {
           audio.currentTime = 0
           // 恢复正确的音量
           audio.volume = targetVolume
-          console.log(`音效 ${soundType} 初始化成功，音量设置为: ${targetVolume}`)
         }).catch((error) => {
           // 即使播放失败，也要恢复音量
           audio.volume = targetVolume
-          console.warn(`音效 ${soundType} 初始化失败:`, error)
         })
       })
       
       this.isInitialized = true
-      console.log('音频系统初始化完成')
     }
 
     // 监听多种用户交互事件
@@ -124,7 +120,6 @@ class AudioService {
   public forceInitialize(): void {
     if (this.isInitialized) return
     
-    console.log('强制初始化音频系统...')
     this.sounds.forEach((audio, soundType) => {
       // 保存当前音量
       const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
@@ -136,21 +131,17 @@ class AudioService {
         audio.currentTime = 0
         // 恢复正确的音量
         audio.volume = targetVolume
-        console.log(`音效 ${soundType} 强制初始化成功，音量设置为: ${targetVolume}`)
       }).catch((error) => {
         // 即使播放失败，也要恢复音量
         audio.volume = targetVolume
-        console.warn(`音效 ${soundType} 强制初始化失败:`, error)
       })
     })
     
     this.isInitialized = true
-    console.log('音频系统强制初始化完成')
   }
   play(soundType: SoundType) {
     // 如果音频系统未初始化，先尝试初始化
     if (!this.isInitialized) {
-      console.warn(`音频系统未初始化，尝试播放 ${soundType}`)
       this.forceInitialize()
     }
 
@@ -163,10 +154,7 @@ class AudioService {
     this.lastPlayTime.set(soundType, now)
 
     const sound = this.sounds.get(soundType)
-    if (!sound) {
-      console.warn(`音效文件未找到: ${soundType}`)
-      return
-    }
+    if (!sound) return
 
     try {
       // 确保音量设置正确
@@ -174,14 +162,8 @@ class AudioService {
       sound.volume = targetVolume
       
       sound.currentTime = 0
-      sound.play().then(() => {
-        console.log(`音效播放成功: ${soundType}, 音量: ${targetVolume}`)
-      }).catch((error) => {
-        console.warn(`音效播放失败: ${soundType}`, error)
-      })
-    } catch (error) {
-      console.error(`音效播放出错: ${soundType}`, error)
-    }
+      sound.play().catch(() => {})
+    } catch (error) {}
   }
 
   /**
@@ -189,38 +171,28 @@ class AudioService {
    */
   playMusic() {
     const music = this.sounds.get(SoundType.MENU_MUSIC)
-    if (!music) {
-      console.warn('BGM音频文件未找到')
-      return
-    }
+    if (!music) return
 
     try {
       // 如果音乐已经在播放，不重新开始
       if (this.currentMusic === music && !this.currentMusic.paused) {
-        console.log('BGM已在播放，跳过')
         return
       }
       
       // 如果音乐暂停了，直接恢复播放
       if (this.currentMusic === music && this.currentMusic.paused) {
-        console.log('恢复播放BGM')
         music.volume = this.musicVolume
         music.play().catch(() => {})
         return
       }
       
       // 否则从头开始播放
-      console.log('开始播放BGM')
       music.currentTime = 0
       music.loop = true
       music.volume = this.musicVolume
-      music.play().catch((error) => {
-        console.warn('BGM播放失败:', error)
-      })
+      music.play().catch(() => {})
       this.currentMusic = music
-    } catch (error) {
-      console.error('BGM播放出错:', error)
-    }
+    } catch (error) {}
   }
 
   /**

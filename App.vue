@@ -233,7 +233,6 @@ const handleStartClick = () => {
   
   // 如果是首次交互，播放BGM
   if (!hasBgmPlayed.value) {
-    console.log('用户首次交互，开始播放BGM')
     playMenuMusic()
     hasBgmPlayed.value = true
   }
@@ -441,9 +440,6 @@ const preventContextMenu = (e: MouseEvent) => {
 onMounted(() => {
   // 检测设备性能
   detectDevicePerformance()
-  
-  // 不在初始化时播放BGM，等待用户交互
-  console.log('页面加载完成，等待用户交互后播放BGM')
   
   // 禁用双指缩放
   document.addEventListener('touchstart', preventZoom, { passive: false })
