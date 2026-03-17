@@ -276,7 +276,7 @@
         <div class="answer-grid">
           <button 
             v-for="(option, index) in gameState.currentQuestion.allOptions" 
-            :key="`${gameState.totalAnswered}-${index}-${option}`"
+            :key="`${gameState.totalAnswered}-${renderKey.value}-${index}-${option}`"
             @click="handleAnswer(option)"
             class="answer-btn"
             :class="{
@@ -412,7 +412,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useGameState } from '@/composables/useGameState'
 import { useAudio } from '@/composables/useAudio'
 import VueBitsProfileCard from '@/component/VueBitsProfileCard/VueBitsProfileCardSimple.vue'
@@ -445,6 +445,7 @@ const isAnswering = ref(false)
 const showAnswerFeedback = ref(false)
 const lastAnswerCorrect = ref(false)
 const selectedAnswer = ref<string | null>(null)
+const renderKey = ref(0) // 添加渲染key来强制重新渲染
 
 // 音效面板控制
 const showAudioPanel = ref(false)
@@ -558,7 +559,7 @@ const backToModeSelect = () => {
 const handleAnswer = async (answer: string) => {
   if (isAnswering.value || !gameState.currentQuestion) return
   
-  // 设置选中的答案
+  // 设置当前选中的答案
   selectedAnswer.value = answer
   
   // 判断答案是否正确
@@ -583,9 +584,18 @@ const handleAnswer = async (answer: string) => {
   // 提交答案
   answerQuestion(answer)
   
-  // 重置动画状态
-  isAnswering.value = false
+  // 使用nextTick确保DOM更新完成后再重置状态
+  await nextTick()
+  
+  // 重置所有状态并强制重新渲染
   selectedAnswer.value = null
+  isAnswering.value = false
+  showAnswerFeedback.value = false
+  lastAnswerCorrect.value = false
+  renderKey.value++
+  
+  // 再次使用nextTick确保移动端也能正确更新
+  await nextTick()
 }
 
 const handleRestart = () => {
@@ -1168,7 +1178,7 @@ html, body {
   width: 100%;
   max-width: 600px;
   flex-shrink: 0;
-  margin: clamp(70px, 14vh, 90px) 8px 0 8px;
+  margin: clamp(40px, 8vh, 60px) 8px 0 8px;
   background: linear-gradient(135deg, #464F6A 0%, #2B3753 100%);
   border-radius: 0;
   padding: 16px 20px;
@@ -1740,7 +1750,7 @@ html, body {
     0 0 0 1px rgba(181, 250, 35, 0.4),
     0 0 20px rgba(181, 250, 35, 0.3);
   flex-shrink: 0;
-  margin-top: clamp(0px, 0vh, 0px);
+  margin-top: clamp(-60px, -6vh, -55px);
   position: relative;
   overflow: hidden;
 }
@@ -1777,7 +1787,7 @@ html, body {
   font-size: clamp(16px, 3.5vw, 20px);
   font-weight: 600;
   text-align: center;
-  margin-bottom: clamp(12px, 2vh, 16px);
+  margin-bottom: clamp(1px, 2vh, 1px);
   color: #ffffff;
 }
 
@@ -2064,7 +2074,7 @@ html, body {
   }
   
   .score-board {
-    margin: clamp(75px, 15vh, 95px) 8px 0 8px;
+    margin: clamp(55px, 11vh, 75px) 8px 0 8px;
     padding: 12px 16px;
   }
   
@@ -2126,7 +2136,7 @@ html, body {
 
 @media (max-width: 480px) {
   .score-board {
-    margin: clamp(80px, 0vh, 100px) 8px 0 8px;
+    margin: clamp(60px, 0vh, 80px) 8px 0 8px;
     padding: 10px 14px;
   }
   
@@ -2166,7 +2176,7 @@ html, body {
   }
   
   .score-board {
-    margin: clamp(55px, 11vh, 70px) 8px 0 8px;
+    margin: clamp(35px, 7vh, 50px) 8px 0 8px;
     padding: 10px 16px;
   }
   
