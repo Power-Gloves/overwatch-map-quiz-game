@@ -62,7 +62,7 @@
       </div>
       
       <div class="footer">
-        <p class="version">v3.0.0</p>
+        <p class="version">v1.0.0</p>
       </div>
     </div>
 
