@@ -14,7 +14,7 @@
         src="/src/assets/images/icons/audio-control.svg" 
         alt="音效设置" 
         @click="toggleAudioPanel"
-        style="position: absolute !important; top: 20px !important; right: 8px !important; z-index: 100 !important; width: 40px !important; height: 40px !important; cursor: pointer !important; transition: all 0.3s ease !important;"
+        class="control-button control-button-right"
       />
       
       <div class="header">
@@ -73,7 +73,7 @@
         src="/src/assets/images/icons/back-arrow-left.svg" 
         alt="返回" 
         @click="backToHome"
-        style="position: absolute !important; top: 20px !important; left: 8px !important; z-index: 100 !important; width: 40px !important; height: 40px !important; cursor: pointer !important; transition: all 0.3s ease !important;"
+        class="control-button control-button-left"
         @mouseover="$event.target.style.transform = 'scale(1.1)'"
         @mouseout="$event.target.style.transform = 'scale(1)'"
       />
@@ -83,7 +83,7 @@
         src="/src/assets/images/icons/audio-control.svg" 
         alt="音效设置" 
         @click="toggleAudioPanel"
-        style="position: absolute !important; top: 20px !important; right: 8px !important; z-index: 100 !important; width: 40px !important; height: 40px !important; cursor: pointer !important; transition: all 0.3s ease !important;"
+        class="control-button control-button-right"
       />
       
       <div class="header">
@@ -93,67 +93,30 @@
       
       <div class="content">
         <!-- 新的OW四方形风格模式选择 -->
-        <div class="ow-mode-container" style="display: flex !important; flex-direction: column !important; gap: 16px !important; width: 100% !important; max-width: 600px !important;">
+        <div class="ow-mode-container">
           <div 
             v-for="mode in modeItems" 
             :key="mode.value"
             class="ow-mode-card"
             @click="() => handleModeSelect(mode.value)"
-            style="display: flex !important; flex-direction: row !important; align-items: stretch !important; height: 80px !important; background: #464F6A !important; border: 2px solid rgba(59, 156, 225, 0.3) !important; cursor: pointer !important; border-radius: 4px !important; overflow: hidden !important;"
           >
             <!-- 左侧图标区域 -->
-            <div class="ow-mode-left" style="width: 80px !important; min-width: 80px !important; max-width: 80px !important; background: transparent !important; display: flex !important; align-items: center !important; justify-content: center !important; flex-shrink: 0 !important; padding: 0 !important;">
+            <div class="ow-mode-left">
               <img 
                 :src="mode.icon" 
                 :alt="mode.title" 
                 class="ow-mode-icon"
-                style="width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; min-width: 100% !important; min-height: 100% !important; object-fit: cover !important; display: block !important;"
               />
             </div>
             
             <!-- 中间内容区域 -->
-            <div class="ow-mode-center" style="flex: 1 !important; padding: 16px 20px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; background: #464F6A !important;">
-              <h3 class="ow-mode-title" style="font-size: 18px !important; font-weight: 700 !important; color: #ffffff !important; margin: 0 0 4px 0 !important;">{{ mode.title }}</h3>
-              <p class="ow-mode-subtitle" style="font-size: 13px !important; color: #C9D4E3 !important; margin: 0 !important;">{{ mode.subtitle }}</p>
+            <div class="ow-mode-center">
+              <h3 class="ow-mode-title">{{ mode.title }}</h3>
+              <p class="ow-mode-subtitle">{{ mode.subtitle }}</p>
             </div>
           </div>
         </div>
 
-        <!-- 备份：原来的模式选择（隐藏） -->
-        <div class="mode-buttons-container" style="display: none;">
-          <SpotlightCard 
-            v-for="mode in modeItems" 
-            :key="mode.value"
-            :class="['mode-button', `mode-button-${mode.value}`]"
-            :spotlight-color="mode.spotlightColor"
-            @click="() => handleModeSelect(mode.value)"
-            style="min-height: 90px !important; max-height: 90px !important; height: 90px !important; padding: 0 !important; margin: 0 0 16px 0 !important;"
-          >
-            <div 
-              class="mode-button-content" 
-              style="display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: flex-start !important; gap: 12px !important; padding: 18px 12px !important; margin: 0 !important; height: 100% !important;"
-            >
-              <div 
-                class="mode-icon"
-                style="flex-shrink: 0 !important; order: 1 !important;"
-              >
-                <img 
-                  :src="mode.icon" 
-                  :alt="mode.title" 
-                  class="mode-icon-img" 
-                  style="width: 40px !important; height: 40px !important; max-width: 40px !important; max-height: 40px !important; object-fit: contain;"
-                />
-              </div>
-              <div 
-                class="mode-text"
-                style="flex: 1 !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; order: 2 !important;"
-              >
-                <h3 class="mode-title">{{ mode.title }}</h3>
-                <p class="mode-subtitle">{{ mode.subtitle }}</p>
-              </div>
-            </div>
-          </SpotlightCard>
-        </div>
       </div>
     </div>
 
@@ -164,7 +127,7 @@
         src="/src/assets/images/icons/back-arrow-left.svg" 
         alt="返回" 
         @click="backToModeSelect"
-        style="position: absolute !important; top: 20px !important; left: 8px !important; z-index: 100 !important; width: 40px !important; height: 40px !important; cursor: pointer !important; transition: all 0.3s ease !important;"
+        class="control-button control-button-left"
         @mouseover="$event.target.style.transform = 'scale(1.1)'"
         @mouseout="$event.target.style.transform = 'scale(1)'"
       />
@@ -174,7 +137,7 @@
         src="/src/assets/images/icons/audio-control.svg" 
         alt="音效设置" 
         @click="toggleAudioPanel"
-        style="position: absolute !important; top: 20px !important; right: 8px !important; z-index: 100 !important; width: 40px !important; height: 40px !important; cursor: pointer !important; transition: all 0.3s ease !important;"
+        class="control-button control-button-right"
       />
       
       <!-- 顶部计分板 - 重新设计 -->
@@ -417,7 +380,6 @@ import { useGameState } from '@/composables/useGameState'
 import { useAudio } from '@/composables/useAudio'
 import VueBitsProfileCard from '@/component/VueBitsProfileCard/VueBitsProfileCardSimple.vue'
 import GameErrorBoundary from '@/components/GameErrorBoundary.vue'
-import SpotlightCard from '@/components/SpotlightCard.vue'
 import AudioControlPanel from '@/components/AudioControlPanel.vue'
 import ElectricBorder from '@/component/ElectricBorder/ElectricBorder.vue'
 import type { MapData } from '@/types'
@@ -449,6 +411,24 @@ const feedbackData = ref<{
   correctAnswer: string
 } | null>(null)
 
+// 检测设备性能
+const isLowPerformanceDevice = ref(false)
+
+// 检测设备性能的函数
+const detectDevicePerformance = () => {
+  // 检测CPU核心数
+  const cores = navigator.hardwareConcurrency || 1
+  
+  // 检测内存（如果可用）
+  const memory = (navigator as any).deviceMemory || 1
+  
+  // 检测是否为移动设备
+  const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  
+  // 低性能设备判断条件
+  isLowPerformanceDevice.value = isMobile && (cores <= 2 || memory <= 2)
+}
+
 // 音效面板控制
 const showAudioPanel = ref(false)
 
@@ -457,15 +437,29 @@ const toggleAudioPanel = () => {
   playButtonClick()
 }
 
-// 简化的文本显示方法 - 返回带模糊标记的对象
+// 简化的文本显示方法 - 缓存结果避免重复计算
+const textDisplayCache = new Map<string, any>()
+
 const getDisplayText = (text: string, gameMode: GameMode) => {
+  const cacheKey = `${text}-${gameMode}`
+  
+  if (textDisplayCache.has(cacheKey)) {
+    return textDisplayCache.get(cacheKey)
+  }
+  
   // 只在挑战模式中模糊文字
   if (gameMode !== 'challenge' && gameMode !== GameMode.CHALLENGE) {
-    return { text, hasBlur: false }
+    const result = { text, hasBlur: false }
+    textDisplayCache.set(cacheKey, result)
+    return result
   }
   
   const length = text.length
-  if (length <= 2) return { text, hasBlur: false } // 太短不模糊
+  if (length <= 2) {
+    const result = { text, hasBlur: false }
+    textDisplayCache.set(cacheKey, result)
+    return result
+  }
   
   // 根据长度决定模糊几个字
   let hideCount = 1
@@ -476,12 +470,15 @@ const getDisplayText = (text: string, gameMode: GameMode) => {
   const start = Math.floor((length - hideCount) / 2)
   const end = start + hideCount
   
-  return {
+  const result = {
     beforeText: text.substring(0, start),
     blurText: text.substring(start, end),
     afterText: text.substring(end),
     hasBlur: true
   }
+  
+  textDisplayCache.set(cacheKey, result)
+  return result
 }
 
 const modeItems = computed(() => [
@@ -589,20 +586,15 @@ const handleAnswer = async (answer: string) => {
   feedbackData.value = null
   isAnswering.value = false
   
-  // 移动端特殊处理：强制清除按钮的hover/active状态
+  // 移动端特殊处理：轻量级状态清除
   if ('ontouchstart' in window) {
-    // 触发一个虚拟的touchend事件来清除移动端的粘滞状态
-    const buttons = document.querySelectorAll('.answer-btn')
-    buttons.forEach(btn => {
-      btn.blur() // 移除焦点
-      // 强制重置样式
-      const element = btn as HTMLElement
-      element.style.transform = ''
-      element.style.background = ''
-      element.style.borderColor = ''
-      element.style.color = ''
-      element.style.boxShadow = ''
-    })
+    // 只在移动端执行最小必要的清理
+    setTimeout(() => {
+      const buttons = document.querySelectorAll('.answer-btn')
+      buttons.forEach(btn => {
+        btn.blur() // 移除焦点
+      })
+    }, 10) // 减少延迟
   }
   
   // 提交答案到游戏状态
@@ -663,6 +655,9 @@ const preventContextMenu = (e: MouseEvent) => {
 }
 
 onMounted(() => {
+  // 检测设备性能
+  detectDevicePerformance()
+  
   // 启动时播放菜单音乐
   playMenuMusic()
   
@@ -689,6 +684,11 @@ onMounted(() => {
       return false
     }
   }, { passive: false })
+  
+  // 为低性能设备添加CSS类
+  if (isLowPerformanceDevice.value) {
+    document.body.classList.add('low-performance-device')
+  }
 })
 
 onUnmounted(() => {
@@ -1365,7 +1365,7 @@ html, body {
 }
 
 .current-card.idle {
-  animation: cardEntrance 0.5s ease, cardIdle 10s ease-in-out 2s infinite;
+  animation: cardEntrance 0.5s ease;
   transform-style: preserve-3d;
   perspective: 800px;
   filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
@@ -1449,101 +1449,6 @@ html, body {
   to {
     opacity: 1;
     transform: scale(1) translateX(0);
-  }
-}
-
-@keyframes cardIdle {
-  0% {
-    transform: scale(1) translateY(0) rotateX(0deg) rotateY(0deg) translateZ(0px);
-  }
-  12.5% {
-    transform: scale(1.02) translateY(-8px) rotateX(4deg) rotateY(-3deg) translateZ(10px);
-  }
-  25% {
-    transform: scale(1.01) translateY(-4px) rotateX(2deg) rotateY(4deg) translateZ(6px);
-  }
-  37.5% {
-    transform: scale(1.02) translateY(-6px) rotateX(-2deg) rotateY(3deg) translateZ(8px);
-  }
-  50% {
-    transform: scale(1.01) translateY(-1px) rotateX(-4deg) rotateY(-4deg) translateZ(3px);
-  }
-  62.5% {
-    transform: scale(1.02) translateY(-5px) rotateX(-3deg) rotateY(2deg) translateZ(7px);
-  }
-  75% {
-    transform: scale(1.02) translateY(-7px) rotateX(2deg) rotateY(-3deg) translateZ(9px);
-  }
-  87.5% {
-    transform: scale(1.01) translateY(-3px) rotateX(3deg) rotateY(2deg) translateZ(5px);
-  }
-  100% {
-    transform: scale(1) translateY(0) rotateX(0deg) rotateY(0deg) translateZ(0px);
-  }
-}
-
-@keyframes shadowIdle {
-  0% {
-    transform: translateX(-50%) scale(1) skewX(0deg);
-    opacity: 0.4;
-  }
-  12.5% {
-    transform: translateX(-45%) scale(0.8) skewX(-8deg);
-    opacity: 0.6;
-  }
-  25% {
-    transform: translateX(-55%) scale(0.9) skewX(6deg);
-    opacity: 0.5;
-  }
-  37.5% {
-    transform: translateX(-48%) scale(0.85) skewX(5deg);
-    opacity: 0.55;
-  }
-  50% {
-    transform: translateX(-50%) scale(1.1) skewX(-6deg);
-    opacity: 0.4;
-  }
-  62.5% {
-    transform: translateX(-52%) scale(0.88) skewX(4deg);
-    opacity: 0.52;
-  }
-  75% {
-    transform: translateX(-46%) scale(0.82) skewX(-7deg);
-    opacity: 0.58;
-  }
-  87.5% {
-    transform: translateX(-54%) scale(0.92) skewX(5deg);
-    opacity: 0.48;
-  }
-  100% {
-    transform: translateX(-50%) scale(1) skewX(0deg);
-    opacity: 0.4;
-  }
-}
-
-/* 简单的淡出动画 */
-@keyframes cardFadeOut {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-}
-
-/* 简单的Stack升级动画 */
-@keyframes stackPromote {
-  from {
-    transform: scale(0.95) translateY(10px) translateZ(-20px);
-    opacity: 0.8;
-    z-index: 1;
-  }
-  to {
-    transform: scale(1) translateY(0) translateZ(0);
-    opacity: 1;
-    z-index: 2;
   }
 }
 
@@ -2093,7 +1998,159 @@ html, body {
   font-size: 16px;
 }
 
-/* ========== 响应式 ========== */
+/* ========== 通用工具类 ========== */
+.control-button {
+  position: absolute !important;
+  top: 20px !important;
+  z-index: 100 !important;
+  width: 40px !important;
+  height: 40px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.control-button-left {
+  left: 8px !important;
+}
+
+.control-button-right {
+  right: 8px !important;
+}
+
+.ow-mode-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: 600px !important;
+}
+
+.ow-mode-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  height: 80px !important;
+  background: #464F6A !important;
+  border: 2px solid rgba(59, 156, 225, 0.3) !important;
+  cursor: pointer !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+.ow-mode-left {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  padding: 0 !important;
+}
+
+.ow-mode-icon {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.ow-mode-center {
+  flex: 1 !important;
+  padding: 16px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  background: #464F6A !important;
+}
+
+.ow-mode-title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 0 4px 0 !important;
+}
+
+.ow-mode-subtitle {
+  font-size: 13px !important;
+  color: #C9D4E3 !important;
+  margin: 0 !important;
+}
+
+/* ========== 低性能设备优化 ========== */
+.low-performance-device * {
+  animation: none !important;
+  transition: none !important;
+  transform-style: flat !important;
+  perspective: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.low-performance-device .answer-btn {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.low-performance-device .separated-answers {
+  background: rgba(44, 44, 44, 0.95) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.low-performance-device .answer-feedback-overlay {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* ========== 移动端性能优化 ========== */
+@media (max-width: 768px) {
+  /* 禁用所有非必要动画 */
+  .bg-gradient,
+  .bg-particles,
+  .glow-text,
+  .ow-button .btn-glow,
+  .game-logo,
+  .ow-icon-logo,
+  .current-card.idle,
+  .separated-answers::before,
+  .answer-btn:hover {
+    animation: none !important;
+  }
+  
+  /* 简化视觉效果 */
+  .answer-feedback-overlay {
+    backdrop-filter: none !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  .separated-answers {
+    backdrop-filter: none !important;
+    background: rgba(44, 44, 44, 0.95) !important;
+  }
+  
+  .accuracy-glow {
+    display: none !important;
+  }
+  
+  /* 简化阴影效果 */
+  .image-card-wrapper {
+    filter: none !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .answer-btn {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .answer-btn:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  /* 禁用复杂变换 */
+  .current-card {
+    transform-style: flat !important;
+    perspective: none !important;
+  }
+}
 @media (max-width: 768px) {
   .game-screen {
     padding: clamp(8px, 1.5vh, 12px);
@@ -2346,95 +2403,6 @@ html, body {
 .start-button-svg:hover svg text {
   fill: #000000;
 }
-.mode-select-screen .ow-mode-container {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 16px !important;
-  width: 100% !important;
-  max-width: 600px !important;
-}
-
-.mode-select-screen .ow-mode-card {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: stretch !important;
-  height: 80px !important;
-  background: #464F6A !important;
-  border: 2px solid rgba(59, 156, 225, 0.3) !important;
-  cursor: pointer !important;
-  border-radius: 4px !important;
-  overflow: hidden !important;
-  position: relative !important;
-}
-
-.mode-select-screen .ow-mode-left {
-  width: 80px !important;
-  min-width: 80px !important;
-  max-width: 80px !important;
-  background: #3B9CE1 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-  flex-grow: 0 !important;
-}
-}
-
-.mode-select-screen .ow-mode-icon {
-  width: 48px !important;
-  height: 48px !important;
-  max-width: 48px !important;
-  max-height: 48px !important;
-  min-width: 48px !important;
-  min-height: 48px !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
-.mode-select-screen .ow-mode-center {
-  flex: 1 !important;
-  flex-grow: 1 !important;
-  flex-shrink: 1 !important;
-  padding: 16px 20px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  background: #464F6A !important;
-}
-
-.mode-select-screen .ow-mode-title {
-  font-size: 18px !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  margin: 0 0 4px 0 !important;
-}
-
-.mode-select-screen .ow-mode-subtitle {
-  font-size: 13px !important;
-  color: #C9D4E3 !important;
-  margin: 0 !important;
-}
-
-.mode-select-screen .ow-mode-right {
-  width: 60px !important;
-  min-width: 60px !important;
-  max-width: 60px !important;
-  background: #FF7575 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-  flex-grow: 0 !important;
-}
-
-.mode-select-screen .ow-mode-arrow {
-  font-size: 24px !important;
-  color: #F5F5F5 !important;
-  font-weight: bold !important;
-}
-
-/* 响应式调整 - 移除冲突的样式，保持简洁 */
-
 /* ========== 原来的模式选择样式（备份保留） ========== */
 .mode-select-screen {
   padding: clamp(20px, 4vh, 40px);
