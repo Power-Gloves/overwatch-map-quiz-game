@@ -1,0 +1,291 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ */
+
+@use "sass:color";
+
+/**
+ * 守望先锋主题色彩
+ */
+$ow-primary: #f4433c;
+$ow-secondary: #ff9c00;
+$ow-accent: #00d4ff;
+$ow-dark: #1a1a1a;
+$ow-darker: #0f0f0f;
+$ow-light: #ffffff;
+$ow-gray: #7a7e83;
+$ow-gray-light: #b3b3b3;
+
+/**
+ * NFT卡片样式变量
+ */
+$card-bg: rgba(255, 255, 255, 0.1);
+$card-border: rgba(255, 255, 255, 0.2);
+$card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+$card-radius: 16px;
+$card-backdrop: blur(10px);
+
+/**
+ * 动画变量
+ */
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+/**
+ * 间距变量
+ */
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+/**
+ * 字体大小
+ */
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+
+/**
+ * 圆角
+ */
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+
+/**
+ * 阴影
+ */
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+$shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.25);
+
+/* 行为相关颜色 */
+$uni-color-primary: $ow-primary;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/* 文字基本颜色 */
+$uni-text-color: $ow-light;
+$uni-text-color-inverse: $ow-dark;
+$uni-text-color-grey: $ow-gray;
+$uni-text-color-placeholder: $ow-gray-light;
+$uni-text-color-disable: #c0c0c0;
+
+/* 背景颜色 */
+$uni-bg-color: $ow-darker;
+$uni-bg-color-grey: #f8f8f8;
+$uni-bg-color-hover: #f1f1f1;
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4);
+
+/* 边框颜色 */
+$uni-border-color: $card-border;
+
+/* 尺寸变量 */
+/* 文字尺寸 */
+$uni-font-size-sm: $font-size-sm;
+$uni-font-size-base: $font-size-md;
+$uni-font-size-lg: $font-size-lg;
+
+/* 图片尺寸 */
+$uni-img-size-sm: 40rpx;
+$uni-img-size-base: 52rpx;
+$uni-img-size-lg: 80rpx;
+
+/* Border Radius */
+$uni-border-radius-sm: $border-radius-sm;
+$uni-border-radius-base: $border-radius-md;
+$uni-border-radius-lg: $border-radius-lg;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 10px;
+$uni-spacing-row-base: 20rpx;
+$uni-spacing-row-lg: 30rpx;
+
+/* 垂直间距 */
+$uni-spacing-col-sm: 8rpx;
+$uni-spacing-col-base: 16rpx;
+$uni-spacing-col-lg: 24rpx;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+$uni-color-title: $ow-light; // 文章标题颜色
+$uni-font-size-title: 40rpx;
+$uni-color-subtitle: $ow-gray; // 二级标题颜色
+$uni-font-size-subtitle: 36rpx;
+$uni-color-paragraph: $ow-gray-light; // 文章段落颜色
+$uni-font-size-paragraph: 30rpx;
+
+/**
+ * NFT卡片样式
+ */
+.nft-card {
+  position: relative;
+  background: $card-bg;
+  backdrop-filter: $card-backdrop;
+  border: 1px solid $card-border;
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all $transition-normal cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+  transform: translateZ(0); /* 强制 GPU 加速 */
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba($ow-primary, 0.1) 0%, 
+      rgba($ow-secondary, 0.1) 25%, 
+      rgba($ow-accent, 0.1) 50%, 
+      rgba($ow-secondary, 0.1) 75%, 
+      rgba($ow-primary, 0.1) 100%);
+    opacity: 0;
+    transition: opacity $transition-normal;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  &:hover {
+    transform: 
+      translateY(-10px) 
+      rotateX(5deg) 
+      rotateY(5deg) 
+      scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.4),
+      0 0 20px rgba($ow-primary, 0.3);
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+  
+  &:active {
+    transform: 
+      translateY(-5px) 
+      rotateX(2deg) 
+      rotateY(2deg) 
+      scale(1.01);
+  }
+}
+
+/* NFT卡片全息彩虹效果 */
+.nft-card-holographic {
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 70%
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+    animation: holographicShine 1.5s ease-in-out;
+  }
+}
+
+@keyframes holographicShine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/**
+ * 按钮样式
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md $spacing-lg;
+  border: none;
+  border-radius: $border-radius-lg;
+  font-size: $font-size-md;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-normal;
+  user-select: none;
+  
+  &:disabled {
+    opacity: $uni-opacity-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, $ow-primary, color.adjust($ow-primary, $lightness: -10%));
+  color: $ow-light;
+  box-shadow: 0 4px 15px rgba($ow-primary, 0.4);
+  
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, color.adjust($ow-primary, $lightness: 5%), $ow-primary);
+    box-shadow: 0 6px 20px rgba($ow-primary, 0.6);
+    transform: translateY(-2px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba($ow-primary, 0.4);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $ow-light;
+  border: 2px solid $card-border;
+  
+  &:hover:not(:disabled) {
+    background: rgba($ow-light, 0.1);
+    border-color: $ow-primary;
+    box-shadow: 0 4px 15px rgba($ow-primary, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.btn-small {
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-sm;
+}

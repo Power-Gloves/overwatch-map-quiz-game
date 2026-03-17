@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2026-03-15",
+  "totalMaps": 18,
+  "totalScreenshots": 540,
+  "maps": [
+    {
+      "id": "cemetery",
+      "name": "墓园",
+      "nameEn": "Cemetery",
+      "type": "control",
+      "description": "阴森恐怖的墓地环境",
+      "screenshots": []
+    },
+    {
+      "id": "ayutthaya", 
+      "name": "阿育陀耶",
+      "nameEn": "Ayutthaya",
+      "type": "control",
+      "description": "泰国古都的寺庙建筑群",
+      "screenshots": []
+    },
+    {
+      "id": "castle",
+      "name": "城堡", 
+      "nameEn": "Castle",
+      "type": "hybrid",
+      "description": "欧洲中世纪风格的古堡",
+      "screenshots": []
+    },
+    {
+      "id": "black_forest",
+      "name": "黑森林",
+      "nameEn": "Black Forest", 
+      "type": "escort",
+      "description": "德国黑森林地区的神秘森林",
+      "screenshots": []
+    },
+    {
+      "id": "lijiang_tower",
+      "name": "漓江塔",
+      "nameEn": "Lijiang Tower",
+      "type": "control", 
+      "description": "中国桂林的现代化高塔建筑",
+      "screenshots": []
+    }

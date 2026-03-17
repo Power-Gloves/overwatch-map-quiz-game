@@ -1,0 +1,4523 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2026-03-15",
+  "totalMaps": 35,
+  "totalScreenshots": 1050,
+  "maps": [
+    {
+      "id": "中城",
+      "name": "中城",
+      "nameEn": "中城",
+      "type": "control",
+      "description": "中城地图",
+      "screenshots": [
+        {
+          "filename": "中城_001.jpg",
+          "url": "/static/maps/中城/中城_001.jpg"
+        },
+        {
+          "filename": "中城_002.jpg",
+          "url": "/static/maps/中城/中城_002.jpg"
+        },
+        {
+          "filename": "中城_003.jpg",
+          "url": "/static/maps/中城/中城_003.jpg"
+        },
+        {
+          "filename": "中城_004.jpg",
+          "url": "/static/maps/中城/中城_004.jpg"
+        },
+        {
+          "filename": "中城_005.jpg",
+          "url": "/static/maps/中城/中城_005.jpg"
+        },
+        {
+          "filename": "中城_006.jpg",
+          "url": "/static/maps/中城/中城_006.jpg"
+        },
+        {
+          "filename": "中城_007.jpg",
+          "url": "/static/maps/中城/中城_007.jpg"
+        },
+        {
+          "filename": "中城_008.jpg",
+          "url": "/static/maps/中城/中城_008.jpg"
+        },
+        {
+          "filename": "中城_009.jpg",
+          "url": "/static/maps/中城/中城_009.jpg"
+        },
+        {
+          "filename": "中城_010.jpg",
+          "url": "/static/maps/中城/中城_010.jpg"
+        },
+        {
+          "filename": "中城_011.jpg",
+          "url": "/static/maps/中城/中城_011.jpg"
+        },
+        {
+          "filename": "中城_012.jpg",
+          "url": "/static/maps/中城/中城_012.jpg"
+        },
+        {
+          "filename": "中城_013.jpg",
+          "url": "/static/maps/中城/中城_013.jpg"
+        },
+        {
+          "filename": "中城_014.jpg",
+          "url": "/static/maps/中城/中城_014.jpg"
+        },
+        {
+          "filename": "中城_015.jpg",
+          "url": "/static/maps/中城/中城_015.jpg"
+        },
+        {
+          "filename": "中城_016.jpg",
+          "url": "/static/maps/中城/中城_016.jpg"
+        },
+        {
+          "filename": "中城_017.jpg",
+          "url": "/static/maps/中城/中城_017.jpg"
+        },
+        {
+          "filename": "中城_018.jpg",
+          "url": "/static/maps/中城/中城_018.jpg"
+        },
+        {
+          "filename": "中城_019.jpg",
+          "url": "/static/maps/中城/中城_019.jpg"
+        },
+        {
+          "filename": "中城_020.jpg",
+          "url": "/static/maps/中城/中城_020.jpg"
+        },
+        {
+          "filename": "中城_021.jpg",
+          "url": "/static/maps/中城/中城_021.jpg"
+        },
+        {
+          "filename": "中城_022.jpg",
+          "url": "/static/maps/中城/中城_022.jpg"
+        },
+        {
+          "filename": "中城_023.jpg",
+          "url": "/static/maps/中城/中城_023.jpg"
+        },
+        {
+          "filename": "中城_024.jpg",
+          "url": "/static/maps/中城/中城_024.jpg"
+        },
+        {
+          "filename": "中城_025.jpg",
+          "url": "/static/maps/中城/中城_025.jpg"
+        },
+        {
+          "filename": "中城_026.jpg",
+          "url": "/static/maps/中城/中城_026.jpg"
+        },
+        {
+          "filename": "中城_027.jpg",
+          "url": "/static/maps/中城/中城_027.jpg"
+        },
+        {
+          "filename": "中城_028.jpg",
+          "url": "/static/maps/中城/中城_028.jpg"
+        },
+        {
+          "filename": "中城_029.jpg",
+          "url": "/static/maps/中城/中城_029.jpg"
+        },
+        {
+          "filename": "中城_030.jpg",
+          "url": "/static/maps/中城/中城_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ilios_ruins",
+      "name": "伊里奥斯-废墟",
+      "nameEn": "Ilios: Ruins",
+      "type": "control",
+      "description": "希腊海岛上的古代废墟",
+      "screenshots": [
+        {
+          "filename": "伊里奥斯-废墟_001.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_001.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_002.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_002.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_003.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_003.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_004.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_004.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_005.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_005.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_006.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_006.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_007.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_007.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_008.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_008.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_009.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_009.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_010.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_010.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_011.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_011.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_012.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_012.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_013.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_013.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_014.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_014.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_015.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_015.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_016.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_016.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_017.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_017.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_018.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_018.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_019.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_019.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_020.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_020.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_021.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_021.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_022.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_022.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_023.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_023.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_024.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_024.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_025.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_025.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_026.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_026.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_027.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_027.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_028.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_028.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_029.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_029.jpg"
+        },
+        {
+          "filename": "伊里奥斯-废墟_030.jpg",
+          "url": "/static/maps/伊里奥斯-废墟/伊里奥斯-废墟_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "伊里奥斯_深井",
+      "name": "伊里奥斯-深井",
+      "nameEn": "伊里奥斯-深井",
+      "type": "control",
+      "description": "伊里奥斯-深井地图",
+      "screenshots": [
+        {
+          "filename": "伊里奥斯-深井_001.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_001.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_002.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_002.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_003.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_003.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_004.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_004.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_005.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_005.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_006.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_006.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_007.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_007.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_008.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_008.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_009.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_009.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_010.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_010.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_011.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_011.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_012.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_012.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_013.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_013.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_014.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_014.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_015.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_015.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_016.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_016.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_017.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_017.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_018.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_018.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_019.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_019.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_020.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_020.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_021.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_021.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_022.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_022.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_023.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_023.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_024.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_024.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_025.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_025.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_026.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_026.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_027.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_027.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_028.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_028.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_029.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_029.jpg"
+        },
+        {
+          "filename": "伊里奥斯-深井_030.jpg",
+          "url": "/static/maps/伊里奥斯-深井/伊里奥斯-深井_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "伊里奥斯_灯塔",
+      "name": "伊里奥斯-灯塔",
+      "nameEn": "伊里奥斯-灯塔",
+      "type": "control",
+      "description": "伊里奥斯-灯塔地图",
+      "screenshots": [
+        {
+          "filename": "伊里奥斯-灯塔_001.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_001.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_002.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_002.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_003.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_003.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_004.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_004.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_005.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_005.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_006.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_006.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_007.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_007.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_008.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_008.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_009.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_009.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_010.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_010.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_011.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_011.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_012.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_012.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_013.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_013.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_014.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_014.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_015.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_015.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_016.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_016.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_017.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_017.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_018.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_018.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_019.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_019.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_020.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_020.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_021.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_021.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_022.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_022.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_023.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_023.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_024.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_024.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_025.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_025.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_026.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_026.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_027.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_027.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_028.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_028.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_029.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_029.jpg"
+        },
+        {
+          "filename": "伊里奥斯-灯塔_030.jpg",
+          "url": "/static/maps/伊里奥斯-灯塔/伊里奥斯-灯塔_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "努巴尼",
+      "name": "努巴尼",
+      "nameEn": "努巴尼",
+      "type": "control",
+      "description": "努巴尼地图",
+      "screenshots": [
+        {
+          "filename": "努巴尼_001.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_001.jpg"
+        },
+        {
+          "filename": "努巴尼_002.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_002.jpg"
+        },
+        {
+          "filename": "努巴尼_003.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_003.jpg"
+        },
+        {
+          "filename": "努巴尼_004.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_004.jpg"
+        },
+        {
+          "filename": "努巴尼_005.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_005.jpg"
+        },
+        {
+          "filename": "努巴尼_006.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_006.jpg"
+        },
+        {
+          "filename": "努巴尼_007.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_007.jpg"
+        },
+        {
+          "filename": "努巴尼_008.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_008.jpg"
+        },
+        {
+          "filename": "努巴尼_009.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_009.jpg"
+        },
+        {
+          "filename": "努巴尼_010.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_010.jpg"
+        },
+        {
+          "filename": "努巴尼_011.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_011.jpg"
+        },
+        {
+          "filename": "努巴尼_012.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_012.jpg"
+        },
+        {
+          "filename": "努巴尼_013.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_013.jpg"
+        },
+        {
+          "filename": "努巴尼_014.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_014.jpg"
+        },
+        {
+          "filename": "努巴尼_015.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_015.jpg"
+        },
+        {
+          "filename": "努巴尼_016.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_016.jpg"
+        },
+        {
+          "filename": "努巴尼_017.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_017.jpg"
+        },
+        {
+          "filename": "努巴尼_018.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_018.jpg"
+        },
+        {
+          "filename": "努巴尼_019.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_019.jpg"
+        },
+        {
+          "filename": "努巴尼_020.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_020.jpg"
+        },
+        {
+          "filename": "努巴尼_021.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_021.jpg"
+        },
+        {
+          "filename": "努巴尼_022.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_022.jpg"
+        },
+        {
+          "filename": "努巴尼_023.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_023.jpg"
+        },
+        {
+          "filename": "努巴尼_024.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_024.jpg"
+        },
+        {
+          "filename": "努巴尼_025.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_025.jpg"
+        },
+        {
+          "filename": "努巴尼_026.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_026.jpg"
+        },
+        {
+          "filename": "努巴尼_027.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_027.jpg"
+        },
+        {
+          "filename": "努巴尼_028.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_028.jpg"
+        },
+        {
+          "filename": "努巴尼_029.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_029.jpg"
+        },
+        {
+          "filename": "努巴尼_030.jpg",
+          "url": "/static/maps/努巴尼/努巴尼_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "kings_row",
+      "name": "国王大道",
+      "nameEn": "King's Row",
+      "type": "escort",
+      "description": "英国伦敦的经典街道",
+      "screenshots": [
+        {
+          "filename": "国王大道_001.jpg",
+          "url": "/static/maps/国王大道/国王大道_001.jpg"
+        },
+        {
+          "filename": "国王大道_002.jpg",
+          "url": "/static/maps/国王大道/国王大道_002.jpg"
+        },
+        {
+          "filename": "国王大道_003.jpg",
+          "url": "/static/maps/国王大道/国王大道_003.jpg"
+        },
+        {
+          "filename": "国王大道_004.jpg",
+          "url": "/static/maps/国王大道/国王大道_004.jpg"
+        },
+        {
+          "filename": "国王大道_005.jpg",
+          "url": "/static/maps/国王大道/国王大道_005.jpg"
+        },
+        {
+          "filename": "国王大道_006.jpg",
+          "url": "/static/maps/国王大道/国王大道_006.jpg"
+        },
+        {
+          "filename": "国王大道_007.jpg",
+          "url": "/static/maps/国王大道/国王大道_007.jpg"
+        },
+        {
+          "filename": "国王大道_008.jpg",
+          "url": "/static/maps/国王大道/国王大道_008.jpg"
+        },
+        {
+          "filename": "国王大道_009.jpg",
+          "url": "/static/maps/国王大道/国王大道_009.jpg"
+        },
+        {
+          "filename": "国王大道_010.jpg",
+          "url": "/static/maps/国王大道/国王大道_010.jpg"
+        },
+        {
+          "filename": "国王大道_011.jpg",
+          "url": "/static/maps/国王大道/国王大道_011.jpg"
+        },
+        {
+          "filename": "国王大道_012.jpg",
+          "url": "/static/maps/国王大道/国王大道_012.jpg"
+        },
+        {
+          "filename": "国王大道_013.jpg",
+          "url": "/static/maps/国王大道/国王大道_013.jpg"
+        },
+        {
+          "filename": "国王大道_014.jpg",
+          "url": "/static/maps/国王大道/国王大道_014.jpg"
+        },
+        {
+          "filename": "国王大道_015.jpg",
+          "url": "/static/maps/国王大道/国王大道_015.jpg"
+        },
+        {
+          "filename": "国王大道_016.jpg",
+          "url": "/static/maps/国王大道/国王大道_016.jpg"
+        },
+        {
+          "filename": "国王大道_017.jpg",
+          "url": "/static/maps/国王大道/国王大道_017.jpg"
+        },
+        {
+          "filename": "国王大道_018.jpg",
+          "url": "/static/maps/国王大道/国王大道_018.jpg"
+        },
+        {
+          "filename": "国王大道_019.jpg",
+          "url": "/static/maps/国王大道/国王大道_019.jpg"
+        },
+        {
+          "filename": "国王大道_020.jpg",
+          "url": "/static/maps/国王大道/国王大道_020.jpg"
+        },
+        {
+          "filename": "国王大道_021.jpg",
+          "url": "/static/maps/国王大道/国王大道_021.jpg"
+        },
+        {
+          "filename": "国王大道_022.jpg",
+          "url": "/static/maps/国王大道/国王大道_022.jpg"
+        },
+        {
+          "filename": "国王大道_023.jpg",
+          "url": "/static/maps/国王大道/国王大道_023.jpg"
+        },
+        {
+          "filename": "国王大道_024.jpg",
+          "url": "/static/maps/国王大道/国王大道_024.jpg"
+        },
+        {
+          "filename": "国王大道_025.jpg",
+          "url": "/static/maps/国王大道/国王大道_025.jpg"
+        },
+        {
+          "filename": "国王大道_026.jpg",
+          "url": "/static/maps/国王大道/国王大道_026.jpg"
+        },
+        {
+          "filename": "国王大道_027.jpg",
+          "url": "/static/maps/国王大道/国王大道_027.jpg"
+        },
+        {
+          "filename": "国王大道_028.jpg",
+          "url": "/static/maps/国王大道/国王大道_028.jpg"
+        },
+        {
+          "filename": "国王大道_029.jpg",
+          "url": "/static/maps/国王大道/国王大道_029.jpg"
+        },
+        {
+          "filename": "国王大道_030.jpg",
+          "url": "/static/maps/国王大道/国王大道_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "圣诞节花村",
+      "name": "圣诞节花村",
+      "nameEn": "圣诞节花村",
+      "type": "control",
+      "description": "圣诞节花村地图",
+      "screenshots": [
+        {
+          "filename": "圣诞节花村_001.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_001.jpg"
+        },
+        {
+          "filename": "圣诞节花村_002.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_002.jpg"
+        },
+        {
+          "filename": "圣诞节花村_003.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_003.jpg"
+        },
+        {
+          "filename": "圣诞节花村_004.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_004.jpg"
+        },
+        {
+          "filename": "圣诞节花村_005.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_005.jpg"
+        },
+        {
+          "filename": "圣诞节花村_006.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_006.jpg"
+        },
+        {
+          "filename": "圣诞节花村_007.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_007.jpg"
+        },
+        {
+          "filename": "圣诞节花村_008.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_008.jpg"
+        },
+        {
+          "filename": "圣诞节花村_009.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_009.jpg"
+        },
+        {
+          "filename": "圣诞节花村_010.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_010.jpg"
+        },
+        {
+          "filename": "圣诞节花村_011.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_011.jpg"
+        },
+        {
+          "filename": "圣诞节花村_012.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_012.jpg"
+        },
+        {
+          "filename": "圣诞节花村_013.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_013.jpg"
+        },
+        {
+          "filename": "圣诞节花村_014.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_014.jpg"
+        },
+        {
+          "filename": "圣诞节花村_015.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_015.jpg"
+        },
+        {
+          "filename": "圣诞节花村_016.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_016.jpg"
+        },
+        {
+          "filename": "圣诞节花村_017.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_017.jpg"
+        },
+        {
+          "filename": "圣诞节花村_018.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_018.jpg"
+        },
+        {
+          "filename": "圣诞节花村_019.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_019.jpg"
+        },
+        {
+          "filename": "圣诞节花村_020.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_020.jpg"
+        },
+        {
+          "filename": "圣诞节花村_021.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_021.jpg"
+        },
+        {
+          "filename": "圣诞节花村_022.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_022.jpg"
+        },
+        {
+          "filename": "圣诞节花村_023.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_023.jpg"
+        },
+        {
+          "filename": "圣诞节花村_024.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_024.jpg"
+        },
+        {
+          "filename": "圣诞节花村_025.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_025.jpg"
+        },
+        {
+          "filename": "圣诞节花村_026.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_026.jpg"
+        },
+        {
+          "filename": "圣诞节花村_027.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_027.jpg"
+        },
+        {
+          "filename": "圣诞节花村_028.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_028.jpg"
+        },
+        {
+          "filename": "圣诞节花村_029.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_029.jpg"
+        },
+        {
+          "filename": "圣诞节花村_030.jpg",
+          "url": "/static/maps/圣诞节花村/圣诞节花村_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "esperanca",
+      "name": "埃斯佩兰萨",
+      "nameEn": "Esperança",
+      "type": "control",
+      "description": "葡萄牙风格的海滨城市",
+      "screenshots": [
+        {
+          "filename": "埃斯佩兰萨_001.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_001.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_002.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_002.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_003.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_003.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_004.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_004.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_005.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_005.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_006.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_006.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_007.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_007.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_008.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_008.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_009.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_009.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_010.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_010.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_011.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_011.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_012.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_012.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_013.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_013.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_014.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_014.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_015.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_015.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_016.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_016.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_017.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_017.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_018.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_018.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_019.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_019.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_020.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_020.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_021.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_021.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_022.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_022.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_023.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_023.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_024.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_024.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_025.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_025.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_026.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_026.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_027.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_027.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_028.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_028.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_029.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_029.jpg"
+        },
+        {
+          "filename": "埃斯佩兰萨_030.jpg",
+          "url": "/static/maps/埃斯佩兰萨/埃斯佩兰萨_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "castle",
+      "name": "城堡",
+      "nameEn": "Castle",
+      "type": "hybrid",
+      "description": "欧洲中世纪风格的古堡",
+      "screenshots": [
+        {
+          "filename": "城堡_001.jpg",
+          "url": "/static/maps/城堡/城堡_001.jpg"
+        },
+        {
+          "filename": "城堡_002.jpg",
+          "url": "/static/maps/城堡/城堡_002.jpg"
+        },
+        {
+          "filename": "城堡_003.jpg",
+          "url": "/static/maps/城堡/城堡_003.jpg"
+        },
+        {
+          "filename": "城堡_004.jpg",
+          "url": "/static/maps/城堡/城堡_004.jpg"
+        },
+        {
+          "filename": "城堡_005.jpg",
+          "url": "/static/maps/城堡/城堡_005.jpg"
+        },
+        {
+          "filename": "城堡_006.jpg",
+          "url": "/static/maps/城堡/城堡_006.jpg"
+        },
+        {
+          "filename": "城堡_007.jpg",
+          "url": "/static/maps/城堡/城堡_007.jpg"
+        },
+        {
+          "filename": "城堡_008.jpg",
+          "url": "/static/maps/城堡/城堡_008.jpg"
+        },
+        {
+          "filename": "城堡_009.jpg",
+          "url": "/static/maps/城堡/城堡_009.jpg"
+        },
+        {
+          "filename": "城堡_010.jpg",
+          "url": "/static/maps/城堡/城堡_010.jpg"
+        },
+        {
+          "filename": "城堡_011.jpg",
+          "url": "/static/maps/城堡/城堡_011.jpg"
+        },
+        {
+          "filename": "城堡_012.jpg",
+          "url": "/static/maps/城堡/城堡_012.jpg"
+        },
+        {
+          "filename": "城堡_013.jpg",
+          "url": "/static/maps/城堡/城堡_013.jpg"
+        },
+        {
+          "filename": "城堡_014.jpg",
+          "url": "/static/maps/城堡/城堡_014.jpg"
+        },
+        {
+          "filename": "城堡_015.jpg",
+          "url": "/static/maps/城堡/城堡_015.jpg"
+        },
+        {
+          "filename": "城堡_016.jpg",
+          "url": "/static/maps/城堡/城堡_016.jpg"
+        },
+        {
+          "filename": "城堡_017.jpg",
+          "url": "/static/maps/城堡/城堡_017.jpg"
+        },
+        {
+          "filename": "城堡_018.jpg",
+          "url": "/static/maps/城堡/城堡_018.jpg"
+        },
+        {
+          "filename": "城堡_019.jpg",
+          "url": "/static/maps/城堡/城堡_019.jpg"
+        },
+        {
+          "filename": "城堡_020.jpg",
+          "url": "/static/maps/城堡/城堡_020.jpg"
+        },
+        {
+          "filename": "城堡_021.jpg",
+          "url": "/static/maps/城堡/城堡_021.jpg"
+        },
+        {
+          "filename": "城堡_022.jpg",
+          "url": "/static/maps/城堡/城堡_022.jpg"
+        },
+        {
+          "filename": "城堡_023.jpg",
+          "url": "/static/maps/城堡/城堡_023.jpg"
+        },
+        {
+          "filename": "城堡_024.jpg",
+          "url": "/static/maps/城堡/城堡_024.jpg"
+        },
+        {
+          "filename": "城堡_025.jpg",
+          "url": "/static/maps/城堡/城堡_025.jpg"
+        },
+        {
+          "filename": "城堡_026.jpg",
+          "url": "/static/maps/城堡/城堡_026.jpg"
+        },
+        {
+          "filename": "城堡_027.jpg",
+          "url": "/static/maps/城堡/城堡_027.jpg"
+        },
+        {
+          "filename": "城堡_028.jpg",
+          "url": "/static/maps/城堡/城堡_028.jpg"
+        },
+        {
+          "filename": "城堡_029.jpg",
+          "url": "/static/maps/城堡/城堡_029.jpg"
+        },
+        {
+          "filename": "城堡_030.jpg",
+          "url": "/static/maps/城堡/城堡_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cemetery",
+      "name": "墓园",
+      "nameEn": "Cemetery",
+      "type": "control",
+      "description": "阴森恐怖的墓地环境",
+      "screenshots": [
+        {
+          "filename": "墓园_001.jpg",
+          "url": "/static/maps/墓园/墓园_001.jpg"
+        },
+        {
+          "filename": "墓园_002.jpg",
+          "url": "/static/maps/墓园/墓园_002.jpg"
+        },
+        {
+          "filename": "墓园_003.jpg",
+          "url": "/static/maps/墓园/墓园_003.jpg"
+        },
+        {
+          "filename": "墓园_004.jpg",
+          "url": "/static/maps/墓园/墓园_004.jpg"
+        },
+        {
+          "filename": "墓园_005.jpg",
+          "url": "/static/maps/墓园/墓园_005.jpg"
+        },
+        {
+          "filename": "墓园_006.jpg",
+          "url": "/static/maps/墓园/墓园_006.jpg"
+        },
+        {
+          "filename": "墓园_007.jpg",
+          "url": "/static/maps/墓园/墓园_007.jpg"
+        },
+        {
+          "filename": "墓园_008.jpg",
+          "url": "/static/maps/墓园/墓园_008.jpg"
+        },
+        {
+          "filename": "墓园_009.jpg",
+          "url": "/static/maps/墓园/墓园_009.jpg"
+        },
+        {
+          "filename": "墓园_010.jpg",
+          "url": "/static/maps/墓园/墓园_010.jpg"
+        },
+        {
+          "filename": "墓园_011.jpg",
+          "url": "/static/maps/墓园/墓园_011.jpg"
+        },
+        {
+          "filename": "墓园_012.jpg",
+          "url": "/static/maps/墓园/墓园_012.jpg"
+        },
+        {
+          "filename": "墓园_013.jpg",
+          "url": "/static/maps/墓园/墓园_013.jpg"
+        },
+        {
+          "filename": "墓园_014.jpg",
+          "url": "/static/maps/墓园/墓园_014.jpg"
+        },
+        {
+          "filename": "墓园_015.jpg",
+          "url": "/static/maps/墓园/墓园_015.jpg"
+        },
+        {
+          "filename": "墓园_016.jpg",
+          "url": "/static/maps/墓园/墓园_016.jpg"
+        },
+        {
+          "filename": "墓园_017.jpg",
+          "url": "/static/maps/墓园/墓园_017.jpg"
+        },
+        {
+          "filename": "墓园_018.jpg",
+          "url": "/static/maps/墓园/墓园_018.jpg"
+        },
+        {
+          "filename": "墓园_019.jpg",
+          "url": "/static/maps/墓园/墓园_019.jpg"
+        },
+        {
+          "filename": "墓园_020.jpg",
+          "url": "/static/maps/墓园/墓园_020.jpg"
+        },
+        {
+          "filename": "墓园_021.jpg",
+          "url": "/static/maps/墓园/墓园_021.jpg"
+        },
+        {
+          "filename": "墓园_022.jpg",
+          "url": "/static/maps/墓园/墓园_022.jpg"
+        },
+        {
+          "filename": "墓园_023.jpg",
+          "url": "/static/maps/墓园/墓园_023.jpg"
+        },
+        {
+          "filename": "墓园_024.jpg",
+          "url": "/static/maps/墓园/墓园_024.jpg"
+        },
+        {
+          "filename": "墓园_025.jpg",
+          "url": "/static/maps/墓园/墓园_025.jpg"
+        },
+        {
+          "filename": "墓园_026.jpg",
+          "url": "/static/maps/墓园/墓园_026.jpg"
+        },
+        {
+          "filename": "墓园_027.jpg",
+          "url": "/static/maps/墓园/墓园_027.jpg"
+        },
+        {
+          "filename": "墓园_028.jpg",
+          "url": "/static/maps/墓园/墓园_028.jpg"
+        },
+        {
+          "filename": "墓园_029.jpg",
+          "url": "/static/maps/墓园/墓园_029.jpg"
+        },
+        {
+          "filename": "墓园_030.jpg",
+          "url": "/static/maps/墓园/墓园_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "hollywood",
+      "name": "好莱坞",
+      "nameEn": "Hollywood",
+      "type": "escort",
+      "description": "美国好莱坞电影片场",
+      "screenshots": [
+        {
+          "filename": "好莱坞_001.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_001.jpg"
+        },
+        {
+          "filename": "好莱坞_002.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_002.jpg"
+        },
+        {
+          "filename": "好莱坞_003.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_003.jpg"
+        },
+        {
+          "filename": "好莱坞_004.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_004.jpg"
+        },
+        {
+          "filename": "好莱坞_005.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_005.jpg"
+        },
+        {
+          "filename": "好莱坞_006.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_006.jpg"
+        },
+        {
+          "filename": "好莱坞_007.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_007.jpg"
+        },
+        {
+          "filename": "好莱坞_008.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_008.jpg"
+        },
+        {
+          "filename": "好莱坞_009.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_009.jpg"
+        },
+        {
+          "filename": "好莱坞_010.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_010.jpg"
+        },
+        {
+          "filename": "好莱坞_011.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_011.jpg"
+        },
+        {
+          "filename": "好莱坞_012.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_012.jpg"
+        },
+        {
+          "filename": "好莱坞_013.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_013.jpg"
+        },
+        {
+          "filename": "好莱坞_014.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_014.jpg"
+        },
+        {
+          "filename": "好莱坞_015.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_015.jpg"
+        },
+        {
+          "filename": "好莱坞_016.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_016.jpg"
+        },
+        {
+          "filename": "好莱坞_017.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_017.jpg"
+        },
+        {
+          "filename": "好莱坞_018.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_018.jpg"
+        },
+        {
+          "filename": "好莱坞_019.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_019.jpg"
+        },
+        {
+          "filename": "好莱坞_020.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_020.jpg"
+        },
+        {
+          "filename": "好莱坞_021.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_021.jpg"
+        },
+        {
+          "filename": "好莱坞_022.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_022.jpg"
+        },
+        {
+          "filename": "好莱坞_023.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_023.jpg"
+        },
+        {
+          "filename": "好莱坞_024.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_024.jpg"
+        },
+        {
+          "filename": "好莱坞_025.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_025.jpg"
+        },
+        {
+          "filename": "好莱坞_026.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_026.jpg"
+        },
+        {
+          "filename": "好莱坞_027.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_027.jpg"
+        },
+        {
+          "filename": "好莱坞_028.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_028.jpg"
+        },
+        {
+          "filename": "好莱坞_029.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_029.jpg"
+        },
+        {
+          "filename": "好莱坞_030.jpg",
+          "url": "/static/maps/好莱坞/好莱坞_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "尼泊尔_圣坛",
+      "name": "尼泊尔-圣坛",
+      "nameEn": "尼泊尔-圣坛",
+      "type": "control",
+      "description": "尼泊尔-圣坛地图",
+      "screenshots": [
+        {
+          "filename": "尼泊尔-圣坛_001.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_001.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_002.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_002.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_003.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_003.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_004.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_004.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_005.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_005.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_006.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_006.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_007.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_007.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_008.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_008.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_009.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_009.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_010.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_010.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_011.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_011.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_012.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_012.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_013.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_013.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_014.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_014.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_015.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_015.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_016.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_016.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_017.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_017.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_018.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_018.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_019.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_019.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_020.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_020.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_021.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_021.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_022.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_022.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_023.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_023.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_024.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_024.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_025.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_025.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_026.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_026.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_027.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_027.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_028.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_028.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_029.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_029.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣坛_030.jpg",
+          "url": "/static/maps/尼泊尔-圣坛/尼泊尔-圣坛_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "尼泊尔_圣所",
+      "name": "尼泊尔-圣所",
+      "nameEn": "尼泊尔-圣所",
+      "type": "control",
+      "description": "尼泊尔-圣所地图",
+      "screenshots": [
+        {
+          "filename": "尼泊尔-圣所_001.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_001.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_002.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_002.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_003.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_003.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_004.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_004.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_005.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_005.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_006.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_006.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_007.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_007.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_008.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_008.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_009.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_009.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_010.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_010.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_011.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_011.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_012.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_012.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_013.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_013.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_014.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_014.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_015.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_015.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_016.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_016.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_017.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_017.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_018.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_018.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_019.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_019.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_020.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_020.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_021.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_021.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_022.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_022.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_023.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_023.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_024.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_024.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_025.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_025.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_026.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_026.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_027.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_027.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_028.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_028.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_029.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_029.jpg"
+        },
+        {
+          "filename": "尼泊尔-圣所_030.jpg",
+          "url": "/static/maps/尼泊尔-圣所/尼泊尔-圣所_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "paris",
+      "name": "巴黎",
+      "nameEn": "Paris",
+      "type": "hybrid",
+      "description": "法国巴黎的经典街区",
+      "screenshots": [
+        {
+          "filename": "巴黎_001.jpg",
+          "url": "/static/maps/巴黎/巴黎_001.jpg"
+        },
+        {
+          "filename": "巴黎_002.jpg",
+          "url": "/static/maps/巴黎/巴黎_002.jpg"
+        },
+        {
+          "filename": "巴黎_003.jpg",
+          "url": "/static/maps/巴黎/巴黎_003.jpg"
+        },
+        {
+          "filename": "巴黎_004.jpg",
+          "url": "/static/maps/巴黎/巴黎_004.jpg"
+        },
+        {
+          "filename": "巴黎_005.jpg",
+          "url": "/static/maps/巴黎/巴黎_005.jpg"
+        },
+        {
+          "filename": "巴黎_006.jpg",
+          "url": "/static/maps/巴黎/巴黎_006.jpg"
+        },
+        {
+          "filename": "巴黎_007.jpg",
+          "url": "/static/maps/巴黎/巴黎_007.jpg"
+        },
+        {
+          "filename": "巴黎_008.jpg",
+          "url": "/static/maps/巴黎/巴黎_008.jpg"
+        },
+        {
+          "filename": "巴黎_009.jpg",
+          "url": "/static/maps/巴黎/巴黎_009.jpg"
+        },
+        {
+          "filename": "巴黎_010.jpg",
+          "url": "/static/maps/巴黎/巴黎_010.jpg"
+        },
+        {
+          "filename": "巴黎_011.jpg",
+          "url": "/static/maps/巴黎/巴黎_011.jpg"
+        },
+        {
+          "filename": "巴黎_012.jpg",
+          "url": "/static/maps/巴黎/巴黎_012.jpg"
+        },
+        {
+          "filename": "巴黎_013.jpg",
+          "url": "/static/maps/巴黎/巴黎_013.jpg"
+        },
+        {
+          "filename": "巴黎_014.jpg",
+          "url": "/static/maps/巴黎/巴黎_014.jpg"
+        },
+        {
+          "filename": "巴黎_015.jpg",
+          "url": "/static/maps/巴黎/巴黎_015.jpg"
+        },
+        {
+          "filename": "巴黎_016.jpg",
+          "url": "/static/maps/巴黎/巴黎_016.jpg"
+        },
+        {
+          "filename": "巴黎_017.jpg",
+          "url": "/static/maps/巴黎/巴黎_017.jpg"
+        },
+        {
+          "filename": "巴黎_018.jpg",
+          "url": "/static/maps/巴黎/巴黎_018.jpg"
+        },
+        {
+          "filename": "巴黎_019.jpg",
+          "url": "/static/maps/巴黎/巴黎_019.jpg"
+        },
+        {
+          "filename": "巴黎_020.jpg",
+          "url": "/static/maps/巴黎/巴黎_020.jpg"
+        },
+        {
+          "filename": "巴黎_021.jpg",
+          "url": "/static/maps/巴黎/巴黎_021.jpg"
+        },
+        {
+          "filename": "巴黎_022.jpg",
+          "url": "/static/maps/巴黎/巴黎_022.jpg"
+        },
+        {
+          "filename": "巴黎_023.jpg",
+          "url": "/static/maps/巴黎/巴黎_023.jpg"
+        },
+        {
+          "filename": "巴黎_024.jpg",
+          "url": "/static/maps/巴黎/巴黎_024.jpg"
+        },
+        {
+          "filename": "巴黎_025.jpg",
+          "url": "/static/maps/巴黎/巴黎_025.jpg"
+        },
+        {
+          "filename": "巴黎_026.jpg",
+          "url": "/static/maps/巴黎/巴黎_026.jpg"
+        },
+        {
+          "filename": "巴黎_027.jpg",
+          "url": "/static/maps/巴黎/巴黎_027.jpg"
+        },
+        {
+          "filename": "巴黎_028.jpg",
+          "url": "/static/maps/巴黎/巴黎_028.jpg"
+        },
+        {
+          "filename": "巴黎_029.jpg",
+          "url": "/static/maps/巴黎/巴黎_029.jpg"
+        },
+        {
+          "filename": "巴黎_030.jpg",
+          "url": "/static/maps/巴黎/巴黎_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "帕拉伊苏",
+      "name": "帕拉伊苏",
+      "nameEn": "帕拉伊苏",
+      "type": "control",
+      "description": "帕拉伊苏地图",
+      "screenshots": [
+        {
+          "filename": "帕拉伊苏_001.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_001.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_002.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_002.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_003.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_003.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_004.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_004.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_005.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_005.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_006.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_006.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_007.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_007.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_008.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_008.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_009.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_009.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_010.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_010.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_011.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_011.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_012.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_012.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_013.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_013.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_014.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_014.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_015.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_015.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_016.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_016.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_017.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_017.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_018.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_018.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_019.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_019.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_020.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_020.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_021.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_021.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_022.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_022.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_023.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_023.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_024.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_024.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_025.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_025.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_026.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_026.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_027.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_027.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_028.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_028.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_029.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_029.jpg"
+        },
+        {
+          "filename": "帕拉伊苏_030.jpg",
+          "url": "/static/maps/帕拉伊苏/帕拉伊苏_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "colosseo",
+      "name": "斗兽场",
+      "nameEn": "Colosseo",
+      "type": "control",
+      "description": "古罗马风格的竞技场",
+      "screenshots": [
+        {
+          "filename": "斗兽场_001.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_001.jpg"
+        },
+        {
+          "filename": "斗兽场_002.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_002.jpg"
+        },
+        {
+          "filename": "斗兽场_003.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_003.jpg"
+        },
+        {
+          "filename": "斗兽场_004.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_004.jpg"
+        },
+        {
+          "filename": "斗兽场_005.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_005.jpg"
+        },
+        {
+          "filename": "斗兽场_006.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_006.jpg"
+        },
+        {
+          "filename": "斗兽场_007.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_007.jpg"
+        },
+        {
+          "filename": "斗兽场_008.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_008.jpg"
+        },
+        {
+          "filename": "斗兽场_009.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_009.jpg"
+        },
+        {
+          "filename": "斗兽场_010.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_010.jpg"
+        },
+        {
+          "filename": "斗兽场_011.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_011.jpg"
+        },
+        {
+          "filename": "斗兽场_012.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_012.jpg"
+        },
+        {
+          "filename": "斗兽场_013.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_013.jpg"
+        },
+        {
+          "filename": "斗兽场_014.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_014.jpg"
+        },
+        {
+          "filename": "斗兽场_015.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_015.jpg"
+        },
+        {
+          "filename": "斗兽场_016.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_016.jpg"
+        },
+        {
+          "filename": "斗兽场_017.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_017.jpg"
+        },
+        {
+          "filename": "斗兽场_018.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_018.jpg"
+        },
+        {
+          "filename": "斗兽场_019.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_019.jpg"
+        },
+        {
+          "filename": "斗兽场_020.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_020.jpg"
+        },
+        {
+          "filename": "斗兽场_021.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_021.jpg"
+        },
+        {
+          "filename": "斗兽场_022.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_022.jpg"
+        },
+        {
+          "filename": "斗兽场_023.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_023.jpg"
+        },
+        {
+          "filename": "斗兽场_024.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_024.jpg"
+        },
+        {
+          "filename": "斗兽场_025.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_025.jpg"
+        },
+        {
+          "filename": "斗兽场_026.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_026.jpg"
+        },
+        {
+          "filename": "斗兽场_027.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_027.jpg"
+        },
+        {
+          "filename": "斗兽场_028.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_028.jpg"
+        },
+        {
+          "filename": "斗兽场_029.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_029.jpg"
+        },
+        {
+          "filename": "斗兽场_030.jpg",
+          "url": "/static/maps/斗兽场/斗兽场_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "新皇后街",
+      "name": "新皇后街",
+      "nameEn": "新皇后街",
+      "type": "control",
+      "description": "新皇后街地图",
+      "screenshots": [
+        {
+          "filename": "新皇后街_001.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_001.jpg"
+        },
+        {
+          "filename": "新皇后街_002.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_002.jpg"
+        },
+        {
+          "filename": "新皇后街_003.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_003.jpg"
+        },
+        {
+          "filename": "新皇后街_004.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_004.jpg"
+        },
+        {
+          "filename": "新皇后街_005.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_005.jpg"
+        },
+        {
+          "filename": "新皇后街_006.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_006.jpg"
+        },
+        {
+          "filename": "新皇后街_007.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_007.jpg"
+        },
+        {
+          "filename": "新皇后街_008.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_008.jpg"
+        },
+        {
+          "filename": "新皇后街_009.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_009.jpg"
+        },
+        {
+          "filename": "新皇后街_010.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_010.jpg"
+        },
+        {
+          "filename": "新皇后街_011.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_011.jpg"
+        },
+        {
+          "filename": "新皇后街_012.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_012.jpg"
+        },
+        {
+          "filename": "新皇后街_013.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_013.jpg"
+        },
+        {
+          "filename": "新皇后街_014.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_014.jpg"
+        },
+        {
+          "filename": "新皇后街_015.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_015.jpg"
+        },
+        {
+          "filename": "新皇后街_016.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_016.jpg"
+        },
+        {
+          "filename": "新皇后街_017.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_017.jpg"
+        },
+        {
+          "filename": "新皇后街_018.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_018.jpg"
+        },
+        {
+          "filename": "新皇后街_019.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_019.jpg"
+        },
+        {
+          "filename": "新皇后街_020.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_020.jpg"
+        },
+        {
+          "filename": "新皇后街_021.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_021.jpg"
+        },
+        {
+          "filename": "新皇后街_022.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_022.jpg"
+        },
+        {
+          "filename": "新皇后街_023.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_023.jpg"
+        },
+        {
+          "filename": "新皇后街_024.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_024.jpg"
+        },
+        {
+          "filename": "新皇后街_025.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_025.jpg"
+        },
+        {
+          "filename": "新皇后街_026.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_026.jpg"
+        },
+        {
+          "filename": "新皇后街_027.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_027.jpg"
+        },
+        {
+          "filename": "新皇后街_028.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_028.jpg"
+        },
+        {
+          "filename": "新皇后街_029.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_029.jpg"
+        },
+        {
+          "filename": "新皇后街_030.jpg",
+          "url": "/static/maps/新皇后街/新皇后街_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "busan_cny",
+      "name": "春节釜山寺院",
+      "nameEn": "Busan CNY",
+      "type": "control",
+      "description": "韩国釜山的传统寺院",
+      "screenshots": [
+        {
+          "filename": "春节釜山寺院_001.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_001.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_002.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_002.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_003.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_003.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_004.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_004.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_005.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_005.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_006.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_006.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_007.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_007.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_008.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_008.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_009.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_009.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_010.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_010.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_011.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_011.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_012.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_012.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_013.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_013.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_014.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_014.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_015.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_015.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_016.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_016.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_017.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_017.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_018.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_018.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_019.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_019.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_020.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_020.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_021.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_021.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_022.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_022.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_023.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_023.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_024.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_024.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_025.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_025.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_026.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_026.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_027.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_027.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_028.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_028.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_029.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_029.jpg"
+        },
+        {
+          "filename": "春节釜山寺院_030.jpg",
+          "url": "/static/maps/春节釜山寺院/春节釜山寺院_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "blizzard_world",
+      "name": "暴雪世界",
+      "nameEn": "Blizzard World",
+      "type": "hybrid",
+      "description": "暴雪游戏主题乐园",
+      "screenshots": [
+        {
+          "filename": "暴雪世界_001.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_001.jpg"
+        },
+        {
+          "filename": "暴雪世界_002.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_002.jpg"
+        },
+        {
+          "filename": "暴雪世界_003.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_003.jpg"
+        },
+        {
+          "filename": "暴雪世界_004.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_004.jpg"
+        },
+        {
+          "filename": "暴雪世界_005.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_005.jpg"
+        },
+        {
+          "filename": "暴雪世界_006.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_006.jpg"
+        },
+        {
+          "filename": "暴雪世界_007.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_007.jpg"
+        },
+        {
+          "filename": "暴雪世界_008.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_008.jpg"
+        },
+        {
+          "filename": "暴雪世界_009.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_009.jpg"
+        },
+        {
+          "filename": "暴雪世界_010.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_010.jpg"
+        },
+        {
+          "filename": "暴雪世界_011.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_011.jpg"
+        },
+        {
+          "filename": "暴雪世界_012.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_012.jpg"
+        },
+        {
+          "filename": "暴雪世界_013.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_013.jpg"
+        },
+        {
+          "filename": "暴雪世界_014.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_014.jpg"
+        },
+        {
+          "filename": "暴雪世界_015.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_015.jpg"
+        },
+        {
+          "filename": "暴雪世界_016.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_016.jpg"
+        },
+        {
+          "filename": "暴雪世界_017.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_017.jpg"
+        },
+        {
+          "filename": "暴雪世界_018.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_018.jpg"
+        },
+        {
+          "filename": "暴雪世界_019.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_019.jpg"
+        },
+        {
+          "filename": "暴雪世界_020.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_020.jpg"
+        },
+        {
+          "filename": "暴雪世界_021.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_021.jpg"
+        },
+        {
+          "filename": "暴雪世界_022.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_022.jpg"
+        },
+        {
+          "filename": "暴雪世界_023.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_023.jpg"
+        },
+        {
+          "filename": "暴雪世界_024.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_024.jpg"
+        },
+        {
+          "filename": "暴雪世界_025.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_025.jpg"
+        },
+        {
+          "filename": "暴雪世界_026.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_026.jpg"
+        },
+        {
+          "filename": "暴雪世界_027.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_027.jpg"
+        },
+        {
+          "filename": "暴雪世界_028.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_028.jpg"
+        },
+        {
+          "filename": "暴雪世界_029.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_029.jpg"
+        },
+        {
+          "filename": "暴雪世界_030.jpg",
+          "url": "/static/maps/暴雪世界/暴雪世界_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "月球基地",
+      "name": "月球基地",
+      "nameEn": "月球基地",
+      "type": "control",
+      "description": "月球基地地图",
+      "screenshots": [
+        {
+          "filename": "月球基地_001.jpg",
+          "url": "/static/maps/月球基地/月球基地_001.jpg"
+        },
+        {
+          "filename": "月球基地_002.jpg",
+          "url": "/static/maps/月球基地/月球基地_002.jpg"
+        },
+        {
+          "filename": "月球基地_003.jpg",
+          "url": "/static/maps/月球基地/月球基地_003.jpg"
+        },
+        {
+          "filename": "月球基地_004.jpg",
+          "url": "/static/maps/月球基地/月球基地_004.jpg"
+        },
+        {
+          "filename": "月球基地_005.jpg",
+          "url": "/static/maps/月球基地/月球基地_005.jpg"
+        },
+        {
+          "filename": "月球基地_006.jpg",
+          "url": "/static/maps/月球基地/月球基地_006.jpg"
+        },
+        {
+          "filename": "月球基地_007.jpg",
+          "url": "/static/maps/月球基地/月球基地_007.jpg"
+        },
+        {
+          "filename": "月球基地_008.jpg",
+          "url": "/static/maps/月球基地/月球基地_008.jpg"
+        },
+        {
+          "filename": "月球基地_009.jpg",
+          "url": "/static/maps/月球基地/月球基地_009.jpg"
+        },
+        {
+          "filename": "月球基地_010.jpg",
+          "url": "/static/maps/月球基地/月球基地_010.jpg"
+        },
+        {
+          "filename": "月球基地_011.jpg",
+          "url": "/static/maps/月球基地/月球基地_011.jpg"
+        },
+        {
+          "filename": "月球基地_012.jpg",
+          "url": "/static/maps/月球基地/月球基地_012.jpg"
+        },
+        {
+          "filename": "月球基地_013.jpg",
+          "url": "/static/maps/月球基地/月球基地_013.jpg"
+        },
+        {
+          "filename": "月球基地_014.jpg",
+          "url": "/static/maps/月球基地/月球基地_014.jpg"
+        },
+        {
+          "filename": "月球基地_015.jpg",
+          "url": "/static/maps/月球基地/月球基地_015.jpg"
+        },
+        {
+          "filename": "月球基地_016.jpg",
+          "url": "/static/maps/月球基地/月球基地_016.jpg"
+        },
+        {
+          "filename": "月球基地_017.jpg",
+          "url": "/static/maps/月球基地/月球基地_017.jpg"
+        },
+        {
+          "filename": "月球基地_018.jpg",
+          "url": "/static/maps/月球基地/月球基地_018.jpg"
+        },
+        {
+          "filename": "月球基地_019.jpg",
+          "url": "/static/maps/月球基地/月球基地_019.jpg"
+        },
+        {
+          "filename": "月球基地_020.jpg",
+          "url": "/static/maps/月球基地/月球基地_020.jpg"
+        },
+        {
+          "filename": "月球基地_021.jpg",
+          "url": "/static/maps/月球基地/月球基地_021.jpg"
+        },
+        {
+          "filename": "月球基地_022.jpg",
+          "url": "/static/maps/月球基地/月球基地_022.jpg"
+        },
+        {
+          "filename": "月球基地_023.jpg",
+          "url": "/static/maps/月球基地/月球基地_023.jpg"
+        },
+        {
+          "filename": "月球基地_024.jpg",
+          "url": "/static/maps/月球基地/月球基地_024.jpg"
+        },
+        {
+          "filename": "月球基地_025.jpg",
+          "url": "/static/maps/月球基地/月球基地_025.jpg"
+        },
+        {
+          "filename": "月球基地_026.jpg",
+          "url": "/static/maps/月球基地/月球基地_026.jpg"
+        },
+        {
+          "filename": "月球基地_027.jpg",
+          "url": "/static/maps/月球基地/月球基地_027.jpg"
+        },
+        {
+          "filename": "月球基地_028.jpg",
+          "url": "/static/maps/月球基地/月球基地_028.jpg"
+        },
+        {
+          "filename": "月球基地_029.jpg",
+          "url": "/static/maps/月球基地/月球基地_029.jpg"
+        },
+        {
+          "filename": "月球基地_030.jpg",
+          "url": "/static/maps/月球基地/月球基地_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "沃斯卡娅工业区",
+      "name": "沃斯卡娅工业区",
+      "nameEn": "沃斯卡娅工业区",
+      "type": "control",
+      "description": "沃斯卡娅工业区地图",
+      "screenshots": [
+        {
+          "filename": "沃斯卡娅工业区_001.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_001.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_002.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_002.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_003.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_003.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_004.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_004.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_005.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_005.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_006.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_006.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_007.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_007.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_008.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_008.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_009.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_009.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_010.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_010.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_011.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_011.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_012.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_012.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_013.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_013.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_014.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_014.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_015.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_015.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_016.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_016.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_017.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_017.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_018.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_018.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_019.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_019.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_020.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_020.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_021.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_021.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_022.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_022.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_023.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_023.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_024.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_024.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_025.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_025.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_026.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_026.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_027.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_027.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_028.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_028.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_029.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_029.jpg"
+        },
+        {
+          "filename": "沃斯卡娅工业区_030.jpg",
+          "url": "/static/maps/沃斯卡娅工业区/沃斯卡娅工业区_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lijiang_tower",
+      "name": "漓江塔",
+      "nameEn": "Lijiang Tower",
+      "type": "control",
+      "description": "中国桂林的现代化高塔建筑",
+      "screenshots": [
+        {
+          "filename": "漓江塔_001.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_001.jpg"
+        },
+        {
+          "filename": "漓江塔_002.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_002.jpg"
+        },
+        {
+          "filename": "漓江塔_003.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_003.jpg"
+        },
+        {
+          "filename": "漓江塔_004.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_004.jpg"
+        },
+        {
+          "filename": "漓江塔_005.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_005.jpg"
+        },
+        {
+          "filename": "漓江塔_006.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_006.jpg"
+        },
+        {
+          "filename": "漓江塔_007.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_007.jpg"
+        },
+        {
+          "filename": "漓江塔_008.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_008.jpg"
+        },
+        {
+          "filename": "漓江塔_009.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_009.jpg"
+        },
+        {
+          "filename": "漓江塔_010.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_010.jpg"
+        },
+        {
+          "filename": "漓江塔_011.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_011.jpg"
+        },
+        {
+          "filename": "漓江塔_012.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_012.jpg"
+        },
+        {
+          "filename": "漓江塔_013.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_013.jpg"
+        },
+        {
+          "filename": "漓江塔_014.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_014.jpg"
+        },
+        {
+          "filename": "漓江塔_015.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_015.jpg"
+        },
+        {
+          "filename": "漓江塔_016.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_016.jpg"
+        },
+        {
+          "filename": "漓江塔_017.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_017.jpg"
+        },
+        {
+          "filename": "漓江塔_018.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_018.jpg"
+        },
+        {
+          "filename": "漓江塔_019.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_019.jpg"
+        },
+        {
+          "filename": "漓江塔_020.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_020.jpg"
+        },
+        {
+          "filename": "漓江塔_021.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_021.jpg"
+        },
+        {
+          "filename": "漓江塔_022.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_022.jpg"
+        },
+        {
+          "filename": "漓江塔_023.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_023.jpg"
+        },
+        {
+          "filename": "漓江塔_024.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_024.jpg"
+        },
+        {
+          "filename": "漓江塔_025.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_025.jpg"
+        },
+        {
+          "filename": "漓江塔_026.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_026.jpg"
+        },
+        {
+          "filename": "漓江塔_027.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_027.jpg"
+        },
+        {
+          "filename": "漓江塔_028.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_028.jpg"
+        },
+        {
+          "filename": "漓江塔_029.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_029.jpg"
+        },
+        {
+          "filename": "漓江塔_030.jpg",
+          "url": "/static/maps/漓江塔/漓江塔_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lijiang_night_market",
+      "name": "漓江塔夜市",
+      "nameEn": "Lijiang Night Market",
+      "type": "control",
+      "description": "漓江塔的繁华夜市街区",
+      "screenshots": [
+        {
+          "filename": "漓江塔夜市_001.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_001.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_002.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_002.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_003.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_003.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_004.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_004.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_005.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_005.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_006.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_006.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_007.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_007.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_008.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_008.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_009.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_009.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_010.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_010.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_011.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_011.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_012.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_012.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_013.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_013.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_014.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_014.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_015.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_015.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_016.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_016.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_017.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_017.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_018.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_018.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_019.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_019.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_020.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_020.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_021.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_021.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_022.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_022.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_023.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_023.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_024.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_024.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_025.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_025.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_026.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_026.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_027.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_027.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_028.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_028.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_029.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_029.jpg"
+        },
+        {
+          "filename": "漓江塔夜市_030.jpg",
+          "url": "/static/maps/漓江塔夜市/漓江塔夜市_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lijiang_garden",
+      "name": "漓江塔庭院",
+      "nameEn": "Lijiang Garden",
+      "type": "control",
+      "description": "漓江塔的传统庭院区域",
+      "screenshots": [
+        {
+          "filename": "漓江塔庭院_001.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_001.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_002.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_002.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_003.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_003.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_004.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_004.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_005.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_005.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_006.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_006.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_007.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_007.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_008.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_008.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_009.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_009.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_010.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_010.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_011.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_011.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_012.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_012.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_013.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_013.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_014.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_014.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_015.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_015.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_016.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_016.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_017.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_017.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_018.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_018.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_019.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_019.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_020.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_020.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_021.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_021.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_022.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_022.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_023.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_023.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_024.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_024.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_025.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_025.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_026.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_026.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_027.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_027.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_028.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_028.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_029.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_029.jpg"
+        },
+        {
+          "filename": "漓江塔庭院_030.jpg",
+          "url": "/static/maps/漓江塔庭院/漓江塔庭院_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "eco_point_antarctica",
+      "name": "生态监测站-南极洲",
+      "nameEn": "Eco Point: Antarctica",
+      "type": "assault",
+      "description": "南极洲的科研监测站",
+      "screenshots": [
+        {
+          "filename": "生态监测站-南极洲_001.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_001.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_002.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_002.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_003.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_003.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_004.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_004.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_005.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_005.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_006.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_006.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_007.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_007.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_008.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_008.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_009.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_009.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_010.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_010.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_011.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_011.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_012.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_012.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_013.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_013.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_014.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_014.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_015.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_015.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_016.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_016.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_017.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_017.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_018.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_018.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_019.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_019.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_020.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_020.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_021.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_021.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_022.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_022.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_023.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_023.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_024.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_024.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_025.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_025.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_026.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_026.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_027.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_027.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_028.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_028.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_029.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_029.jpg"
+        },
+        {
+          "filename": "生态监测站-南极洲_030.jpg",
+          "url": "/static/maps/生态监测站-南极洲/生态监测站-南极洲_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "绿洲城中心",
+      "name": "绿洲城中心",
+      "nameEn": "绿洲城中心",
+      "type": "control",
+      "description": "绿洲城中心地图",
+      "screenshots": [
+        {
+          "filename": "绿洲城中心_001.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_001.jpg"
+        },
+        {
+          "filename": "绿洲城中心_002.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_002.jpg"
+        },
+        {
+          "filename": "绿洲城中心_003.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_003.jpg"
+        },
+        {
+          "filename": "绿洲城中心_004.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_004.jpg"
+        },
+        {
+          "filename": "绿洲城中心_005.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_005.jpg"
+        },
+        {
+          "filename": "绿洲城中心_006.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_006.jpg"
+        },
+        {
+          "filename": "绿洲城中心_007.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_007.jpg"
+        },
+        {
+          "filename": "绿洲城中心_008.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_008.jpg"
+        },
+        {
+          "filename": "绿洲城中心_009.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_009.jpg"
+        },
+        {
+          "filename": "绿洲城中心_010.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_010.jpg"
+        },
+        {
+          "filename": "绿洲城中心_011.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_011.jpg"
+        },
+        {
+          "filename": "绿洲城中心_012.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_012.jpg"
+        },
+        {
+          "filename": "绿洲城中心_013.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_013.jpg"
+        },
+        {
+          "filename": "绿洲城中心_014.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_014.jpg"
+        },
+        {
+          "filename": "绿洲城中心_015.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_015.jpg"
+        },
+        {
+          "filename": "绿洲城中心_016.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_016.jpg"
+        },
+        {
+          "filename": "绿洲城中心_017.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_017.jpg"
+        },
+        {
+          "filename": "绿洲城中心_018.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_018.jpg"
+        },
+        {
+          "filename": "绿洲城中心_019.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_019.jpg"
+        },
+        {
+          "filename": "绿洲城中心_020.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_020.jpg"
+        },
+        {
+          "filename": "绿洲城中心_021.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_021.jpg"
+        },
+        {
+          "filename": "绿洲城中心_022.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_022.jpg"
+        },
+        {
+          "filename": "绿洲城中心_023.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_023.jpg"
+        },
+        {
+          "filename": "绿洲城中心_024.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_024.jpg"
+        },
+        {
+          "filename": "绿洲城中心_025.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_025.jpg"
+        },
+        {
+          "filename": "绿洲城中心_026.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_026.jpg"
+        },
+        {
+          "filename": "绿洲城中心_027.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_027.jpg"
+        },
+        {
+          "filename": "绿洲城中心_028.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_028.jpg"
+        },
+        {
+          "filename": "绿洲城中心_029.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_029.jpg"
+        },
+        {
+          "filename": "绿洲城中心_030.jpg",
+          "url": "/static/maps/绿洲城中心/绿洲城中心_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "绿洲城大学",
+      "name": "绿洲城大学",
+      "nameEn": "绿洲城大学",
+      "type": "control",
+      "description": "绿洲城大学地图",
+      "screenshots": [
+        {
+          "filename": "绿洲城大学_001.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_001.jpg"
+        },
+        {
+          "filename": "绿洲城大学_002.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_002.jpg"
+        },
+        {
+          "filename": "绿洲城大学_003.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_003.jpg"
+        },
+        {
+          "filename": "绿洲城大学_004.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_004.jpg"
+        },
+        {
+          "filename": "绿洲城大学_005.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_005.jpg"
+        },
+        {
+          "filename": "绿洲城大学_006.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_006.jpg"
+        },
+        {
+          "filename": "绿洲城大学_007.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_007.jpg"
+        },
+        {
+          "filename": "绿洲城大学_008.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_008.jpg"
+        },
+        {
+          "filename": "绿洲城大学_009.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_009.jpg"
+        },
+        {
+          "filename": "绿洲城大学_010.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_010.jpg"
+        },
+        {
+          "filename": "绿洲城大学_011.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_011.jpg"
+        },
+        {
+          "filename": "绿洲城大学_012.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_012.jpg"
+        },
+        {
+          "filename": "绿洲城大学_013.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_013.jpg"
+        },
+        {
+          "filename": "绿洲城大学_014.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_014.jpg"
+        },
+        {
+          "filename": "绿洲城大学_015.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_015.jpg"
+        },
+        {
+          "filename": "绿洲城大学_016.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_016.jpg"
+        },
+        {
+          "filename": "绿洲城大学_017.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_017.jpg"
+        },
+        {
+          "filename": "绿洲城大学_018.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_018.jpg"
+        },
+        {
+          "filename": "绿洲城大学_019.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_019.jpg"
+        },
+        {
+          "filename": "绿洲城大学_020.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_020.jpg"
+        },
+        {
+          "filename": "绿洲城大学_021.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_021.jpg"
+        },
+        {
+          "filename": "绿洲城大学_022.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_022.jpg"
+        },
+        {
+          "filename": "绿洲城大学_023.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_023.jpg"
+        },
+        {
+          "filename": "绿洲城大学_024.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_024.jpg"
+        },
+        {
+          "filename": "绿洲城大学_025.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_025.jpg"
+        },
+        {
+          "filename": "绿洲城大学_026.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_026.jpg"
+        },
+        {
+          "filename": "绿洲城大学_027.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_027.jpg"
+        },
+        {
+          "filename": "绿洲城大学_028.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_028.jpg"
+        },
+        {
+          "filename": "绿洲城大学_029.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_029.jpg"
+        },
+        {
+          "filename": "绿洲城大学_030.jpg",
+          "url": "/static/maps/绿洲城大学/绿洲城大学_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "绿洲城花园",
+      "name": "绿洲城花园",
+      "nameEn": "绿洲城花园",
+      "type": "control",
+      "description": "绿洲城花园地图",
+      "screenshots": [
+        {
+          "filename": "绿洲城花园_001.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_001.jpg"
+        },
+        {
+          "filename": "绿洲城花园_002.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_002.jpg"
+        },
+        {
+          "filename": "绿洲城花园_003.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_003.jpg"
+        },
+        {
+          "filename": "绿洲城花园_004.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_004.jpg"
+        },
+        {
+          "filename": "绿洲城花园_005.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_005.jpg"
+        },
+        {
+          "filename": "绿洲城花园_006.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_006.jpg"
+        },
+        {
+          "filename": "绿洲城花园_007.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_007.jpg"
+        },
+        {
+          "filename": "绿洲城花园_008.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_008.jpg"
+        },
+        {
+          "filename": "绿洲城花园_009.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_009.jpg"
+        },
+        {
+          "filename": "绿洲城花园_010.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_010.jpg"
+        },
+        {
+          "filename": "绿洲城花园_011.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_011.jpg"
+        },
+        {
+          "filename": "绿洲城花园_012.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_012.jpg"
+        },
+        {
+          "filename": "绿洲城花园_013.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_013.jpg"
+        },
+        {
+          "filename": "绿洲城花园_014.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_014.jpg"
+        },
+        {
+          "filename": "绿洲城花园_015.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_015.jpg"
+        },
+        {
+          "filename": "绿洲城花园_016.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_016.jpg"
+        },
+        {
+          "filename": "绿洲城花园_017.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_017.jpg"
+        },
+        {
+          "filename": "绿洲城花园_018.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_018.jpg"
+        },
+        {
+          "filename": "绿洲城花园_019.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_019.jpg"
+        },
+        {
+          "filename": "绿洲城花园_020.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_020.jpg"
+        },
+        {
+          "filename": "绿洲城花园_021.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_021.jpg"
+        },
+        {
+          "filename": "绿洲城花园_022.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_022.jpg"
+        },
+        {
+          "filename": "绿洲城花园_023.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_023.jpg"
+        },
+        {
+          "filename": "绿洲城花园_024.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_024.jpg"
+        },
+        {
+          "filename": "绿洲城花园_025.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_025.jpg"
+        },
+        {
+          "filename": "绿洲城花园_026.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_026.jpg"
+        },
+        {
+          "filename": "绿洲城花园_027.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_027.jpg"
+        },
+        {
+          "filename": "绿洲城花园_028.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_028.jpg"
+        },
+        {
+          "filename": "绿洲城花园_029.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_029.jpg"
+        },
+        {
+          "filename": "绿洲城花园_030.jpg",
+          "url": "/static/maps/绿洲城花园/绿洲城花园_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "eichenwalde",
+      "name": "艾兴瓦尔德",
+      "nameEn": "Eichenwalde",
+      "type": "hybrid",
+      "description": "德国中世纪城堡要塞",
+      "screenshots": [
+        {
+          "filename": "艾兴瓦尔德_001.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_001.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_002.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_002.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_003.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_003.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_004.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_004.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_005.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_005.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_006.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_006.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_007.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_007.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_008.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_008.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_009.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_009.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_010.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_010.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_011.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_011.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_012.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_012.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_013.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_013.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_014.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_014.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_015.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_015.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_016.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_016.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_017.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_017.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_018.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_018.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_019.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_019.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_020.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_020.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_021.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_021.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_022.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_022.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_023.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_023.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_024.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_024.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_025.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_025.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_026.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_026.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_027.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_027.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_028.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_028.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_029.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_029.jpg"
+        },
+        {
+          "filename": "艾兴瓦尔德_030.jpg",
+          "url": "/static/maps/艾兴瓦尔德/艾兴瓦尔德_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "萨摩亚",
+      "name": "萨摩亚",
+      "nameEn": "萨摩亚",
+      "type": "control",
+      "description": "萨摩亚地图",
+      "screenshots": [
+        {
+          "filename": "萨摩亚_001.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_001.jpg"
+        },
+        {
+          "filename": "萨摩亚_002.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_002.jpg"
+        },
+        {
+          "filename": "萨摩亚_003.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_003.jpg"
+        },
+        {
+          "filename": "萨摩亚_004.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_004.jpg"
+        },
+        {
+          "filename": "萨摩亚_005.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_005.jpg"
+        },
+        {
+          "filename": "萨摩亚_006.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_006.jpg"
+        },
+        {
+          "filename": "萨摩亚_007.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_007.jpg"
+        },
+        {
+          "filename": "萨摩亚_008.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_008.jpg"
+        },
+        {
+          "filename": "萨摩亚_009.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_009.jpg"
+        },
+        {
+          "filename": "萨摩亚_010.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_010.jpg"
+        },
+        {
+          "filename": "萨摩亚_011.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_011.jpg"
+        },
+        {
+          "filename": "萨摩亚_012.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_012.jpg"
+        },
+        {
+          "filename": "萨摩亚_013.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_013.jpg"
+        },
+        {
+          "filename": "萨摩亚_014.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_014.jpg"
+        },
+        {
+          "filename": "萨摩亚_015.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_015.jpg"
+        },
+        {
+          "filename": "萨摩亚_016.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_016.jpg"
+        },
+        {
+          "filename": "萨摩亚_017.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_017.jpg"
+        },
+        {
+          "filename": "萨摩亚_018.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_018.jpg"
+        },
+        {
+          "filename": "萨摩亚_019.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_019.jpg"
+        },
+        {
+          "filename": "萨摩亚_020.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_020.jpg"
+        },
+        {
+          "filename": "萨摩亚_021.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_021.jpg"
+        },
+        {
+          "filename": "萨摩亚_022.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_022.jpg"
+        },
+        {
+          "filename": "萨摩亚_023.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_023.jpg"
+        },
+        {
+          "filename": "萨摩亚_024.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_024.jpg"
+        },
+        {
+          "filename": "萨摩亚_025.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_025.jpg"
+        },
+        {
+          "filename": "萨摩亚_026.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_026.jpg"
+        },
+        {
+          "filename": "萨摩亚_027.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_027.jpg"
+        },
+        {
+          "filename": "萨摩亚_028.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_028.jpg"
+        },
+        {
+          "filename": "萨摩亚_029.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_029.jpg"
+        },
+        {
+          "filename": "萨摩亚_030.jpg",
+          "url": "/static/maps/萨摩亚/萨摩亚_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "anubis_throne",
+      "name": "阿努比斯王座",
+      "nameEn": "Anubis Throne",
+      "type": "assault",
+      "description": "阿努比斯神殿的王座大厅",
+      "screenshots": [
+        {
+          "filename": "阿努比斯王座_001.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_001.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_002.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_002.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_003.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_003.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_004.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_004.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_005.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_005.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_006.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_006.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_007.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_007.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_008.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_008.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_009.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_009.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_010.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_010.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_011.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_011.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_012.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_012.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_013.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_013.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_014.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_014.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_015.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_015.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_016.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_016.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_017.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_017.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_018.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_018.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_019.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_019.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_020.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_020.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_021.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_021.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_022.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_022.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_023.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_023.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_024.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_024.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_025.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_025.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_026.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_026.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_027.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_027.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_028.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_028.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_029.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_029.jpg"
+        },
+        {
+          "filename": "阿努比斯王座_030.jpg",
+          "url": "/static/maps/阿努比斯王座/阿努比斯王座_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "temple_of_anubis",
+      "name": "阿努比斯神殿",
+      "nameEn": "Temple of Anubis",
+      "type": "assault",
+      "description": "埃及风格的古代神殿",
+      "screenshots": [
+        {
+          "filename": "阿努比斯神殿_001.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_001.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_002.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_002.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_003.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_003.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_004.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_004.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_005.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_005.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_006.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_006.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_007.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_007.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_008.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_008.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_009.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_009.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_010.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_010.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_011.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_011.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_012.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_012.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_013.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_013.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_014.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_014.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_015.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_015.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_016.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_016.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_017.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_017.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_018.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_018.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_019.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_019.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_020.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_020.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_021.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_021.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_022.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_022.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_023.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_023.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_024.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_024.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_025.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_025.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_026.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_026.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_027.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_027.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_028.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_028.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_029.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_029.jpg"
+        },
+        {
+          "filename": "阿努比斯神殿_030.jpg",
+          "url": "/static/maps/阿努比斯神殿/阿努比斯神殿_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ayutthaya",
+      "name": "阿育陀耶",
+      "nameEn": "Ayutthaya",
+      "type": "control",
+      "description": "泰国古都的寺庙建筑群",
+      "screenshots": [
+        {
+          "filename": "阿育陀耶_001.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_001.jpg"
+        },
+        {
+          "filename": "阿育陀耶_002.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_002.jpg"
+        },
+        {
+          "filename": "阿育陀耶_003.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_003.jpg"
+        },
+        {
+          "filename": "阿育陀耶_004.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_004.jpg"
+        },
+        {
+          "filename": "阿育陀耶_005.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_005.jpg"
+        },
+        {
+          "filename": "阿育陀耶_006.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_006.jpg"
+        },
+        {
+          "filename": "阿育陀耶_007.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_007.jpg"
+        },
+        {
+          "filename": "阿育陀耶_008.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_008.jpg"
+        },
+        {
+          "filename": "阿育陀耶_009.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_009.jpg"
+        },
+        {
+          "filename": "阿育陀耶_010.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_010.jpg"
+        },
+        {
+          "filename": "阿育陀耶_011.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_011.jpg"
+        },
+        {
+          "filename": "阿育陀耶_012.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_012.jpg"
+        },
+        {
+          "filename": "阿育陀耶_013.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_013.jpg"
+        },
+        {
+          "filename": "阿育陀耶_014.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_014.jpg"
+        },
+        {
+          "filename": "阿育陀耶_015.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_015.jpg"
+        },
+        {
+          "filename": "阿育陀耶_016.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_016.jpg"
+        },
+        {
+          "filename": "阿育陀耶_017.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_017.jpg"
+        },
+        {
+          "filename": "阿育陀耶_018.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_018.jpg"
+        },
+        {
+          "filename": "阿育陀耶_019.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_019.jpg"
+        },
+        {
+          "filename": "阿育陀耶_020.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_020.jpg"
+        },
+        {
+          "filename": "阿育陀耶_021.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_021.jpg"
+        },
+        {
+          "filename": "阿育陀耶_022.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_022.jpg"
+        },
+        {
+          "filename": "阿育陀耶_023.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_023.jpg"
+        },
+        {
+          "filename": "阿育陀耶_024.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_024.jpg"
+        },
+        {
+          "filename": "阿育陀耶_025.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_025.jpg"
+        },
+        {
+          "filename": "阿育陀耶_026.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_026.jpg"
+        },
+        {
+          "filename": "阿育陀耶_027.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_027.jpg"
+        },
+        {
+          "filename": "阿育陀耶_028.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_028.jpg"
+        },
+        {
+          "filename": "阿育陀耶_029.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_029.jpg"
+        },
+        {
+          "filename": "阿育陀耶_030.jpg",
+          "url": "/static/maps/阿育陀耶/阿育陀耶_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "鲁纳塞彼",
+      "name": "鲁纳塞彼",
+      "nameEn": "鲁纳塞彼",
+      "type": "control",
+      "description": "鲁纳塞彼地图",
+      "screenshots": [
+        {
+          "filename": "鲁纳塞彼_001.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_001.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_002.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_002.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_003.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_003.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_004.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_004.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_005.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_005.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_006.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_006.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_007.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_007.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_008.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_008.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_009.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_009.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_010.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_010.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_011.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_011.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_012.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_012.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_013.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_013.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_014.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_014.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_015.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_015.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_016.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_016.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_017.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_017.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_018.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_018.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_019.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_019.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_020.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_020.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_021.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_021.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_022.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_022.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_023.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_023.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_024.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_024.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_025.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_025.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_026.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_026.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_027.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_027.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_028.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_028.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_029.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_029.jpg"
+        },
+        {
+          "filename": "鲁纳塞彼_030.jpg",
+          "url": "/static/maps/鲁纳塞彼/鲁纳塞彼_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": "black_forest",
+      "name": "黑森林",
+      "nameEn": "Black Forest",
+      "type": "escort",
+      "description": "德国黑森林地区的神秘森林",
+      "screenshots": [
+        {
+          "filename": "黑森林_001.jpg",
+          "url": "/static/maps/黑森林/黑森林_001.jpg"
+        },
+        {
+          "filename": "黑森林_002.jpg",
+          "url": "/static/maps/黑森林/黑森林_002.jpg"
+        },
+        {
+          "filename": "黑森林_003.jpg",
+          "url": "/static/maps/黑森林/黑森林_003.jpg"
+        },
+        {
+          "filename": "黑森林_004.jpg",
+          "url": "/static/maps/黑森林/黑森林_004.jpg"
+        },
+        {
+          "filename": "黑森林_005.jpg",
+          "url": "/static/maps/黑森林/黑森林_005.jpg"
+        },
+        {
+          "filename": "黑森林_006.jpg",
+          "url": "/static/maps/黑森林/黑森林_006.jpg"
+        },
+        {
+          "filename": "黑森林_007.jpg",
+          "url": "/static/maps/黑森林/黑森林_007.jpg"
+        },
+        {
+          "filename": "黑森林_008.jpg",
+          "url": "/static/maps/黑森林/黑森林_008.jpg"
+        },
+        {
+          "filename": "黑森林_009.jpg",
+          "url": "/static/maps/黑森林/黑森林_009.jpg"
+        },
+        {
+          "filename": "黑森林_010.jpg",
+          "url": "/static/maps/黑森林/黑森林_010.jpg"
+        },
+        {
+          "filename": "黑森林_011.jpg",
+          "url": "/static/maps/黑森林/黑森林_011.jpg"
+        },
+        {
+          "filename": "黑森林_012.jpg",
+          "url": "/static/maps/黑森林/黑森林_012.jpg"
+        },
+        {
+          "filename": "黑森林_013.jpg",
+          "url": "/static/maps/黑森林/黑森林_013.jpg"
+        },
+        {
+          "filename": "黑森林_014.jpg",
+          "url": "/static/maps/黑森林/黑森林_014.jpg"
+        },
+        {
+          "filename": "黑森林_015.jpg",
+          "url": "/static/maps/黑森林/黑森林_015.jpg"
+        },
+        {
+          "filename": "黑森林_016.jpg",
+          "url": "/static/maps/黑森林/黑森林_016.jpg"
+        },
+        {
+          "filename": "黑森林_017.jpg",
+          "url": "/static/maps/黑森林/黑森林_017.jpg"
+        },
+        {
+          "filename": "黑森林_018.jpg",
+          "url": "/static/maps/黑森林/黑森林_018.jpg"
+        },
+        {
+          "filename": "黑森林_019.jpg",
+          "url": "/static/maps/黑森林/黑森林_019.jpg"
+        },
+        {
+          "filename": "黑森林_020.jpg",
+          "url": "/static/maps/黑森林/黑森林_020.jpg"
+        },
+        {
+          "filename": "黑森林_021.jpg",
+          "url": "/static/maps/黑森林/黑森林_021.jpg"
+        },
+        {
+          "filename": "黑森林_022.jpg",
+          "url": "/static/maps/黑森林/黑森林_022.jpg"
+        },
+        {
+          "filename": "黑森林_023.jpg",
+          "url": "/static/maps/黑森林/黑森林_023.jpg"
+        },
+        {
+          "filename": "黑森林_024.jpg",
+          "url": "/static/maps/黑森林/黑森林_024.jpg"
+        },
+        {
+          "filename": "黑森林_025.jpg",
+          "url": "/static/maps/黑森林/黑森林_025.jpg"
+        },
+        {
+          "filename": "黑森林_026.jpg",
+          "url": "/static/maps/黑森林/黑森林_026.jpg"
+        },
+        {
+          "filename": "黑森林_027.jpg",
+          "url": "/static/maps/黑森林/黑森林_027.jpg"
+        },
+        {
+          "filename": "黑森林_028.jpg",
+          "url": "/static/maps/黑森林/黑森林_028.jpg"
+        },
+        {
+          "filename": "黑森林_029.jpg",
+          "url": "/static/maps/黑森林/黑森林_029.jpg"
+        },
+        {
+          "filename": "黑森林_030.jpg",
+          "url": "/static/maps/黑森林/黑森林_030.jpg"
+        }
+      ]
+    }
+  ]
+}
