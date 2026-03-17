@@ -2228,19 +2228,6 @@ html, body {
   }
 }
 
-/* ========== 文本模糊效果 ========== */
-.answer-text .blurred-text {
-  filter: blur(3px) !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4) !important;
-  transition: all 0.3s ease !important;
-  user-select: none !important;
-  pointer-events: none !important;
-  display: inline !important;
-  transform: none !important; /* 重置父元素的skew变换 */
-  font-style: normal !important; /* 重置斜体 */
-}
-
 /* ========== 音效面板样式 ========== */
 .audio-panel-overlay {
   position: fixed;
