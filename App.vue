@@ -236,8 +236,8 @@
           v-if="gameState.currentQuestion" 
           class="image-card-wrapper current-card"
           :class="{
-            'answer-correct': showAnswerFeedback && lastAnswerCorrect,
-            'answer-wrong': showAnswerFeedback && !lastAnswerCorrect,
+            'answer-correct': showAnswerFeedback && feedbackData?.isCorrect,
+            'answer-wrong': showAnswerFeedback && feedbackData && !feedbackData.isCorrect,
             'idle': !isAnswering && !showAnswerFeedback
           }"
           :enable-tilt="true"
@@ -252,17 +252,17 @@
               <img :src="gameState.currentQuestion.screenshot.url" alt="地图截图" class="map-image" />
               
               <!-- 答案反馈覆盖层 -->
-              <div v-if="showAnswerFeedback" class="answer-feedback-overlay">
+              <div v-if="showAnswerFeedback && feedbackData" class="answer-feedback-overlay">
                 <div class="feedback-icon">
-                  <span v-if="lastAnswerCorrect" class="correct-icon">✓</span>
+                  <span v-if="feedbackData.isCorrect" class="correct-icon">✓</span>
                   <span v-else class="wrong-icon">✗</span>
                 </div>
                 <div class="feedback-text">
-                  <span v-if="lastAnswerCorrect" class="correct-text">正确！</span>
+                  <span v-if="feedbackData.isCorrect" class="correct-text">正确！</span>
                   <span v-else class="wrong-text">错误</span>
                 </div>
-                <div v-if="!lastAnswerCorrect" class="correct-answer-text">
-                  正确答案：{{ gameState.currentQuestion.correctAnswer }}
+                <div v-if="!feedbackData.isCorrect" class="correct-answer-text">
+                  正确答案：{{ feedbackData.correctAnswer }}
                 </div>
               </div>
             </div>
@@ -276,14 +276,14 @@
         <div class="answer-grid">
           <button 
             v-for="(option, index) in gameState.currentQuestion.allOptions" 
-            :key="`${gameState.totalAnswered}-${renderKey.value}-${index}-${option}`"
+            :key="`${gameState.totalAnswered}-${index}-${option}`"
             @click="handleAnswer(option)"
             class="answer-btn"
             :class="{
               ['answer-' + (index + 1)]: true,
-              'selected': selectedAnswer === option,
-              'correct-selected': selectedAnswer === option && lastAnswerCorrect,
-              'wrong-selected': selectedAnswer === option && !lastAnswerCorrect
+              'selected': feedbackData && feedbackData.selectedOption === option,
+              'correct-selected': feedbackData && feedbackData.selectedOption === option && feedbackData.isCorrect,
+              'wrong-selected': feedbackData && feedbackData.selectedOption === option && !feedbackData.isCorrect
             }"
             :disabled="isAnswering"
           >
@@ -440,12 +440,14 @@ const {
   stopMusic
 } = useAudio()
 
-// 动画状态管理
+// 答题状态管理 - 简化版本
 const isAnswering = ref(false)
 const showAnswerFeedback = ref(false)
-const lastAnswerCorrect = ref(false)
-const selectedAnswer = ref<string | null>(null)
-const renderKey = ref(0) // 添加渲染key来强制重新渲染
+const feedbackData = ref<{
+  isCorrect: boolean
+  selectedOption: string
+  correctAnswer: string
+} | null>(null)
 
 // 音效面板控制
 const showAudioPanel = ref(false)
@@ -557,45 +559,54 @@ const backToModeSelect = () => {
 }
 
 const handleAnswer = async (answer: string) => {
+  // 防止重复点击
   if (isAnswering.value || !gameState.currentQuestion) return
   
-  // 设置当前选中的答案
-  selectedAnswer.value = answer
+  // 开始答题流程
+  isAnswering.value = true
   
   // 判断答案是否正确
   const isCorrect = answer === gameState.currentQuestion.correctAnswer
-  lastAnswerCorrect.value = isCorrect
+  
+  // 设置反馈数据
+  feedbackData.value = {
+    isCorrect,
+    selectedOption: answer,
+    correctAnswer: gameState.currentQuestion.correctAnswer
+  }
   
   // 播放音效
   playButtonClick()
   
-  // 开始答题动画
-  isAnswering.value = true
-  
-  // 显示答案反馈覆盖层
+  // 显示反馈
   showAnswerFeedback.value = true
   
-  // 等待反馈显示
+  // 等待反馈显示时间
   await new Promise(resolve => setTimeout(resolve, 1000))
   
-  // 隐藏反馈覆盖层
+  // 清除所有状态
   showAnswerFeedback.value = false
-  
-  // 提交答案
-  answerQuestion(answer)
-  
-  // 使用nextTick确保DOM更新完成后再重置状态
-  await nextTick()
-  
-  // 重置所有状态并强制重新渲染
-  selectedAnswer.value = null
+  feedbackData.value = null
   isAnswering.value = false
-  showAnswerFeedback.value = false
-  lastAnswerCorrect.value = false
-  renderKey.value++
   
-  // 再次使用nextTick确保移动端也能正确更新
-  await nextTick()
+  // 移动端特殊处理：强制清除按钮的hover/active状态
+  if ('ontouchstart' in window) {
+    // 触发一个虚拟的touchend事件来清除移动端的粘滞状态
+    const buttons = document.querySelectorAll('.answer-btn')
+    buttons.forEach(btn => {
+      btn.blur() // 移除焦点
+      // 强制重置样式
+      const element = btn as HTMLElement
+      element.style.transform = ''
+      element.style.background = ''
+      element.style.borderColor = ''
+      element.style.color = ''
+      element.style.boxShadow = ''
+    })
+  }
+  
+  // 提交答案到游戏状态
+  answerQuestion(answer)
 }
 
 const handleRestart = () => {
@@ -1839,6 +1850,21 @@ html, body {
     0 4px 15px rgba(181, 250, 35, 0.6),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   animation: owGreenGlow 2s ease-in-out infinite;
+}
+
+/* 移动端禁用hover效果，避免状态粘滞 */
+@media (hover: none) and (pointer: coarse) {
+  .answer-btn:hover {
+    background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    transform: translateY(0);
+    box-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.3), 
+      0 0 6px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: none;
+  }
 }
 
 .answer-btn:active {
