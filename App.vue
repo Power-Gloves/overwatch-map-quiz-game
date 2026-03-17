@@ -288,7 +288,16 @@
             :disabled="isAnswering"
           >
             <span class="answer-letter">{{ String.fromCharCode(65 + index) }}</span>
-            <span class="answer-text">{{ option }}</span>
+            <span class="answer-text">
+              <template v-if="getDisplayText(option, gameState.mode).hasBlur">
+                {{ getDisplayText(option, gameState.mode).beforeText }}<span 
+                  style="filter: blur(4px); text-shadow: 0 0 8px currentColor;"
+                >{{ getDisplayText(option, gameState.mode).blurText }}</span>{{ getDisplayText(option, gameState.mode).afterText }}
+              </template>
+              <template v-else>
+                {{ getDisplayText(option, gameState.mode).text }}
+              </template>
+            </span>
           </button>
         </div>
       </div>
@@ -443,6 +452,33 @@ const showAudioPanel = ref(false)
 const toggleAudioPanel = () => {
   showAudioPanel.value = !showAudioPanel.value
   playButtonClick()
+}
+
+// 简化的文本显示方法 - 返回带模糊标记的对象
+const getDisplayText = (text: string, gameMode: GameMode) => {
+  // 只在挑战模式中模糊文字
+  if (gameMode !== 'challenge' && gameMode !== GameMode.CHALLENGE) {
+    return { text, hasBlur: false }
+  }
+  
+  const length = text.length
+  if (length <= 2) return { text, hasBlur: false } // 太短不模糊
+  
+  // 根据长度决定模糊几个字
+  let hideCount = 1
+  if (length >= 6) hideCount = Math.floor(length / 2) - 1
+  else if (length >= 4) hideCount = 2
+  
+  // 保留首尾，中间模糊
+  const start = Math.floor((length - hideCount) / 2)
+  const end = start + hideCount
+  
+  return {
+    beforeText: text.substring(0, start),
+    blurText: text.substring(start, end),
+    afterText: text.substring(end),
+    hasBlur: true
+  }
 }
 
 const modeItems = computed(() => [
@@ -1687,18 +1723,22 @@ html, body {
   }
 }
 
-/* ========== 分离的答案区域 - 守望先锋风格 ========== */
+/* ========== 分离的答案区域 - 守望先锋绿色主题 ========== */
 .separated-answers {
   width: 100%;
   max-width: clamp(200px, 40vw, 280px);
-  background: linear-gradient(135deg, #464F6A 0%, #2B3753 100%);
+  background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
   border-radius: 4px;
   padding: clamp(12px, 2vh, 16px);
   backdrop-filter: blur(20px);
-  border: 2px solid rgba(59, 156, 225, 0.3);
+  /* 守望先锋经典绿色边框 */
+  border: 2px solid rgba(181, 250, 35, 0.8);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    /* 绿色外发光效果 */
+    0 0 0 1px rgba(181, 250, 35, 0.4),
+    0 0 20px rgba(181, 250, 35, 0.3);
   flex-shrink: 0;
   margin-top: clamp(35px, 7vh, 60px);
   position: relative;
@@ -1711,9 +1751,21 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #01FFFF 0%, #3B9CE1 50%, #01FFFF 100%);
+  height: 3px;
+  background: linear-gradient(90deg, #B5FA23 0%, #32CD32 50%, #B5FA23 100%);
   animation: topGlow 3s ease-in-out infinite;
+}
+
+/* 左侧绿色装饰条 */
+.separated-answers::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, #B5FA23 30%, #32CD32 70%, transparent 100%);
+  opacity: 0.9;
 }
 
 @keyframes topGlow {
@@ -1722,7 +1774,7 @@ html, body {
 }
 
 .question-text {
-  font-size: clamp(14px, 3vw, 18px);
+  font-size: clamp(16px, 3.5vw, 20px);
   font-weight: 600;
   text-align: center;
   margin-bottom: clamp(12px, 2vh, 16px);
@@ -1743,33 +1795,48 @@ html, body {
   align-items: center;
   gap: clamp(6px, 1vh, 10px);
   padding: clamp(12px, 2vh, 16px) clamp(10px, 2vw, 14px);
-  background: linear-gradient(135deg, #565F76 0%, #464F6A 100%);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  /* 守望先锋黑色背景 */
+  background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
+  /* 守望先锋白色边框 */
+  border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 4px;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: clamp(12px, 2.5vw, 16px);
-  min-height: clamp(48px, 8vh, 64px);
+  /* 稍微调大按钮整体字体找到平衡点 */
+  font-size: clamp(14.5px, 3vw, 18px) !important;
+  min-height: clamp(47px, 7.8vh, 62px);
   position: relative;
   overflow: hidden;
   transform: translateY(0);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  /* 守望先锋按钮阴影 */
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3), 
+    0 0 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .answer-btn:hover {
-  background: linear-gradient(135deg, #3B9CE1 0%, #01FFFF 100%);
-  border-color: rgba(255, 255, 255, 0.8);
+  /* 守望先锋绿色悬浮效果 */
+  background: linear-gradient(135deg, #B5FA23 0%, #32CD32 100%);
+  border-color: rgba(255, 255, 255, 1);
+  color: #000000;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.8);
-  animation: border-breathe 2s ease-in-out infinite;
+  box-shadow: 
+    0px 0px 2px 3px rgba(181, 250, 35, 0.8),
+    0 4px 15px rgba(181, 250, 35, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  animation: owGreenGlow 2s ease-in-out infinite;
 }
 
 .answer-btn:active {
   transform: translateY(0) scale(0.95);
-  box-shadow: 0 2px 10px rgba(59, 156, 225, 0.4);
-  animation: buttonClick 0.2s ease;
+  box-shadow: 
+    0 2px 10px rgba(181, 250, 35, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: owButtonPress 0.2s ease;
 }
 
 .answer-btn:disabled {
@@ -1778,25 +1845,37 @@ html, body {
   transform: none;
 }
 
-/* 选中状态样式 - 守望先锋风格 */
+/* 选中状态样式 - 守望先锋绿色风格 */
 .answer-btn.selected {
-  background: linear-gradient(135deg, #3B9CE1 0%, #01FFFF 100%);
+  background: linear-gradient(135deg, #B5FA23 0%, #32CD32 100%);
   border-color: rgba(255, 255, 255, 1);
+  color: #000000;
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 1);
+  box-shadow: 
+    0px 0px 2px 3px rgba(181, 250, 35, 1),
+    0 4px 15px rgba(181, 250, 35, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .answer-btn.correct-selected {
   background: linear-gradient(135deg, #33A03D 0%, #4cd964 100%);
   border-color: #4cd964;
-  box-shadow: 0px 0px 2px 3px rgba(76, 217, 100, 1);
+  color: #ffffff;
+  box-shadow: 
+    0px 0px 2px 3px rgba(76, 217, 100, 1),
+    0 4px 20px rgba(76, 217, 100, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   animation: correctButtonPulse 0.6s ease;
 }
 
 .answer-btn.wrong-selected {
   background: linear-gradient(135deg, #DE4561 0%, #ff4757 100%);
   border-color: #ff4757;
-  box-shadow: 0px 0px 2px 3px rgba(255, 71, 87, 1);
+  color: #ffffff;
+  box-shadow: 
+    0px 0px 2px 3px rgba(255, 71, 87, 1),
+    0 4px 20px rgba(255, 71, 87, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   animation: wrongButtonShake 0.6s ease;
 }
 
@@ -1850,22 +1929,42 @@ html, body {
   }
 }
 
+/* 守望先锋绿色主题动画 */
+@keyframes owGreenGlow {
+  0%, 100% { 
+    box-shadow: 
+      0px 0px 2px 3px rgba(181, 250, 35, 0.8),
+      0 4px 15px rgba(181, 250, 35, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0px 0px 4px 5px rgba(181, 250, 35, 0.9),
+      0 6px 25px rgba(181, 250, 35, 0.8),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
 .answer-letter {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(24px, 4vw, 32px);
-  height: clamp(24px, 4vw, 32px);
-  background: linear-gradient(135deg, #3B9CE1, #01FFFF);
+  width: clamp(36px, 5.5vw, 44px);
+  height: clamp(36px, 5.5vw, 44px);
+  /* 守望先锋绿色字母标识 */
+  background: linear-gradient(135deg, #B5FA23, #32CD32);
   border-radius: 4px;
   font-weight: 700;
-  color: white;
+  color: #000000;
   flex-shrink: 0;
-  font-size: clamp(12px, 2vw, 16px);
+  /* 强制增大字母字体 */
+  font-size: clamp(18px, 3.5vw, 22px) !important;
+  /* 守望先锋字母标识样式 */
   box-shadow: 
-    0 2px 8px rgba(59, 156, 225, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+    0 2px 8px rgba(181, 250, 35, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1873,13 +1972,15 @@ html, body {
 .answer-text {
   flex: 1;
   text-align: left;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 600 !important;
+  line-height: 1.3;
   color: #ffffff;
   transform: skew(-8deg) !important;
   font-style: italic !important;
   letter-spacing: 0.5px !important;
   font-family: 'Bank Sans EF CY Compressed', sans-serif !important;
+  /* 稍微调大字体大小找到平衡点 */
+  font-size: clamp(14.5px, 3vw, 18px) !important;
 }
 
 
@@ -2125,6 +2226,19 @@ html, body {
     animation: none !important;
     opacity: 0;
   }
+}
+
+/* ========== 文本模糊效果 ========== */
+.answer-text .blurred-text {
+  filter: blur(3px) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.3s ease !important;
+  user-select: none !important;
+  pointer-events: none !important;
+  display: inline !important;
+  transform: none !important; /* 重置父元素的skew变换 */
+  font-style: normal !important; /* 重置斜体 */
 }
 
 /* ========== 音效面板样式 ========== */
