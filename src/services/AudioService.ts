@@ -4,7 +4,8 @@
 
 export enum SoundType {
   BUTTON_CLICK = 'button-click',
-  MENU_MUSIC = 'menu-music'
+  MENU_MUSIC = 'menu-music',
+  CORRECT_ANSWER = 'correct-answer'
 }
 
 class AudioService {
@@ -60,21 +61,35 @@ class AudioService {
     const initAudio = () => {
       if (this.isInitialized) return
       
-      this.sounds.forEach((audio) => {
-        const originalVolume = audio.volume
+      console.log('初始化音频系统...')
+      this.sounds.forEach((audio, soundType) => {
+        // 保存当前音量
+        const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
+        
+        // 临时设置为静音进行初始化
         audio.volume = 0
         audio.play().then(() => {
           audio.pause()
           audio.currentTime = 0
-          audio.volume = originalVolume
-        }).catch(() => {})
+          // 恢复正确的音量
+          audio.volume = targetVolume
+          console.log(`音效 ${soundType} 初始化成功，音量设置为: ${targetVolume}`)
+        }).catch((error) => {
+          // 即使播放失败，也要恢复音量
+          audio.volume = targetVolume
+          console.warn(`音效 ${soundType} 初始化失败:`, error)
+        })
       })
       
       this.isInitialized = true
+      console.log('音频系统初始化完成')
     }
 
-    document.addEventListener('click', initAudio, { once: true })
-    document.addEventListener('touchstart', initAudio, { once: true })
+    // 监听多种用户交互事件
+    const events = ['click', 'touchstart', 'keydown']
+    events.forEach(eventType => {
+      document.addEventListener(eventType, initAudio, { once: true })
+    })
   }
 
   /**
@@ -83,7 +98,8 @@ class AudioService {
   private preloadSounds() {
     const soundFiles = {
       [SoundType.BUTTON_CLICK]: '/src/assets/sounds/confirm.wav',
-      [SoundType.MENU_MUSIC]: '/src/assets/sounds/bgm.mp3'
+      [SoundType.MENU_MUSIC]: '/src/assets/sounds/bgm.mp3',
+      [SoundType.CORRECT_ANSWER]: '/src/assets/sounds/ok.mp3'
     }
 
     Object.entries(soundFiles).forEach(([type, path]) => {
@@ -103,9 +119,41 @@ class AudioService {
   }
 
   /**
-   * 播放音效
+   * 强制初始化音频系统（用于确保用户交互后音效可用）
    */
+  public forceInitialize(): void {
+    if (this.isInitialized) return
+    
+    console.log('强制初始化音频系统...')
+    this.sounds.forEach((audio, soundType) => {
+      // 保存当前音量
+      const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
+      
+      // 临时设置为静音进行初始化
+      audio.volume = 0
+      audio.play().then(() => {
+        audio.pause()
+        audio.currentTime = 0
+        // 恢复正确的音量
+        audio.volume = targetVolume
+        console.log(`音效 ${soundType} 强制初始化成功，音量设置为: ${targetVolume}`)
+      }).catch((error) => {
+        // 即使播放失败，也要恢复音量
+        audio.volume = targetVolume
+        console.warn(`音效 ${soundType} 强制初始化失败:`, error)
+      })
+    })
+    
+    this.isInitialized = true
+    console.log('音频系统强制初始化完成')
+  }
   play(soundType: SoundType) {
+    // 如果音频系统未初始化，先尝试初始化
+    if (!this.isInitialized) {
+      console.warn(`音频系统未初始化，尝试播放 ${soundType}`)
+      this.forceInitialize()
+    }
+
     // 防抖检查
     const now = Date.now()
     const lastTime = this.lastPlayTime.get(soundType) || 0
@@ -115,12 +163,25 @@ class AudioService {
     this.lastPlayTime.set(soundType, now)
 
     const sound = this.sounds.get(soundType)
-    if (!sound) return
+    if (!sound) {
+      console.warn(`音效文件未找到: ${soundType}`)
+      return
+    }
 
     try {
+      // 确保音量设置正确
+      const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
+      sound.volume = targetVolume
+      
       sound.currentTime = 0
-      sound.play().catch(() => {})
-    } catch (error) {}
+      sound.play().then(() => {
+        console.log(`音效播放成功: ${soundType}, 音量: ${targetVolume}`)
+      }).catch((error) => {
+        console.warn(`音效播放失败: ${soundType}`, error)
+      })
+    } catch (error) {
+      console.error(`音效播放出错: ${soundType}`, error)
+    }
   }
 
   /**
@@ -128,20 +189,38 @@ class AudioService {
    */
   playMusic() {
     const music = this.sounds.get(SoundType.MENU_MUSIC)
-    if (!music) return
-
-    // 如果正在播放，不重新开始
-    if (this.currentMusic === music && !this.currentMusic.paused) {
+    if (!music) {
+      console.warn('BGM音频文件未找到')
       return
     }
 
     try {
+      // 如果音乐已经在播放，不重新开始
+      if (this.currentMusic === music && !this.currentMusic.paused) {
+        console.log('BGM已在播放，跳过')
+        return
+      }
+      
+      // 如果音乐暂停了，直接恢复播放
+      if (this.currentMusic === music && this.currentMusic.paused) {
+        console.log('恢复播放BGM')
+        music.volume = this.musicVolume
+        music.play().catch(() => {})
+        return
+      }
+      
+      // 否则从头开始播放
+      console.log('开始播放BGM')
       music.currentTime = 0
       music.loop = true
       music.volume = this.musicVolume
-      music.play().catch(() => {})
+      music.play().catch((error) => {
+        console.warn('BGM播放失败:', error)
+      })
       this.currentMusic = music
-    } catch (error) {}
+    } catch (error) {
+      console.error('BGM播放出错:', error)
+    }
   }
 
   /**
@@ -178,9 +257,13 @@ class AudioService {
    */
   setSfxVolume(volume: number) {
     this.sfxVolume = Math.max(0, Math.min(1, volume))
-    const sound = this.sounds.get(SoundType.BUTTON_CLICK)
-    if (sound) {
-      sound.volume = this.sfxVolume
+    const buttonSound = this.sounds.get(SoundType.BUTTON_CLICK)
+    const correctSound = this.sounds.get(SoundType.CORRECT_ANSWER)
+    if (buttonSound) {
+      buttonSound.volume = this.sfxVolume
+    }
+    if (correctSound) {
+      correctSound.volume = this.sfxVolume
     }
     this.saveSettings()
   }

@@ -39,8 +39,10 @@ export class QuestionPool {
         throw new Error(`地图数据不完整: ${map.id || '未知地图'}`)
       }
       
-      if (map.screenshots.length < 30 || map.screenshots.length > 40) {
-        console.warn(`地图 ${map.name} 的截图数量不在推荐范围内 (30-40张): ${map.screenshots.length}张`)
+      if (map.screenshots.length < 10) {
+        console.warn(`地图 ${map.name} 的截图数量过少 (建议至少10张): ${map.screenshots.length}张`)
+      } else if (map.screenshots.length > 50) {
+        console.warn(`地图 ${map.name} 的截图数量过多 (建议不超过50张): ${map.screenshots.length}张`)
       }
       
       // 验证截图数据完整性

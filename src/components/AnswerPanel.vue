@@ -114,7 +114,7 @@ const handleAnswer = (answer: string) => {
     0 0 0 1px rgba(181, 250, 35, 0.4),
     0 0 20px rgba(181, 250, 35, 0.3);
   flex-shrink: 0;
-  margin-top: clamp(-60px, -6vh, -55px);
+  margin-top: clamp(-80px, -8vh, -75px);
   position: relative;
   overflow: hidden;
 }

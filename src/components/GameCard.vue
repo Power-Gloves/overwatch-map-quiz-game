@@ -76,8 +76,8 @@ defineProps<{
 .card-stack {
   position: relative;
   width: 100%;
-  max-width: clamp(200px, 40vw, 280px);
-  height: clamp(480px, 65vh, 700px);
+  max-width: clamp(320px, 60vw, 450px);
+  height: clamp(360px, 50vh, 540px);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -94,8 +94,8 @@ defineProps<{
   isolation: isolate;
   contain: layout style;
   width: 100%;
-  max-width: clamp(200px, 40vw, 280px);
-  height: clamp(480px, 65vh, 700px);
+  max-width: clamp(320px, 60vw, 450px);
+  height: clamp(360px, 50vh, 540px);
   flex-shrink: 0;
 }
 

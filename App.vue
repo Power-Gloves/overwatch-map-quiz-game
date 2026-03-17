@@ -49,7 +49,7 @@
           <!-- 新的START按钮 - 仿照SVG风格 -->
           <div 
             class="start-button-svg" 
-            @click="() => { playButtonClick(); showModeSelect(); }" 
+            @click="handleStartClick"
             :disabled="isLoading"
             style="margin-top: 60px !important;"
           >
@@ -186,9 +186,14 @@ const {
 // 音效系统
 const {
   playButtonClick,
+  playCorrectAnswer,
   playMenuMusic,
-  stopMusic
+  stopMusic,
+  forceInitializeAudio
 } = useAudio()
+
+// BGM播放状态管理
+const hasBgmPlayed = ref(false)
 
 // 答题状态管理 - 简化版本
 const isAnswering = ref(false)
@@ -219,6 +224,22 @@ const detectDevicePerformance = () => {
 
 // 音效面板控制
 const showAudioPanel = ref(false)
+
+const handleStartClick = () => {
+  playButtonClick()
+  
+  // 强制初始化音频系统，确保所有音效可用
+  forceInitializeAudio()
+  
+  // 如果是首次交互，播放BGM
+  if (!hasBgmPlayed.value) {
+    console.log('用户首次交互，开始播放BGM')
+    playMenuMusic()
+    hasBgmPlayed.value = true
+  }
+  
+  showModeSelect()
+}
 
 const toggleAudioPanel = () => {
   showAudioPanel.value = !showAudioPanel.value
@@ -322,8 +343,10 @@ const handleModeSelect = async (mode: string) => {
         return
     }
     
+    // 进入游戏时停止BGM
+    stopMusic()
+    
     await startGame(mapsData.maps as MapData[], gameMode, targetQuestions)
-    // 游戏开始后继续播放背景音乐（不中断）
   } catch (error) {
     console.error('启动游戏失败:', error)
   }
@@ -331,16 +354,14 @@ const handleModeSelect = async (mode: string) => {
 
 const backToHome = () => {
   playButtonClick()
-  stopMusic()
   restartGame()
-  playMenuMusic()
+  // 返回首页时不重新播放BGM
 }
 
 const backToModeSelect = () => {
   playButtonClick()
-  stopMusic()
   showModeSelect()
-  playMenuMusic()
+  // 返回模式选择时不重新播放BGM
 }
 
 const handleAnswer = async (answer: string) => {
@@ -360,8 +381,10 @@ const handleAnswer = async (answer: string) => {
     correctAnswer: gameState.currentQuestion.correctAnswer
   }
   
-  // 播放音效
-  playButtonClick()
+  // 播放音效 - 只有答对时播放ok音效
+  if (isCorrect) {
+    playCorrectAnswer()
+  }
   
   // 显示反馈
   showAnswerFeedback.value = true
@@ -391,9 +414,8 @@ const handleAnswer = async (answer: string) => {
 
 const handleRestart = () => {
   playButtonClick()
-  stopMusic()
   restartGame()
-  playMenuMusic()
+  // 重新开始时不重新播放BGM
 }
 
 // 禁用系统交互事件
@@ -420,8 +442,8 @@ onMounted(() => {
   // 检测设备性能
   detectDevicePerformance()
   
-  // 启动时播放菜单音乐
-  playMenuMusic()
+  // 不在初始化时播放BGM，等待用户交互
+  console.log('页面加载完成，等待用户交互后播放BGM')
   
   // 禁用双指缩放
   document.addEventListener('touchstart', preventZoom, { passive: false })

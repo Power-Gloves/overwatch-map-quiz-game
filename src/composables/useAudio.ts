@@ -22,6 +22,17 @@ export function useAudio() {
     audioService.play(SoundType.BUTTON_CLICK)
   }
 
+  // 播放正确答案音效
+  const playCorrectAnswer = () => {
+    audioService.play(SoundType.CORRECT_ANSWER)
+  }
+
+  // 强制初始化音频系统
+  const forceInitializeAudio = () => {
+    audioService.forceInitialize()
+    updateState()
+  }
+
   // 播放背景音乐
   const playMenuMusic = () => {
     audioService.playMusic()
@@ -63,6 +74,7 @@ export function useAudio() {
     
     // 音效
     playButtonClick,
+    playCorrectAnswer,
     
     // 音乐控制
     playMenuMusic,
@@ -72,6 +84,9 @@ export function useAudio() {
     
     // 音量控制
     setMusicVolume,
-    setSfxVolume
+    setSfxVolume,
+    
+    // 系统控制
+    forceInitializeAudio
   }
 }

@@ -40,11 +40,14 @@ defineEmits<{
 }>()
 </script>
 
-<style scoped lang="scss">
-@import '@/styles/design-system.scss';
-
+<style scoped>
 .control-buttons {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   z-index: 100;
 }
 
@@ -56,25 +59,26 @@ defineEmits<{
   background: none;
   border: none;
   cursor: pointer;
-  transition: var(--transition-normal);
+  transition: all 0.3s ease;
   z-index: 100;
-  
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  &:hover {
-    transform: scale(1.1);
-  }
-  
-  &-left {
-    left: var(--spacing-sm);
-  }
-  
-  &-right {
-    right: var(--spacing-sm);
-  }
+  pointer-events: auto;
+}
+
+.control-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.control-button:hover {
+  transform: scale(1.1);
+}
+
+.control-button-left {
+  left: 8px;
+}
+
+.control-button-right {
+  right: 8px;
 }
 </style>

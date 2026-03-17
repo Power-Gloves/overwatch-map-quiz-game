@@ -53,10 +53,10 @@ defineProps<{
   width: 100%;
   max-width: 600px;
   flex-shrink: 0;
-  margin: clamp(40px, 8vh, 60px) 8px 0 8px;
+  margin: clamp(20px, 4vh, 30px) 8px 0 8px;
   background: linear-gradient(135deg, #464F6A 0%, #2B3753 100%);
   border-radius: 0;
-  padding: 16px 20px;
+  padding: 12px 16px;
   border: 2px solid rgba(181, 250, 35, 0.4);
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.4),
@@ -80,21 +80,21 @@ defineProps<{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 14px;
-  gap: 12px;
+  margin-bottom: 10px;
+  gap: 8px;
 }
 
 .score-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex: 1;
   justify-content: center;
 }
 
 .score-icon-img {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
   opacity: 0.8;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
@@ -107,18 +107,18 @@ defineProps<{
 }
 
 .score-label {
-  font-size: 10px;
+  font-size: 9px;
   color: #C9D4E3;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
   font-family: 'Bank Sans EF CY Compressed', sans-serif;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .score-value {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -138,7 +138,7 @@ defineProps<{
 
 .score-divider {
   width: 1px;
-  height: 40px;
+  height: 32px;
   background: linear-gradient(180deg, transparent 0%, rgba(181, 250, 35, 0.3) 50%, transparent 100%);
 }
 

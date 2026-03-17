@@ -77,8 +77,10 @@ const {
   setMusicVolume, 
   setSfxVolume,
   playButtonClick,
+  playMenuMusic,
   pauseMusic,
-  resumeMusic
+  resumeMusic,
+  stopMusic
 } = useAudio()
 
 const isMusicMuted = ref(false)
@@ -103,10 +105,10 @@ const toggleMusic = () => {
   isMusicMuted.value = !isMusicMuted.value
   if (isMusicMuted.value) {
     setMusicVolume(0)
-    pauseMusic()
+    stopMusic()
   } else {
     setMusicVolume(musicVolume.value || 0.7)
-    resumeMusic()
+    playMenuMusic() // 直接播放音乐，而不是恢复
   }
   if (!isSfxMuted.value) {
     playButtonClick()
