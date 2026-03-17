@@ -121,244 +121,30 @@
     </div>
 
     <!-- 游戏页面 -->
-    <div v-else-if="gameState.status === 'playing'" class="game-screen">
-      <!-- 左上角返回按钮 -->
-      <img 
-        src="/src/assets/images/icons/back-arrow-left.svg" 
-        alt="返回" 
-        @click="backToModeSelect"
-        class="control-button control-button-left"
-        @mouseover="$event.target.style.transform = 'scale(1.1)'"
-        @mouseout="$event.target.style.transform = 'scale(1)'"
-      />
-      
-      <!-- 右上角音效控制按钮 -->
-      <img 
-        src="/src/assets/images/icons/audio-control.svg" 
-        alt="音效设置" 
-        @click="toggleAudioPanel"
-        class="control-button control-button-right"
-      />
-      
-      <!-- 顶部计分板 - 重新设计 -->
-      <div class="score-board">
-        <div class="score-items">
-          <div class="score-item">
-            <img src="/src/assets/images/defenban/1.png" alt="已答题" class="score-icon-img" />
-            <div class="score-info">
-              <span class="score-label">已答题</span>
-              <span class="score-value">{{ gameState.totalAnswered }}</span>
-            </div>
-          </div>
-          <div class="score-divider"></div>
-          <div class="score-item">
-            <img src="/src/assets/images/defenban/2.png" alt="正确" class="score-icon-img" />
-            <div class="score-info">
-              <span class="score-label">正确</span>
-              <span class="score-value correct">{{ gameState.correctCount }}</span>
-            </div>
-          </div>
-          <div class="score-divider"></div>
-          <div class="score-item">
-            <img src="/src/assets/images/defenban/3.png" alt="正确率" class="score-icon-img" />
-            <div class="score-info">
-              <span class="score-label">正确率</span>
-              <span class="score-value accuracy">{{ gameState.accuracy.toFixed(0) }}%</span>
-            </div>
-          </div>
-        </div>
-        <div class="accuracy-bar">
-          <div class="accuracy-fill" :style="{ width: gameState.accuracy + '%' }">
-            <ElectricBorder class="electric-progress-border" />
-          </div>
-          <div class="accuracy-glow" :style="{ width: gameState.accuracy + '%' }"></div>
-        </div>
-      </div>
-      
-      <!-- 卡片区域 - 恢复原来的逻辑，只添加Stack风格动画 -->
-      <div class="card-stack">
-        <!-- 下一张卡片（背景层） -->
-        <VueBitsProfileCard 
-          v-if="gameState.nextQuestion" 
-          class="image-card-wrapper next-card"
-          :enable-tilt="false"
-        >
-          <div class="image-card-inner">
-            <div class="card-header">
-              <span class="card-number">#{{ gameState.totalAnswered + 2 }}</span>
-              <span class="card-type">{{ gameState.nextQuestion.mapData.type }}</span>
-            </div>
-            <div class="image-container">
-              <img :src="gameState.nextQuestion.screenshot.url" alt="下一张" class="map-image" />
-            </div>
-          </div>
-        </VueBitsProfileCard>
-
-        <!-- 当前卡片（顶层） -->
-        <VueBitsProfileCard 
-          v-if="gameState.currentQuestion" 
-          class="image-card-wrapper current-card"
-          :class="{
-            'answer-correct': showAnswerFeedback && feedbackData?.isCorrect,
-            'answer-wrong': showAnswerFeedback && feedbackData && !feedbackData.isCorrect,
-            'idle': !isAnswering && !showAnswerFeedback
-          }"
-          :enable-tilt="true"
-        >
-          <div class="image-card-inner">
-            <div class="card-header">
-              <span class="card-number">#{{ gameState.totalAnswered + 1 }}</span>
-              <span class="card-type">{{ gameState.currentQuestion.mapData.type }}</span>
-            </div>
-            
-            <div class="image-container">
-              <img :src="gameState.currentQuestion.screenshot.url" alt="地图截图" class="map-image" />
-              
-              <!-- 答案反馈覆盖层 -->
-              <div v-if="showAnswerFeedback && feedbackData" class="answer-feedback-overlay">
-                <div class="feedback-icon">
-                  <span v-if="feedbackData.isCorrect" class="correct-icon">✓</span>
-                  <span v-else class="wrong-icon">✗</span>
-                </div>
-                <div class="feedback-text">
-                  <span v-if="feedbackData.isCorrect" class="correct-text">正确！</span>
-                  <span v-else class="wrong-text">错误</span>
-                </div>
-                <div v-if="!feedbackData.isCorrect" class="correct-answer-text">
-                  正确答案：{{ feedbackData.correctAnswer }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </VueBitsProfileCard>
-      </div>
-
-      <!-- 分离的答案区域 - 在卡片外部 -->
-      <div class="separated-answers" v-if="gameState.currentQuestion">
-        <p class="question-text">这是哪个地图？</p>
-        <div class="answer-grid">
-          <button 
-            v-for="(option, index) in gameState.currentQuestion.allOptions" 
-            :key="`${gameState.totalAnswered}-${index}-${option}`"
-            @click="handleAnswer(option)"
-            class="answer-btn"
-            :class="{
-              ['answer-' + (index + 1)]: true,
-              'selected': feedbackData && feedbackData.selectedOption === option,
-              'correct-selected': feedbackData && feedbackData.selectedOption === option && feedbackData.isCorrect,
-              'wrong-selected': feedbackData && feedbackData.selectedOption === option && !feedbackData.isCorrect
-            }"
-            :disabled="isAnswering"
-          >
-            <span class="answer-letter">{{ String.fromCharCode(65 + index) }}</span>
-            <span class="answer-text">
-              <template v-if="getDisplayText(option, gameState.mode).hasBlur">
-                {{ getDisplayText(option, gameState.mode).beforeText }}<span 
-                  style="filter: blur(4px); text-shadow: 0 0 8px currentColor;"
-                >{{ getDisplayText(option, gameState.mode).blurText }}</span>{{ getDisplayText(option, gameState.mode).afterText }}
-              </template>
-              <template v-else>
-                {{ getDisplayText(option, gameState.mode).text }}
-              </template>
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
+    <GamePage
+      v-else-if="gameState.status === 'playing'"
+      :game-state="gameState"
+      :is-answering="isAnswering"
+      :show-answer-feedback="showAnswerFeedback"
+      :feedback-data="feedbackData"
+      @back="backToModeSelect"
+      @toggle-audio="toggleAudioPanel"
+      @answer="handleAnswer"
+    />
 
     <!-- 游戏结束页面 -->
-    <div v-else-if="gameState.status === 'finished'" class="finish-screen">
-      <VueBitsProfileCard class="stats-card-wrapper">
-        <div class="stats-card-inner">
-          <!-- 挑战模式结果 -->
-          <div v-if="gameState.mode === 'challenge'" class="challenge-result">
-            <div class="result-icon">
-              {{ gameState.challenge?.isPassed ? '🎉' : '😔' }}
-            </div>
-            <h2 class="glow-text">
-              {{ gameState.challenge?.isPassed ? '挑战成功！' : '挑战失败' }}
-            </h2>
-            
-            <!-- 星级显示 -->
-            <div v-if="gameState.challenge?.isPassed" class="stars-display">
-              <div class="stars">
-                <span 
-                  v-for="star in 3" 
-                  :key="star"
-                  class="star"
-                  :class="{ 'filled': star <= getChallengeStars() }"
-                >
-                  ⭐
-                </span>
-              </div>
-              <p class="stars-text">{{ getStarsText() }}</p>
-            </div>
-            
-            <div class="pass-info">
-              <p class="pass-text">
-                通关条件：{{ gameState.challenge?.passAccuracy }}% 正确率
-              </p>
-            </div>
-          </div>
-          
-          <!-- 练习模式结果 -->
-          <div v-else-if="gameState.mode === 'practice'" class="practice-result">
-            <div class="result-icon">📚</div>
-            <h2 class="glow-text">练习完成！</h2>
-            <p class="practice-score">完成 {{ gameState.totalAnswered }} 题练习</p>
-          </div>
-          
-          <!-- 无尽模式结果 -->
-          <div v-else class="endless-result">
-            <div class="trophy-icon">🏆</div>
-            <h2 class="glow-text">游戏结束！</h2>
-            <p class="endless-score">连续答对 {{ gameState.correctCount }} 题</p>
-          </div>
-          
-          <!-- 通用统计 -->
-          <div class="stats-grid">
-            <div class="stat-box">
-              <div class="stat-number">{{ gameState.totalAnswered }}</div>
-              <div class="stat-label">总题数</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number correct">{{ gameState.correctCount }}</div>
-              <div class="stat-label">正确数</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">{{ gameState.accuracy.toFixed(1) }}%</div>
-              <div class="stat-label">正确率</div>
-            </div>
-          </div>
-
-          <div class="rating">
-            <p class="rating-text">{{ getRating(gameState.accuracy) }}</p>
-          </div>
-          
-          <div class="actions">
-            <button class="btn btn-primary ow-button" @click="handleRestart">
-              <span class="btn-text">再玩一次</span>
-              <span class="btn-glow"></span>
-            </button>
-          </div>
-        </div>
-      </VueBitsProfileCard>
-    </div>
+    <FinishPage
+      v-else-if="gameState.status === 'finished'"
+      :game-state="gameState"
+      @restart="handleRestart"
+    />
 
     <!-- 错误页面 -->
-    <div v-else-if="gameState.status === 'error'" class="error-screen">
-      <VueBitsProfileCard class="error-card-wrapper">
-        <div class="error-card-inner">
-          <div class="error-icon">⚠️</div>
-          <h2>出现错误</h2>
-          <p>{{ gameState.error }}</p>
-          <button class="btn btn-primary ow-button" @click="handleRestart">
-            <span class="btn-text">重新开始</span>
-            <span class="btn-glow"></span>
-          </button>
-        </div>
-      </VueBitsProfileCard>
-    </div>
+    <ErrorPage
+      v-else-if="gameState.status === 'error'"
+      :game-state="gameState"
+      @restart="handleRestart"
+    />
     
     <!-- 音效控制面板 -->
     <div v-if="showAudioPanel" class="audio-panel-overlay" @click="showAudioPanel = false">
@@ -381,7 +167,9 @@ import { useAudio } from '@/composables/useAudio'
 import VueBitsProfileCard from '@/component/VueBitsProfileCard/VueBitsProfileCardSimple.vue'
 import GameErrorBoundary from '@/components/GameErrorBoundary.vue'
 import AudioControlPanel from '@/components/AudioControlPanel.vue'
-import ElectricBorder from '@/component/ElectricBorder/ElectricBorder.vue'
+import GamePage from '@/pages/GamePage.vue'
+import FinishPage from '@/components/FinishPage.vue'
+import ErrorPage from '@/components/ErrorPage.vue'
 import type { MapData } from '@/types'
 import { GameMode } from '@/types'
 import mapsData from '@/assets/data/maps.json'
@@ -606,32 +394,6 @@ const handleRestart = () => {
   stopMusic()
   restartGame()
   playMenuMusic()
-}
-
-const getChallengeStars = () => {
-  const accuracy = gameState.accuracy
-  if (accuracy >= 90) return 3
-  if (accuracy >= 80) return 2
-  if (accuracy >= 70) return 1
-  return 0
-}
-
-const getStarsText = () => {
-  const stars = getChallengeStars()
-  switch (stars) {
-    case 3: return '完美通关！'
-    case 2: return '优秀表现！'
-    case 1: return '成功通关！'
-    default: return ''
-  }
-}
-
-const getRating = (accuracy: number) => {
-  if (accuracy >= 90) return '🌟 传奇大师！'
-  if (accuracy >= 80) return '💎 钻石水平！'
-  if (accuracy >= 70) return '🥇 黄金选手！'
-  if (accuracy >= 60) return '🥈 白银玩家'
-  return '🥉 继续加油！'
 }
 
 // 禁用系统交互事件
@@ -1035,7 +797,6 @@ html, body {
 /* ========== 页面布局 ========== */
 .start-screen,
 .mode-select-screen,
-.game-screen,
 .finish-screen,
 .error-screen {
   position: absolute;
@@ -1178,210 +939,11 @@ html, body {
   font-size: 14px;
 }
 
-/* ========== 游戏页面 ========== */
-.game-screen {
-  padding: clamp(5px, 1vh, 10px);
-  gap: clamp(10px, 2vh, 20px);
-}
 
-/* ========== 计分板 - 守望先锋绿色风格 ========== */
-.score-board {
-  width: 100%;
-  max-width: 600px;
-  flex-shrink: 0;
-  margin: clamp(40px, 8vh, 60px) 8px 0 8px;
-  background: linear-gradient(135deg, #464F6A 0%, #2B3753 100%);
-  border-radius: 0;
-  padding: 16px 20px;
-  border: 2px solid rgba(181, 250, 35, 0.4);
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 0 0 1px rgba(181, 250, 35, 0.2);
-  position: relative;
-}
 
-.score-board::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent 0%, #B5FA23 50%, transparent 100%);
-  opacity: 0.8;
-}
 
-.score-items {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 14px;
-  gap: 12px;
-}
 
-.score-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
-  justify-content: center;
-}
 
-.score-icon {
-  font-size: 20px;
-  opacity: 0.8;
-}
-
-.score-icon-img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  opacity: 0.8;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
-}
-
-.score-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.score-label {
-  font-size: 10px;
-  color: #C9D4E3;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-family: 'Bank Sans EF CY Compressed', sans-serif;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.score-value {
-  font-size: 22px;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  font-family: 'Orbitron', sans-serif;
-  line-height: 1;
-}
-
-.score-value.correct {
-  color: #B5FA23;
-  text-shadow: 0 0 10px rgba(181, 250, 35, 0.6);
-}
-
-.score-value.accuracy {
-  color: #B5FA23;
-  text-shadow: 0 0 10px rgba(181, 250, 35, 0.6);
-}
-
-.score-divider {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(180deg, transparent 0%, rgba(181, 250, 35, 0.3) 50%, transparent 100%);
-}
-
-.accuracy-bar {
-  height: 6px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-  overflow: visible;
-  border: 1px solid rgba(181, 250, 35, 0.2);
-  position: relative;
-}
-
-.accuracy-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #B5FA23 0%, #32CD32 100%);
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 
-    0 0 10px rgba(181, 250, 35, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  position: relative;
-  z-index: 2;
-}
-
-.electric-progress-border {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  pointer-events: none;
-  z-index: 10;
-  mix-blend-mode: screen;
-}
-
-.accuracy-glow {
-  position: absolute;
-  top: -2px;
-  left: 0;
-  height: calc(100% + 4px);
-  background: linear-gradient(90deg, rgba(181, 250, 35, 0.4) 0%, rgba(50, 205, 50, 0.4) 100%);
-  filter: blur(4px);
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
-}
-
-/* ========== 卡片堆叠 - Stack风格 ========== */
-.card-stack {
-  position: relative;
-  width: 100%;
-  max-width: clamp(200px, 40vw, 280px);
-  height: clamp(480px, 65vh, 700px);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-
-.image-card-wrapper {
-  position: absolute;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform-style: preserve-3d;
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
-  isolation: isolate;
-  contain: layout style;
-}
-
-/* 下一张卡片 - 简单的Stack风格层叠 */
-.next-card {
-  transform: scale(0.95) translateY(10px) translateZ(-20px);
-  opacity: 0.8;
-  z-index: 1;
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
-}
-
-/* 当前卡片 - 在最前面 */
-.current-card {
-  z-index: 2;
-  transform: scale(1) translateY(0) translateZ(0);
-  animation: cardEntrance 0.5s ease;
-}
-
-.current-card.idle {
-  animation: cardEntrance 0.5s ease;
-  transform-style: preserve-3d;
-  perspective: 800px;
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
-}
-
-/* 简单的淡出效果 */
-.current-card.swipe-right,
-.current-card.swipe-left {
-  animation: cardFadeOut 0.5s ease forwards;
-}
-
-/* 下一张卡片升级为当前卡片 */
-.current-card.swipe-right ~ .next-card,
-.current-card.swipe-left ~ .next-card {
-  animation: stackPromote 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
-}
 
 /* 移除背景层，改用其他方式防止穿模 */
 
@@ -1649,354 +1211,15 @@ html, body {
   }
 }
 
-/* ========== 分离的答案区域 - 守望先锋绿色主题 ========== */
-.separated-answers {
-  width: 100%;
-  max-width: 600px;
-  background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
-  border-radius: 4px;
-  padding: clamp(10px, 1.5vh, 14px);
-  backdrop-filter: blur(20px);
-  /* 守望先锋经典绿色边框 */
-  border: 2px solid rgba(181, 250, 35, 0.8);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    /* 绿色外发光效果 */
-    0 0 0 1px rgba(181, 250, 35, 0.4),
-    0 0 20px rgba(181, 250, 35, 0.3);
-  flex-shrink: 0;
-  margin-top: clamp(-60px, -6vh, -55px);
-  position: relative;
-  overflow: hidden;
-}
-
-.separated-answers::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #B5FA23 0%, #32CD32 50%, #B5FA23 100%);
-  animation: topGlow 3s ease-in-out infinite;
-}
-
-/* 左侧绿色装饰条 */
-.separated-answers::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent 0%, #B5FA23 30%, #32CD32 70%, transparent 100%);
-  opacity: 0.9;
-}
-
-@keyframes topGlow {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-.question-text {
-  font-size: clamp(16px, 3.5vw, 20px);
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: clamp(1px, 2vh, 1px);
-  color: #ffffff;
-}
-
-/* 关键：2行2列答案网格 */
-.answer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: clamp(8px, 1.5vh, 12px);
-  width: 100%;
-}
-
-.answer-btn {
-  display: flex;
-  align-items: center;
-  gap: clamp(6px, 1vh, 10px);
-  padding: clamp(12px, 2vh, 16px) clamp(10px, 2vw, 14px);
-  /* 守望先锋黑色背景 */
-  background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
-  /* 守望先锋白色边框 */
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  /* 稍微调大按钮整体字体找到平衡点 */
-  font-size: clamp(14.5px, 3vw, 18px) !important;
-  min-height: clamp(42px, 6.5vh, 55px);
-  position: relative;
-  overflow: hidden;
-  transform: translateY(0);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  /* 守望先锋按钮阴影 */
-  box-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.3), 
-    0 0 6px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.answer-btn:hover {
-  /* 守望先锋绿色悬浮效果 */
-  background: linear-gradient(135deg, #B5FA23 0%, #32CD32 100%);
-  border-color: rgba(255, 255, 255, 1);
-  color: #000000;
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 
-    0px 0px 2px 3px rgba(181, 250, 35, 0.8),
-    0 4px 15px rgba(181, 250, 35, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  animation: owGreenGlow 2s ease-in-out infinite;
-}
-
-/* 移动端禁用hover效果，避免状态粘滞 */
-@media (hover: none) and (pointer: coarse) {
-  .answer-btn:hover {
-    background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
-    border-color: rgba(255, 255, 255, 0.6);
-    color: white;
-    transform: translateY(0);
-    box-shadow: 
-      0 2px 4px rgba(0, 0, 0, 0.3), 
-      0 0 6px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    animation: none;
-  }
-}
-
-.answer-btn:active {
-  transform: translateY(0) scale(0.95);
-  box-shadow: 
-    0 2px 10px rgba(181, 250, 35, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  animation: owButtonPress 0.2s ease;
-}
-
-.answer-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* 选中状态样式 - 守望先锋绿色风格 */
-.answer-btn.selected {
-  background: linear-gradient(135deg, #B5FA23 0%, #32CD32 100%);
-  border-color: rgba(255, 255, 255, 1);
-  color: #000000;
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 
-    0px 0px 2px 3px rgba(181, 250, 35, 1),
-    0 4px 15px rgba(181, 250, 35, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.answer-btn.correct-selected {
-  background: linear-gradient(135deg, #33A03D 0%, #4cd964 100%);
-  border-color: #4cd964;
-  color: #ffffff;
-  box-shadow: 
-    0px 0px 2px 3px rgba(76, 217, 100, 1),
-    0 4px 20px rgba(76, 217, 100, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  animation: correctButtonPulse 0.6s ease;
-}
-
-.answer-btn.wrong-selected {
-  background: linear-gradient(135deg, #DE4561 0%, #ff4757 100%);
-  border-color: #ff4757;
-  color: #ffffff;
-  box-shadow: 
-    0px 0px 2px 3px rgba(255, 71, 87, 1),
-    0 4px 20px rgba(255, 71, 87, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  animation: wrongButtonShake 0.6s ease;
-}
-
-.answer-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.answer-btn:hover::before {
-  left: 100%;
-}
-
-@keyframes buttonClick {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-1px) scale(0.98);
-  }
-  100% {
-    transform: translateY(0) scale(0.98);
-  }
-}
-
-@keyframes correctButtonPulse {
-  0%, 100% {
-    transform: translateY(-1px) scale(1.02);
-    box-shadow: 0 4px 20px rgba(76, 217, 100, 0.4);
-  }
-  50% {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 30px rgba(76, 217, 100, 0.6);
-  }
-}
-
-@keyframes wrongButtonShake {
-  0%, 100% {
-    transform: translateY(-1px) scale(1.02) translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateY(-1px) scale(1.02) translateX(-3px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateY(-1px) scale(1.02) translateX(3px);
-  }
-}
-
-/* 守望先锋绿色主题动画 */
-@keyframes owGreenGlow {
-  0%, 100% { 
-    box-shadow: 
-      0px 0px 2px 3px rgba(181, 250, 35, 0.8),
-      0 4px 15px rgba(181, 250, 35, 0.6),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  }
-  50% { 
-    box-shadow: 
-      0px 0px 4px 5px rgba(181, 250, 35, 0.9),
-      0 6px 25px rgba(181, 250, 35, 0.8),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  }
-}
-
-.answer-letter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(36px, 5.5vw, 44px);
-  height: clamp(36px, 5.5vw, 44px);
-  /* 守望先锋绿色字母标识 */
-  background: linear-gradient(135deg, #B5FA23, #32CD32);
-  border-radius: 4px;
-  font-weight: 700;
-  color: #000000;
-  flex-shrink: 0;
-  /* 强制增大字母字体 */
-  font-size: clamp(18px, 3.5vw, 22px) !important;
-  /* 守望先锋字母标识样式 */
-  box-shadow: 
-    0 2px 8px rgba(181, 250, 35, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.answer-text {
-  flex: 1;
-  text-align: left;
-  font-weight: 600 !important;
-  line-height: 1.3;
-  color: #ffffff;
-  transform: skew(-8deg) !important;
-  font-style: italic !important;
-  letter-spacing: 0.5px !important;
-  font-family: 'Bank Sans EF CY Compressed', sans-serif !important;
-  /* 稍微调大字体大小找到平衡点 */
-  font-size: clamp(14.5px, 3vw, 18px) !important;
-}
 
 
 
-/* ========== 结束页面 ========== */
-.stats-card-inner h2 {
-  font-size: clamp(24px, 5vw, 36px);
-  margin-bottom: 16px;
-  color: #ffffff;
-}
 
-.trophy-icon {
-  font-size: clamp(48px, 8vw, 80px);
-  margin-bottom: 16px;
-  animation: trophyBounce 1s ease infinite;
-}
 
-@keyframes trophyBounce {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-5px) scale(1.05); }
-}
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 20px;
-  width: 100%;
-}
 
-.stat-box {
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.stat-number {
-  font-size: clamp(20px, 5vw, 32px);
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: #ff9c00;
-}
 
-.stat-number.correct {
-  color: #4cd964;
-}
-
-.rating {
-  margin-bottom: 20px;
-}
-
-.rating-text {
-  font-size: clamp(16px, 4vw, 24px);
-  font-weight: 600;
-  color: #4cd964;
-}
-
-/* ========== 错误页面 ========== */
-.error-icon {
-  font-size: 64px;
-  margin-bottom: 24px;
-}
-
-.error-card-inner h2 {
-  color: #ff4757;
-  margin-bottom: 16px;
-  font-size: 28px;
-}
-
-.error-card-inner p {
-  margin-bottom: 24px;
-  color: #b3b3b3;
-  font-size: 16px;
-}
 
 /* ========== 通用工具类 ========== */
 .control-button {
@@ -2088,15 +1311,6 @@ html, body {
   backdrop-filter: none !important;
 }
 
-.low-performance-device .answer-btn {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-}
-
-.low-performance-device .separated-answers {
-  background: rgba(44, 44, 44, 0.95) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-}
-
 .low-performance-device .answer-feedback-overlay {
   background: rgba(0, 0, 0, 0.9) !important;
 }
@@ -2109,10 +1323,7 @@ html, body {
   .glow-text,
   .ow-button .btn-glow,
   .game-logo,
-  .ow-icon-logo,
-  .current-card.idle,
-  .separated-answers::before,
-  .answer-btn:hover {
+  .ow-icon-logo {
     animation: none !important;
   }
   
@@ -2121,46 +1332,8 @@ html, body {
     backdrop-filter: none !important;
     background: rgba(0, 0, 0, 0.9) !important;
   }
-  
-  .separated-answers {
-    backdrop-filter: none !important;
-    background: rgba(44, 44, 44, 0.95) !important;
-  }
-  
-  .accuracy-glow {
-    display: none !important;
-  }
-  
-  /* 简化阴影效果 */
-  .image-card-wrapper {
-    filter: none !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  .answer-btn {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
-  }
-  
-  .answer-btn:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
-  }
-  
-  /* 禁用复杂变换 */
-  .current-card {
-    transform-style: flat !important;
-    perspective: none !important;
-  }
 }
 @media (max-width: 768px) {
-  .game-screen {
-    padding: clamp(8px, 1.5vh, 12px);
-  }
-  
-  .score-board {
-    margin: clamp(55px, 11vh, 75px) 8px 0 8px;
-    padding: 12px 16px;
-  }
-  
   .game-logo {
     max-width: clamp(200px, 70vw, 400px);
     max-height: clamp(60px, 15vh, 120px);
@@ -2170,172 +1343,12 @@ html, body {
     max-width: clamp(90px, 20vw, 120px);
     max-height: clamp(90px, 20vw, 120px);
   }
-  
-  .game-screen .back-button-styled {
-    top: 15px !important;
-    left: 5px !important;
-    padding: 6px 12px !important;
-    font-size: 12px !important;
-  }
-  
-  .image-card-wrapper {
-    max-width: min(75vw, 240px);
-    height: clamp(420px, 55vh, 580px);
-  }
-  
-  .card-stack {
-    max-width: min(75vw, 240px);
-    height: clamp(420px, 55vh, 580px);
-  }
-  
-  .separated-answers {
-    max-width: 100%;
-    padding: clamp(8px, 1.2vh, 12px);
-    margin-top: clamp(30px, 6vh, 45px);
-  }
-  
-  .answer-grid {
-    gap: clamp(6px, 1vh, 10px);
-  }
-  
-  .answer-btn {
-    padding: clamp(10px, 1.5vh, 14px) clamp(8px, 1.5vw, 12px);
-    min-height: clamp(36px, 5vh, 50px);
-  }
-  
-  /* 移动端动画优化 */
-  .feedback-icon {
-    font-size: clamp(40px, 6vw, 64px);
-  }
-  
-  .feedback-text {
-    font-size: clamp(18px, 3vw, 24px);
-  }
-  
-  .correct-answer-text {
-    font-size: clamp(12px, 2.5vw, 16px);
-  }
 }
 
-@media (max-width: 480px) {
-  .score-board {
-    margin: clamp(60px, 0vh, 80px) 8px 0 8px;
-    padding: 10px 14px;
-  }
-  
-  .image-card-wrapper {
-    max-width: 80vw;
-    height: clamp(380px, 50vh, 520px);
-  }
-  
-  .card-stack {
-    max-width: 80vw;
-    height: clamp(380px, 50vh, 520px);
-  }
-  
-  .separated-answers {
-    max-width: 100%;
-    padding: clamp(6px, 1vh, 10px);
-    margin-top: clamp(0px, 0vh, 0px);
-  }
-  
-  .answer-grid {
-    gap: clamp(4px, 0.8vh, 8px);
-  }
-  
-  .answer-btn {
-    padding: clamp(8px, 1vh, 12px) clamp(6px, 1vw, 10px);
-    min-height: clamp(32px, 4vh, 42px);
-  }
-  
-  .answer-text {
-    font-size: clamp(10px, 2vw, 14px);
-  }
-}
 
-@media (max-height: 600px) {
-  .game-screen {
-    padding: clamp(5px, 0.8vh, 8px);
-  }
-  
-  .score-board {
-    margin: clamp(35px, 7vh, 50px) 8px 0 8px;
-    padding: 10px 16px;
-  }
-  
-  .image-card-wrapper {
-    height: clamp(300px, 60vh, 420px);
-  }
-  
-  .card-stack {
-    height: clamp(300px, 60vh, 420px);
-  }
-  
-  .separated-answers {
-    max-width: 100%;
-    padding: clamp(6px, 1vh, 8px);
-    margin-top: clamp(8px, 1.5vh, 12px);
-  }
-  
-  .answer-btn {
-    min-height: clamp(28px, 3.5vh, 38px);
-  }
-}
-
-/* 超宽屏幕优化 */
-@media (min-width: 1200px) {
-  .image-card-wrapper {
-    max-width: 320px;
-    height: clamp(600px, 70vh, 800px);
-  }
-  
-  .card-stack {
-    max-width: 320px;
-    height: clamp(600px, 70vh, 800px);
-  }
-  
-  .separated-answers {
-    max-width: 320px;
-    margin-top: clamp(30px, 6vh, 50px);
-  }
-  
-  .answer-btn {
-    min-height: clamp(56px, 8vh, 72px);
-  }
-}
 </style>
 
-/* 减少动画偏好设置 */
-@media (prefers-reduced-motion: reduce) {
-  .current-card,
-  .next-card,
-  .answer-btn,
-  .feedback-icon,
-  .feedback-text,
-  .correct-answer-text,
-  .answer-feedback-overlay {
-    animation: none !important;
-    transition: opacity 0.2s ease, transform 0.2s ease !important;
-  }
-  
-  .current-card.swipe-right,
-  .current-card.swipe-left {
-    animation: none !important;
-    opacity: 0;
-    transform: translateX(0);
-  }
-  
-  .current-card.answer-correct,
-  .current-card.answer-wrong {
-    animation: none !important;
-  }
-  
-  .current-card.swipe-right::before,
-  .current-card.swipe-left::before {
-    animation: none !important;
-    opacity: 0;
-  }
-}
+
 
 /* ========== 音效面板样式 ========== */
 .audio-panel-overlay {

@@ -1,0 +1,168 @@
+// 守望先锋设计系统
+
+// ========== 颜色系统 ==========
+:root {
+  // 主色调
+  --ow-primary: #B5FA23;
+  --ow-primary-dark: #32CD32;
+  --ow-secondary: #3B9CE1;
+  --ow-accent: #ff9c00;
+  
+  // 状态色
+  --ow-success: #4cd964;
+  --ow-error: #ff4757;
+  --ow-warning: #f39c12;
+  
+  // 中性色
+  --ow-bg-primary: #0a0a0a;
+  --ow-bg-secondary: #1A1A1A;
+  --ow-bg-tertiary: #2C2C2C;
+  --ow-text-primary: #ffffff;
+  --ow-text-secondary: #C9D4E3;
+  --ow-text-muted: #7a7e83;
+  
+  // 边框和阴影
+  --ow-border: rgba(255, 255, 255, 0.1);
+  --ow-border-active: rgba(181, 250, 35, 0.8);
+  --ow-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --ow-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --ow-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.4);
+  
+  // 间距系统
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  // 字体系统
+  --font-primary: 'Orbitron', 'Bank Sans EF CY Compressed', sans-serif;
+  --font-size-xs: clamp(10px, 2vw, 12px);
+  --font-size-sm: clamp(12px, 2.5vw, 14px);
+  --font-size-md: clamp(14px, 3vw, 16px);
+  --font-size-lg: clamp(16px, 3.5vw, 20px);
+  --font-size-xl: clamp(20px, 4vw, 24px);
+  --font-size-2xl: clamp(24px, 5vw, 32px);
+  
+  // 圆角系统
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  // 过渡动画
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+// ========== 通用组件类 ==========
+.ow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--ow-secondary) 0%, #01FFFF 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--ow-text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: var(--ow-shadow-md);
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 2px 3px rgba(255, 255, 255, 1), var(--ow-shadow-lg);
+  }
+  
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.ow-card {
+  background: var(--ow-bg-secondary);
+  border: 2px solid var(--ow-border-active);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--ow-shadow-lg);
+}
+
+.ow-text-glow {
+  color: var(--ow-primary);
+  text-shadow: 
+    0 0 10px rgba(181, 250, 35, 0.5),
+    0 0 20px rgba(181, 250, 35, 0.3);
+}
+
+// ========== 布局工具类 ==========
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// ========== 响应式断点 ==========
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+// ========== 性能优化 ==========
+@mixin low-performance {
+  .low-performance-device & {
+    @content;
+  }
+}
+
+@mixin mobile-performance {
+  @media (max-width: 768px) {
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    @content;
+  }
+}
