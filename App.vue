@@ -1168,7 +1168,7 @@ html, body {
   width: 100%;
   max-width: 600px;
   flex-shrink: 0;
-  margin: 0 8px;
+  margin: clamp(70px, 14vh, 90px) 8px 0 8px;
   background: linear-gradient(135deg, #464F6A 0%, #2B3753 100%);
   border-radius: 0;
   padding: 16px 20px;
@@ -1726,10 +1726,10 @@ html, body {
 /* ========== 分离的答案区域 - 守望先锋绿色主题 ========== */
 .separated-answers {
   width: 100%;
-  max-width: clamp(200px, 40vw, 280px);
+  max-width: 600px;
   background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
   border-radius: 4px;
-  padding: clamp(12px, 2vh, 16px);
+  padding: clamp(10px, 1.5vh, 14px);
   backdrop-filter: blur(20px);
   /* 守望先锋经典绿色边框 */
   border: 2px solid rgba(181, 250, 35, 0.8);
@@ -1740,7 +1740,7 @@ html, body {
     0 0 0 1px rgba(181, 250, 35, 0.4),
     0 0 20px rgba(181, 250, 35, 0.3);
   flex-shrink: 0;
-  margin-top: clamp(35px, 7vh, 60px);
+  margin-top: clamp(0px, 0vh, 0px);
   position: relative;
   overflow: hidden;
 }
@@ -1805,7 +1805,7 @@ html, body {
   transition: all 0.3s ease;
   /* 稍微调大按钮整体字体找到平衡点 */
   font-size: clamp(14.5px, 3vw, 18px) !important;
-  min-height: clamp(47px, 7.8vh, 62px);
+  min-height: clamp(42px, 6.5vh, 55px);
   position: relative;
   overflow: hidden;
   transform: translateY(0);
@@ -2063,6 +2063,11 @@ html, body {
     padding: clamp(8px, 1.5vh, 12px);
   }
   
+  .score-board {
+    margin: clamp(75px, 15vh, 95px) 8px 0 8px;
+    padding: 12px 16px;
+  }
+  
   .game-logo {
     max-width: clamp(200px, 70vw, 400px);
     max-height: clamp(60px, 15vh, 120px);
@@ -2091,8 +2096,8 @@ html, body {
   }
   
   .separated-answers {
-    max-width: min(75vw, 240px);
-    padding: clamp(10px, 1.5vh, 14px);
+    max-width: 100%;
+    padding: clamp(8px, 1.2vh, 12px);
     margin-top: clamp(30px, 6vh, 45px);
   }
   
@@ -2102,7 +2107,7 @@ html, body {
   
   .answer-btn {
     padding: clamp(10px, 1.5vh, 14px) clamp(8px, 1.5vw, 12px);
-    min-height: clamp(40px, 6vh, 56px);
+    min-height: clamp(36px, 5vh, 50px);
   }
   
   /* 移动端动画优化 */
@@ -2120,6 +2125,11 @@ html, body {
 }
 
 @media (max-width: 480px) {
+  .score-board {
+    margin: clamp(80px, 0vh, 100px) 8px 0 8px;
+    padding: 10px 14px;
+  }
+  
   .image-card-wrapper {
     max-width: 80vw;
     height: clamp(380px, 50vh, 520px);
@@ -2131,9 +2141,9 @@ html, body {
   }
   
   .separated-answers {
-    max-width: 80vw;
-    padding: clamp(8px, 1vh, 12px);
-    margin-top: clamp(15px, 3vh, 25px);
+    max-width: 100%;
+    padding: clamp(6px, 1vh, 10px);
+    margin-top: clamp(0px, 0vh, 0px);
   }
   
   .answer-grid {
@@ -2142,7 +2152,7 @@ html, body {
   
   .answer-btn {
     padding: clamp(8px, 1vh, 12px) clamp(6px, 1vw, 10px);
-    min-height: clamp(36px, 5vh, 48px);
+    min-height: clamp(32px, 4vh, 42px);
   }
   
   .answer-text {
@@ -2155,6 +2165,11 @@ html, body {
     padding: clamp(5px, 0.8vh, 8px);
   }
   
+  .score-board {
+    margin: clamp(55px, 11vh, 70px) 8px 0 8px;
+    padding: 10px 16px;
+  }
+  
   .image-card-wrapper {
     height: clamp(300px, 60vh, 420px);
   }
@@ -2164,12 +2179,13 @@ html, body {
   }
   
   .separated-answers {
-    padding: clamp(8px, 1vh, 10px);
-    margin-top: clamp(12px, 2vh, 20px);
+    max-width: 100%;
+    padding: clamp(6px, 1vh, 8px);
+    margin-top: clamp(8px, 1.5vh, 12px);
   }
   
   .answer-btn {
-    min-height: clamp(32px, 4vh, 44px);
+    min-height: clamp(28px, 3.5vh, 38px);
   }
 }
 

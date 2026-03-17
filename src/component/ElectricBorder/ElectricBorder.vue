@@ -33,7 +33,26 @@ function hexToRgba(hex: string, alpha = 1): string {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-const rawId = `id-${crypto.randomUUID().replace(/[:]/g, '')}`;
+// 生成兼容的UUID函数
+function generateUUID(): string {
+  // 优先使用crypto.randomUUID（如果可用）
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+    try {
+      return crypto.randomUUID();
+    } catch (e) {
+      // 如果失败，使用fallback方法
+    }
+  }
+  
+  // Fallback UUID生成方法
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+const rawId = `id-${generateUUID().replace(/[:]/g, '')}`;
 const filterId = `turbulent-displace-${rawId}`;
 
 const svgRef = useTemplateRef('svgRef');
