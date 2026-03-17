@@ -4,6 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/overwatch-map-quiz-game/', // GitHub Pages 路径
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
