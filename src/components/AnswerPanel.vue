@@ -3,8 +3,8 @@
     <p class="question-text">这是哪个地图？</p>
     <div class="answer-grid">
       <button 
-        v-for="(option, index) in question.allOptions" 
-        :key="`${question.id}-${index}-${option}`"
+        v-for="(option, index) in props.question.allOptions" 
+        :key="`${props.question.id}-${index}-${option}`"
         @click="handleAnswer(option)"
         class="answer-btn"
         :class="{
@@ -35,7 +35,7 @@
 import { GameMode } from '@/types'
 
 // Props
-defineProps<{
+const props = defineProps<{
   question: any
   gameMode: GameMode
   feedbackData: any
@@ -47,33 +47,27 @@ const emit = defineEmits<{
   'answer': [answer: string]
 }>()
 
-// 简化的文本显示方法 - 使用WeakMap提升性能
-const textDisplayCache = new WeakMap<object, Map<string, any>>()
+// 简化的文本显示方法 - 缓存结果避免重复计算
+const textDisplayCache = new Map<string, any>()
 
 const getDisplayText = (text: string, gameMode: GameMode) => {
-  // 使用question对象作为WeakMap的key，避免内存泄漏
-  if (!textDisplayCache.has(question)) {
-    textDisplayCache.set(question, new Map())
-  }
-  
-  const cache = textDisplayCache.get(question)!
   const cacheKey = `${text}-${gameMode}`
   
-  if (cache.has(cacheKey)) {
-    return cache.get(cacheKey)
+  if (textDisplayCache.has(cacheKey)) {
+    return textDisplayCache.get(cacheKey)
   }
   
   // 只在挑战模式中模糊文字
   if (gameMode !== 'challenge' && gameMode !== GameMode.CHALLENGE) {
     const result = { text, hasBlur: false }
-    cache.set(cacheKey, result)
+    textDisplayCache.set(cacheKey, result)
     return result
   }
   
   const length = text.length
   if (length <= 2) {
     const result = { text, hasBlur: false }
-    cache.set(cacheKey, result)
+    textDisplayCache.set(cacheKey, result)
     return result
   }
   
@@ -93,7 +87,7 @@ const getDisplayText = (text: string, gameMode: GameMode) => {
     hasBlur: true
   }
   
-  cache.set(cacheKey, result)
+  textDisplayCache.set(cacheKey, result)
   return result
 }
 
