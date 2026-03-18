@@ -12,43 +12,20 @@
     "test:run": "vitest run"
   },
   "dependencies": {
-    "@dcloudio/uni-app": "^3.0.0-alpha-3060920220707001",
-    "@dcloudio/uni-components": "^3.0.0-alpha-3060920220707001",
-    "@dcloudio/uni-h5": "^3.0.0-alpha-3060920220707001",
-    "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-3060920220707001",
     "gsap": "^3.14.2",
-    "pinia": "^2.0.23",
-    "vue": "^3.2.37",
-    "vue-router": "^4.6.4"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@dcloudio/types": "^3.0.16",
-    "@dcloudio/uni-cli-shared": "^3.0.0-alpha-3060920220707001",
-    "@dcloudio/uni-stacktracey": "^3.0.0-alpha-3060920220707001",
-    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3060920220707001",
     "@types/node": "^18.7.14",
-    "@typescript-eslint/eslint-plugin": "^5.33.1",
-    "@typescript-eslint/parser": "^5.33.1",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue/compiler-sfc": "^3.2.37",
-    "@vue/test-utils": "^2.0.2",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.22.0",
-    "eslint-plugin-vue": "^9.3.0",
-    "fast-check": "^3.1.4",
-    "jsdom": "^20.0.0",
     "sass": "^1.54.4",
-    "sass-loader": "^13.0.2",
+    "terser": "^5.15.0",
     "typescript": "^4.7.4",
-    "vite": "^3.0.9",
-    "vitest": "^0.23.1",
-    "vue-cli-service": "^5.0.8"
+    "vite": "^3.0.9"
   },
   "browserslist": [
     "Android >= 4.4",
     "ios >= 9"
-  ],
-  "uni-app": {
-    "scripts": {}
-  }
+  ]
 }
