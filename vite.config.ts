@@ -30,20 +30,17 @@ export default defineConfig({
         drop_debugger: true // 移除debugger
       }
     },
-    // 代码分割优化
+    // 简化代码分割，避免构建错误
     rollupOptions: {
       output: {
         manualChunks: {
-          'vue-vendor': ['vue'],
-          'audio-vendor': ['gsap'],
-          'ui-components': [
-            './src/component/VueBitsProfileCard/VueBitsProfileCardSimple.vue',
-            './src/component/ElectricBorder/ElectricBorder.vue'
-          ]
+          'vue-vendor': ['vue']
         }
       }
     },
     // 资源内联阈值
-    assetsInlineLimit: 4096
+    assetsInlineLimit: 4096,
+    // 确保构建成功
+    emptyOutDir: true
   }
 })
