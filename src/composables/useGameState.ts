@@ -252,6 +252,14 @@ export function useGameState() {
   }
   
   /**
+   * 预加载图片到浏览器缓存
+   */
+  const preloadImage = (url: string) => {
+    const img = new Image()
+    img.src = url
+  }
+
+  /**
    * 加载下一个题目
    */
   const loadNextQuestion = async () => {
@@ -266,13 +274,17 @@ export function useGameState() {
       // 记录题目开始时间
       questionStartTime.value = Date.now()
       
-      // 预加载下一个题目
+      // 预加载下一个题目及其图片
       try {
         const nextQuestion = questionPool.getNextQuestion()
         state.nextQuestion = nextQuestion
+        
+        // 主动预加载下一题的图片到浏览器缓存
+        if (nextQuestion?.screenshot?.url) {
+          preloadImage(nextQuestion.screenshot.url)
+        }
       } catch (error) {
         // 没有更多题目了，这是正常情况
-        console.log('没有更多题目可预加载')
       }
       
     } catch (error) {
