@@ -1,5 +1,5 @@
 /**
- * 游戏音效管理服务 - 简化版
+ * 游戏音效管理服务 - 支持移动端音频池
  */
 
 export enum SoundType {
@@ -10,12 +10,16 @@ export enum SoundType {
 
 class AudioService {
   private sounds: Map<SoundType, HTMLAudioElement> = new Map()
+  /** 音效池：每种音效维护多个Audio实例，解决移动端重复播放问题 */
+  private sfxPool: Map<SoundType, HTMLAudioElement[]> = new Map()
+  private sfxPoolIndex: Map<SoundType, number> = new Map()
+  private readonly POOL_SIZE = 3
   private musicVolume: number = 0.7
   private sfxVolume: number = 0.8
   private currentMusic: HTMLAudioElement | null = null
   private isInitialized: boolean = false
   private lastPlayTime: Map<SoundType, number> = new Map()
-  private readonly DEBOUNCE_TIME = 300
+  private readonly DEBOUNCE_TIME = 100 // 降低防抖，避免快速答题丢音效
 
   constructor() {
     this.loadSettings()
@@ -23,9 +27,6 @@ class AudioService {
     this.initUserInteraction()
   }
 
-  /**
-   * 从本地存储加载设置
-   */
   private loadSettings() {
     try {
       const savedSettings = localStorage.getItem('audioSettings')
@@ -39,9 +40,6 @@ class AudioService {
     }
   }
 
-  /**
-   * 保存设置到本地存储
-   */
   private saveSettings() {
     try {
       const settings = {
@@ -55,33 +53,42 @@ class AudioService {
   }
 
   /**
-   * 初始化用户交互
+   * 初始化用户交互（移动端必须在用户操作后才能播放音频）
    */
   private initUserInteraction() {
     const initAudio = () => {
       if (this.isInitialized) return
       
+      // 初始化主音频实例
       this.sounds.forEach((audio, soundType) => {
-        // 保存当前音量
         const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
-        
-        // 临时设置为静音进行初始化
         audio.volume = 0
         audio.play().then(() => {
           audio.pause()
           audio.currentTime = 0
-          // 恢复正确的音量
           audio.volume = targetVolume
-        }).catch((error) => {
-          // 即使播放失败，也要恢复音量
+        }).catch(() => {
           audio.volume = targetVolume
+        })
+      })
+
+      // 初始化音效池中的所有实例
+      this.sfxPool.forEach((pool) => {
+        pool.forEach(audio => {
+          audio.volume = 0
+          audio.play().then(() => {
+            audio.pause()
+            audio.currentTime = 0
+            audio.volume = this.sfxVolume
+          }).catch(() => {
+            audio.volume = this.sfxVolume
+          })
         })
       })
       
       this.isInitialized = true
     }
 
-    // 监听多种用户交互事件
     const events = ['click', 'touchstart', 'keydown']
     events.forEach(eventType => {
       document.addEventListener(eventType, initAudio, { once: true })
@@ -109,6 +116,18 @@ class AudioService {
         audio.loop = true
       } else {
         audio.volume = this.sfxVolume
+        
+        // 为音效类型创建音频池（多个实例轮换播放）
+        const pool: HTMLAudioElement[] = []
+        for (let i = 0; i < this.POOL_SIZE; i++) {
+          const poolAudio = new Audio()
+          poolAudio.preload = 'auto'
+          poolAudio.src = path
+          poolAudio.volume = this.sfxVolume
+          pool.push(poolAudio)
+        }
+        this.sfxPool.set(type as SoundType, pool)
+        this.sfxPoolIndex.set(type as SoundType, 0)
       }
 
       this.sounds.set(type as SoundType, audio)
@@ -116,32 +135,43 @@ class AudioService {
   }
 
   /**
-   * 强制初始化音频系统（用于确保用户交互后音效可用）
+   * 强制初始化音频系统
    */
   public forceInitialize(): void {
     if (this.isInitialized) return
     
     this.sounds.forEach((audio, soundType) => {
-      // 保存当前音量
       const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
-      
-      // 临时设置为静音进行初始化
       audio.volume = 0
       audio.play().then(() => {
         audio.pause()
         audio.currentTime = 0
-        // 恢复正确的音量
         audio.volume = targetVolume
-      }).catch((error) => {
-        // 即使播放失败，也要恢复音量
+      }).catch(() => {
         audio.volume = targetVolume
+      })
+    })
+
+    this.sfxPool.forEach((pool) => {
+      pool.forEach(audio => {
+        audio.volume = 0
+        audio.play().then(() => {
+          audio.pause()
+          audio.currentTime = 0
+          audio.volume = this.sfxVolume
+        }).catch(() => {
+          audio.volume = this.sfxVolume
+        })
       })
     })
     
     this.isInitialized = true
   }
+
+  /**
+   * 播放音效（使用音频池轮换，解决移动端重复播放问题）
+   */
   play(soundType: SoundType) {
-    // 如果音频系统未初始化，先尝试初始化
     if (!this.isInitialized) {
       this.forceInitialize()
     }
@@ -154,14 +184,30 @@ class AudioService {
     }
     this.lastPlayTime.set(soundType, now)
 
+    // 优先从音频池获取（轮换实例，避免同一个Audio重复play）
+    const pool = this.sfxPool.get(soundType)
+    if (pool && pool.length > 0) {
+      const index = this.sfxPoolIndex.get(soundType) || 0
+      const audio = pool[index]
+      
+      // 轮换到下一个实例
+      this.sfxPoolIndex.set(soundType, (index + 1) % pool.length)
+      
+      try {
+        audio.volume = this.sfxVolume
+        audio.currentTime = 0
+        audio.play().catch(() => {})
+      } catch (error) {}
+      return
+    }
+
+    // 兜底：使用主实例（用于背景音乐等）
     const sound = this.sounds.get(soundType)
     if (!sound) return
 
     try {
-      // 确保音量设置正确
       const targetVolume = soundType === SoundType.MENU_MUSIC ? this.musicVolume : this.sfxVolume
       sound.volume = targetVolume
-      
       sound.currentTime = 0
       sound.play().catch(() => {})
     } catch (error) {}
@@ -175,19 +221,16 @@ class AudioService {
     if (!music) return
 
     try {
-      // 如果音乐已经在播放，不重新开始
       if (this.currentMusic === music && !this.currentMusic.paused) {
         return
       }
       
-      // 如果音乐暂停了，直接恢复播放
       if (this.currentMusic === music && this.currentMusic.paused) {
         music.volume = this.musicVolume
         music.play().catch(() => {})
         return
       }
       
-      // 否则从头开始播放
       music.currentTime = 0
       music.loop = true
       music.volume = this.musicVolume
@@ -196,9 +239,6 @@ class AudioService {
     } catch (error) {}
   }
 
-  /**
-   * 停止背景音乐
-   */
   stopMusic() {
     if (this.currentMusic) {
       this.currentMusic.pause()
@@ -207,43 +247,37 @@ class AudioService {
     }
   }
 
-  /**
-   * 暂停背景音乐
-   */
   pauseMusic() {
     if (this.currentMusic) {
       this.currentMusic.pause()
     }
   }
 
-  /**
-   * 恢复背景音乐
-   */
   resumeMusic() {
     if (this.currentMusic && this.currentMusic.paused) {
       this.currentMusic.play().catch(() => {})
     }
   }
 
-  /**
-   * 设置音效音量
-   */
   setSfxVolume(volume: number) {
     this.sfxVolume = Math.max(0, Math.min(1, volume))
+    
+    // 更新主实例音量
     const buttonSound = this.sounds.get(SoundType.BUTTON_CLICK)
     const correctSound = this.sounds.get(SoundType.CORRECT_ANSWER)
-    if (buttonSound) {
-      buttonSound.volume = this.sfxVolume
-    }
-    if (correctSound) {
-      correctSound.volume = this.sfxVolume
-    }
+    if (buttonSound) buttonSound.volume = this.sfxVolume
+    if (correctSound) correctSound.volume = this.sfxVolume
+    
+    // 更新音频池音量
+    this.sfxPool.forEach((pool) => {
+      pool.forEach(audio => {
+        audio.volume = this.sfxVolume
+      })
+    })
+    
     this.saveSettings()
   }
 
-  /**
-   * 设置音乐音量
-   */
   setMusicVolume(volume: number) {
     this.musicVolume = Math.max(0, Math.min(1, volume))
     const music = this.sounds.get(SoundType.MENU_MUSIC)
@@ -253,9 +287,6 @@ class AudioService {
     this.saveSettings()
   }
 
-  /**
-   * 获取当前状态
-   */
   getState() {
     return {
       musicVolume: this.musicVolume,
