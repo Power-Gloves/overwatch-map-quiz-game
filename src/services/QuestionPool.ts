@@ -18,18 +18,27 @@ export class QuestionPool {
   private questionHistory: Question[] = []
   
   /**
+   * jsDelivr CDN 基础路径（生产环境使用，国内访问更快）
+   */
+  private static readonly CDN_BASE = 'https://cdn.jsdelivr.net/gh/Power-Gloves/overwatch-map-quiz-game@master/public'
+  
+  /**
    * 构造函数
    * @param mapData 地图数据配置
    */
   constructor(mapData: MapData[] = []) {
+    const isProd = import.meta.env.PROD
     const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '')
     
-    // 给所有截图URL加上base前缀（适配GitHub Pages等子路径部署）
+    // 生产环境：使用 jsDelivr CDN 加速地图截图
+    // 开发环境：使用本地路径
     this.maps = mapData.map(map => ({
       ...map,
       screenshots: map.screenshots.map(s => ({
         ...s,
-        url: s.url.startsWith('/') ? `${base}${s.url}` : s.url
+        url: isProd && s.url.startsWith('/static/')
+          ? `${QuestionPool.CDN_BASE}${s.url}`
+          : s.url.startsWith('/') ? `${base}${s.url}` : s.url
       }))
     }))
     
