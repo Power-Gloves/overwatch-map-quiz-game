@@ -2,7 +2,7 @@
   <div class="score-board">
     <div class="score-items">
       <div class="score-item">
-        <img src="/src/assets/images/defenban/1.png" alt="已答题" class="score-icon-img" />
+        <img :src="`${baseUrl}images/defenban/1.png`" alt="已答题" class="score-icon-img" />
         <div class="score-info">
           <span class="score-label">已答题</span>
           <span class="score-value">{{ gameState.totalAnswered }}</span>
@@ -10,7 +10,7 @@
       </div>
       <div class="score-divider"></div>
       <div class="score-item">
-        <img src="/src/assets/images/defenban/2.png" alt="正确" class="score-icon-img" />
+        <img :src="`${baseUrl}images/defenban/2.png`" alt="正确" class="score-icon-img" />
         <div class="score-info">
           <span class="score-label">正确</span>
           <span class="score-value correct">{{ gameState.correctCount }}</span>
@@ -18,7 +18,7 @@
       </div>
       <div class="score-divider"></div>
       <div class="score-item">
-        <img src="/src/assets/images/defenban/3.png" alt="正确率" class="score-icon-img" />
+        <img :src="`${baseUrl}images/defenban/3.png`" alt="正确率" class="score-icon-img" />
         <div class="score-info">
           <span class="score-label">正确率</span>
           <span class="score-value accuracy">{{ gameState.accuracy.toFixed(0) }}%</span>
@@ -36,6 +36,8 @@
 
 <script setup lang="ts">
 import ElectricBorder from '@/component/ElectricBorder/ElectricBorder.vue'
+
+const baseUrl = import.meta.env.BASE_URL
 
 // Props
 defineProps<{

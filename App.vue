@@ -11,7 +11,7 @@
     <div v-if="gameState.status === 'idle'" class="start-screen">
       <!-- 右上角音效控制按钮 -->
       <img 
-        src="/src/assets/images/icons/audio-control.svg" 
+        :src="`${baseUrl}images/icons/audio-control.svg`" 
         alt="音效设置" 
         @click="toggleAudioPanel"
         class="control-button control-button-right"
@@ -19,7 +19,7 @@
       
       <div class="header">
         <div class="logo-container">
-          <img src="/src/assets/images/logos/logo-white.png" alt="OVERWATCH" class="game-logo" />
+          <img :src="`${baseUrl}images/logos/logo-white.png`" alt="OVERWATCH" class="game-logo" />
           <p class="subtitle">地图识别挑战</p>
         </div>
       </div>
@@ -31,11 +31,11 @@
           :enable-shine="false"
           :behind-gradient="`radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(120,100%,90%,calc(var(--card-opacity)*0.7)) 4%, hsla(120,50%,80%,calc(var(--card-opacity)*0.525)) 10%, hsla(120,25%,70%,calc(var(--card-opacity)*0.35)) 50%, hsla(120,0%,60%,0) 100%), radial-gradient(35% 52% at 55% 20%, #B5FA2389 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #B5FA23b3 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #B5FA23b3 0%, #32CD32b3 40%, #32CD32b3 60%, #B5FA23b3 100%)`"
           :inner-gradient="`linear-gradient(145deg, rgba(181, 250, 35, 0.1) 0%, rgba(181, 250, 35, 0.05) 100%)`"
-          :icon-url="`/src/assets/images/guiling.png`"
+          :icon-url="`${baseUrl}images/guiling.png`"
         >
           <div class="stats-preview-content" style="padding: 24px 20px !important; border: 2px solid #B5FA23; border-radius: 16px; background: rgba(181, 250, 35, 0.05);">
             <div class="icon-wrapper">
-              <img src="/src/assets/images/logos/带文字logo-white.png" alt="游戏图标" class="ow-icon-logo" />
+              <img :src="`${baseUrl}images/logos/带文字logo-white.png`" alt="游戏图标" class="ow-icon-logo" />
             </div>
             <p class="preview-text">准备好挑战你的地图知识了吗？</p>
             <p class="stats-text">
@@ -70,7 +70,7 @@
     <div v-else-if="gameState.status === 'mode_select'" class="mode-select-screen">
       <!-- 左上角返回按钮 -->
       <img 
-        src="/src/assets/images/icons/back-arrow-left.svg" 
+        :src="`${baseUrl}images/icons/back-arrow-left.svg`" 
         alt="返回" 
         @click="backToHome"
         class="control-button control-button-left"
@@ -80,7 +80,7 @@
       
       <!-- 右上角音效控制按钮 -->
       <img 
-        src="/src/assets/images/icons/audio-control.svg" 
+        :src="`${baseUrl}images/icons/audio-control.svg`" 
         alt="音效设置" 
         @click="toggleAudioPanel"
         class="control-button control-button-right"
@@ -172,6 +172,9 @@ import FinishPage from '@/components/FinishPage.vue'
 import ErrorPage from '@/components/ErrorPage.vue'
 import type { MapData } from '@/types'
 import { GameMode } from '@/types'
+
+// 资源基础路径（自动适配开发/生产环境）
+const baseUrl = import.meta.env.BASE_URL
 import mapsData from '@/assets/data/maps.json'
 
 const {
@@ -291,21 +294,21 @@ const getDisplayText = (text: string, gameMode: GameMode) => {
 
 const modeItems = computed(() => [
   {
-    icon: "/src/assets/images/1.png",
+    icon: `${baseUrl}images/1.png`,
     title: "无尽模式",
     subtitle: "无限题目，追求连续答对的最高记录！",
     spotlightColor: "rgba(79, 70, 229, 0.6)",
     value: 'endless'
   },
   {
-    icon: "/src/assets/images/2.png",
+    icon: `${baseUrl}images/2.png`,
     title: "挑战模式", 
     subtitle: "20题挑战，达到70%正确率通关！",
     spotlightColor: "rgba(245, 158, 11, 0.6)",
     value: 'challenge'
   },
   {
-    icon: "/src/assets/images/3.png",
+    icon: `${baseUrl}images/3.png`,
     title: "练习模式",
     subtitle: "10题轻松练习，熟悉地图布局！", 
     spotlightColor: "rgba(16, 185, 129, 0.6)",

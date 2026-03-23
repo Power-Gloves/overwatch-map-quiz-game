@@ -1,0 +1,15 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="120" height="120" fill="#B5FA23"/>
+<!-- 音响图标 - 居中对齐，放大尺寸 -->
+<g transform="translate(60, 60)">
+  <!-- 扬声器主体 -->
+  <rect x="-25" y="-12" width="16" height="24" fill="#1D1D1F"/>
+  <!-- 扬声器锥形 -->
+  <path d="M-9 -8 L8 -20 L8 20 L-9 8 Z" fill="#1D1D1F"/>
+  
+  <!-- 音波线条 -->
+  <path d="M13 -8 Q20 -2 20 0 Q20 2 13 8" stroke="#1D1D1F" stroke-width="4" fill="none"/>
+  <path d="M23 -15 Q32 -5 32 0 Q32 5 23 15" stroke="#1D1D1F" stroke-width="4" fill="none"/>
+  <path d="M33 -22 Q44 -8 44 0 Q44 8 33 22" stroke="#1D1D1F" stroke-width="4" fill="none"/>
+</g>
+</svg>

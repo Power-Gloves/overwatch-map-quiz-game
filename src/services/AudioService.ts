@@ -92,10 +92,11 @@ class AudioService {
    * 预加载音效文件
    */
   private preloadSounds() {
+    const base = import.meta.env.BASE_URL || '/'
     const soundFiles = {
-      [SoundType.BUTTON_CLICK]: '/src/assets/sounds/confirm.wav',
-      [SoundType.MENU_MUSIC]: '/src/assets/sounds/bgm.mp3',
-      [SoundType.CORRECT_ANSWER]: '/src/assets/sounds/ok.mp3'
+      [SoundType.BUTTON_CLICK]: `${base}sounds/confirm.wav`,
+      [SoundType.MENU_MUSIC]: `${base}sounds/bgm.mp3`,
+      [SoundType.CORRECT_ANSWER]: `${base}sounds/ok.mp3`
     }
 
     Object.entries(soundFiles).forEach(([type, path]) => {

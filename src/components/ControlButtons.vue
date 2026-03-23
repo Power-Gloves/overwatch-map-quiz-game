@@ -7,7 +7,7 @@
       aria-label="返回"
     >
       <img 
-        src="/src/assets/images/icons/back-arrow-left.svg" 
+        :src="`${baseUrl}images/icons/back-arrow-left.svg`" 
         alt="返回"
       />
     </button>
@@ -19,7 +19,7 @@
       aria-label="音效设置"
     >
       <img 
-        src="/src/assets/images/icons/audio-control.svg" 
+        :src="`${baseUrl}images/icons/audio-control.svg`" 
         alt="音效设置"
       />
     </button>
@@ -27,6 +27,8 @@
 </template>
 
 <script setup lang="ts">
+const baseUrl = import.meta.env.BASE_URL
+
 // Props
 defineProps<{
   showBack?: boolean

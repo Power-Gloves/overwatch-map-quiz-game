@@ -2,7 +2,7 @@
   <div class="start-screen">
     <!-- 右上角音效控制按钮 -->
     <img 
-      src="/src/assets/images/icons/audio-control.svg" 
+      :src="`${baseUrl}images/icons/audio-control.svg`" 
       alt="音效设置" 
       @click="$emit('toggle-audio')"
       class="control-button control-button-right"
@@ -10,7 +10,7 @@
     
     <div class="header">
       <div class="logo-container">
-        <img src="/src/assets/images/logos/logo-white.png" alt="OVERWATCH" class="game-logo" />
+        <img :src="`${baseUrl}images/logos/logo-white.png`" alt="OVERWATCH" class="game-logo" />
         <p class="subtitle">地图识别挑战</p>
       </div>
     </div>
@@ -26,7 +26,7 @@
       >
         <div class="stats-preview-content">
           <div class="icon-wrapper">
-            <img src="/src/assets/images/logos/带文字logo-white.png" alt="游戏图标" class="ow-icon-logo" />
+            <img :src="`${baseUrl}images/logos/带文字logo-white.png`" alt="游戏图标" class="ow-icon-logo" />
           </div>
           <p class="preview-text">准备好挑战你的地图知识了吗？</p>
           <p class="stats-text">
@@ -60,6 +60,8 @@ import { computed } from 'vue'
 import VueBitsProfileCard from '@/component/VueBitsProfileCard/VueBitsProfileCardSimple.vue'
 import mapsData from '@/assets/data/maps.json'
 
+const baseUrl = import.meta.env.BASE_URL
+
 // Props
 defineProps<{
   isLoading?: boolean
@@ -81,7 +83,7 @@ const cardGradient = `radial-gradient(farthest-side circle at var(--pointer-x) v
 
 const innerGradient = `linear-gradient(145deg, rgba(181, 250, 35, 0.1) 0%, rgba(181, 250, 35, 0.05) 100%)`
 
-const iconUrl = `/src/assets/images/guiling.png`
+const iconUrl = `${baseUrl}images/guiling.png`
 </script>
 
 <style scoped>

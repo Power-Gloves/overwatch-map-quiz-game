@@ -30,6 +30,8 @@ import { computed } from 'vue'
 import ControlButtons from '@/components/ControlButtons.vue'
 import ModeCard from '@/components/ModeCard.vue'
 
+const baseUrl = import.meta.env.BASE_URL
+
 // Emits
 defineEmits<{
   'back': []
@@ -40,19 +42,19 @@ defineEmits<{
 // 游戏模式配置
 const modes = computed(() => [
   {
-    icon: "/src/assets/images/1.png",
+    icon: `${baseUrl}images/1.png`,
     title: "无尽模式",
     subtitle: "无限题目，追求连续答对的最高记录！",
     value: 'endless'
   },
   {
-    icon: "/src/assets/images/2.png",
+    icon: `${baseUrl}images/2.png`,
     title: "挑战模式", 
     subtitle: "20题挑战，达到70%正确率通关！",
     value: 'challenge'
   },
   {
-    icon: "/src/assets/images/3.png",
+    icon: `${baseUrl}images/3.png`,
     title: "练习模式",
     subtitle: "10题轻松练习，熟悉地图布局！", 
     value: 'practice'
