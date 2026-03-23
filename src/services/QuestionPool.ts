@@ -22,7 +22,17 @@ export class QuestionPool {
    * @param mapData 地图数据配置
    */
   constructor(mapData: MapData[] = []) {
-    this.maps = [...mapData]
+    const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '')
+    
+    // 给所有截图URL加上base前缀（适配GitHub Pages等子路径部署）
+    this.maps = mapData.map(map => ({
+      ...map,
+      screenshots: map.screenshots.map(s => ({
+        ...s,
+        url: s.url.startsWith('/') ? `${base}${s.url}` : s.url
+      }))
+    }))
+    
     this.validateMapData()
   }
   
