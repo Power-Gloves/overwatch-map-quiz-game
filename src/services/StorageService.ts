@@ -145,11 +145,10 @@ export class StorageService {
    * 更新连续正确记录
    */
   private updateStreakStats(statistics: Statistics, session: GameSession): void {
-    let currentStreak = 0
     let maxStreak = 0
     let tempStreak = 0
     
-    // 计算本次会话的连续正确数
+    // 计算本次会话的最长连续正确数
     for (const answer of session.answers) {
       if (answer.isCorrect) {
         tempStreak++
@@ -162,15 +161,42 @@ export class StorageService {
     // 更新最佳连续记录
     statistics.bestStreak = Math.max(statistics.bestStreak, maxStreak)
     
-    // 更新当前连续记录（需要考虑历史数据）
-    if (session.answers.length > 0) {
-      const lastAnswer = session.answers[session.answers.length - 1]
-      if (lastAnswer.isCorrect) {
-        statistics.currentStreak += 1
+    // 计算本次会话尾部的连续正确数
+    let tailStreak = 0
+    for (let i = session.answers.length - 1; i >= 0; i--) {
+      if (session.answers[i].isCorrect) {
+        tailStreak++
       } else {
-        statistics.currentStreak = 0
+        break
       }
     }
+    
+    // 检查会话开头是否全部正确（用于判断是否与上次会话的连续记录衔接）
+    let headStreak = 0
+    for (const answer of session.answers) {
+      if (answer.isCorrect) {
+        headStreak++
+      } else {
+        break
+      }
+    }
+    
+    // 如果会话从头到尾都正确，累加到历史连续记录；否则重置
+    if (headStreak === session.answers.length) {
+      // 全部正确，累加历史连续记录
+      statistics.currentStreak += headStreak
+    } else if (headStreak > 0 && statistics.currentStreak > 0) {
+      // 开头有连续正确，可以和历史衔接，但中间断了
+      // 最终连续记录以尾部为准
+      statistics.bestStreak = Math.max(statistics.bestStreak, statistics.currentStreak + headStreak)
+      statistics.currentStreak = tailStreak
+    } else {
+      // 开头就答错或没有历史连续，直接取尾部值
+      statistics.currentStreak = tailStreak
+    }
+    
+    // 再次更新最佳记录（考虑跨会话累加后的值）
+    statistics.bestStreak = Math.max(statistics.bestStreak, statistics.currentStreak)
   }
   
   /**

@@ -395,10 +395,13 @@ export function useGameState() {
    * 退出游戏
    */
   const exitGame = () => {
+    // 必须在 dispatch 之前检查状态，因为 dispatch 会将状态改为 IDLE
+    const shouldSave = state.status === GameStatus.PLAYING && state.totalAnswered > 0
+    
     dispatch({ type: 'EXIT_GAME' })
     
     // 如果游戏进行中，保存当前会话
-    if (state.status === GameStatus.PLAYING && state.totalAnswered > 0) {
+    if (shouldSave) {
       saveCurrentSession()
     }
   }
